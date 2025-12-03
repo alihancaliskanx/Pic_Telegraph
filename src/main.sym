@@ -1,0 +1,171 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020-021 strtok.save
+022-025 _Randseed
+026-02F morse_buffer
+030-044 text_buffer
+045     morse_index
+046     text_index
+047-04A sector_addr
+04B     @TRIS_C
+04C-04D MAIN.press_time
+04E-04F MAIN.hold_time
+050     MAIN.decoded
+051-052 MAIN.hold_time
+053     MAIN.empty
+054-055 decode_morse.code
+054     lcd_init.i
+054     update_lcd.i
+054     sd_init.i
+054     MAIN.@SCRATCH1
+054     @PSTRINGC7_917.@SCRATCH1
+055     sd_init.response
+055     update_lcd.len
+055     lcd_init.@SCRATCH1
+055     MAIN.@SCRATCH2
+055     @PSTRINGC7_917.@SCRATCH2
+056     decode_morse.i
+056-057 sd_init.timeout
+056-057 strlen.s
+056     lcd_locate.x
+056     @PSTRINGR_917.@SCRATCH1
+056     MAIN.@SCRATCH3
+056     @PSTRINGC7_917.@SCRATCH3
+057     lcd_locate.y
+057     @PSTRINGR_917.@SCRATCH2
+057     decode_morse.@SCRATCH1
+057     MAIN.@SCRATCH4
+057     @PSTRINGC7_917.@SCRATCH4
+058     lcd_locate.address
+058-05B sd_write_block.address
+058     lcd_putc.c
+058-059 strlen.sc
+058     sd_init.@SCRATCH1
+058     decode_morse.@SCRATCH2
+059     lcd_gotoxy.x
+059     @delay_ms1.P1
+059-05A strcmp.s1
+059     sd_init.@SCRATCH2
+059     lcd_locate.@SCRATCH1
+05A     lcd_gotoxy.y
+05A     strlen.@SCRATCH1
+05B-05C strcmp.s2
+05B     lcd_gotoxy.address
+05C-05D sd_write_block.data
+05C     lcd_gotoxy.@SCRATCH1
+05D     lcd_send_byte.address
+05D     strcmp.@SCRATCH1
+05E     sd_write_block.len
+05E     lcd_send_byte.n
+05F-060 sd_write_block.i
+05F     lcd_read_byte.low
+05F     lcd_send_byte.@SCRATCH1
+060     lcd_read_byte.high
+060     lcd_send_nibble.n
+061     sd_send_command.cmd
+061     lcd_read_nibble.n
+061     lcd_read_byte.@SCRATCH1
+061     sd_write_block.@SCRATCH1
+062-065 sd_send_command.arg
+062     lcd_read_nibble.@SCRATCH1
+066     sd_send_command.response
+067     sd_send_command.retry
+068     sd_send_command.@SCRATCH1
+069     spi_transfer.data_out
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  LCD_INIT_STRING.call
+000008  LCD_INIT_STRING.data
+00000C  morse_code.call
+000010  morse_code.data
+0000B8  ascii_char.call
+0000BC  ascii_char.data
+0000E0  @const972.call
+0000EB  @const974.call
+0000F5  @const975.call
+0000FF  @const976.call
+000109  @const977.call
+000116  @const981.call
+000121  @const982.call
+00012C  @const983.call
+000137  @const984.call
+000144  @const986.call
+00014F  @const987.call
+00015C  @const988.call
+000166  @const990.call
+000173  @delay_ms1
+000187  lcd_send_nibble
+0001B3  lcd_read_nibble
+0001E4  lcd_send_byte
+0001EC  lcd_read_byte
+000240  lcd_init
+00027D  lcd_locate
+0002A2  lcd_gotoxy
+0002B4  lcd_putc
+0002E0  @PSTRINGC7_917
+00032B  spi_transfer
+000336  sd_send_command
+000374  sd_init
+0003E8  @PSTRINGR_917
+0003FE  strlen
+00041C  update_lcd
+000451  decode_morse
+000469  strcmp
+0004BB  sd_write_block
+00051D  @cinit1
+00051D  MAIN
+000534  @cinit2
+0136  StrtoulGO
+0136  StrtolGO
+
+Project Directory:
+    C:\Users\Alihan\Desktop\TELGRAF\src\
+
+Project Files:
+    main.c                                                  [03-Ara-25 10:31  CRC=84AEFEB4]
+    ..\..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h [21-Haz-13 16:04  CRC=9FD133B5]
+    ..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h [14-Tem-11 10:13  CRC=23EDEC8F]
+    ..\..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h [16-Tem-10 09:27  CRC=897CEC6C]
+    ..\..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h [03-Oca-08 13:55  CRC=2D1F019F]
+    ..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdlib.h [08-Haz-11 14:39  CRC=0B6669CF]
+    LCD.C                                                   [23-Aðu-12 09:01  CRC=D28E8746]
+
+Source signature=AF8D855E
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   main.xsym
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX8:       main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA
