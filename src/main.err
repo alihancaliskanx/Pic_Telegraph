@@ -1,4 +1,19 @@
->>> Warning 201 "main.c" Line 80(1,1): Assignment inside relational expression
-      Memory usage:   ROM=23%      RAM=14% - 21%
-      0 Errors,  1 Warnings.
-Build Successful.
+*** Error 18 "main.c" Line 1(9,19): File can not be opened
+    Not in "C:\Program Files (x86)\PICC\Devices\16F887.h"
+    Not in "C:\Program Files (x86)\PICC\Drivers\16F887.h"
+    Not in "C:\Users\Alihan\Desktop\TELGRAF\src\16F887.h"
+    Not in project "Z:\home\sups\Documents\Code\mikroproje\Pic_Telegraph\src\16F887.h"
+*** Error 128 "main.c" Line 3(7,54): A #DEVICE required before this line
+*** Error 18 "main.c" Line 6(10,20): File can not be opened
+    Not in "C:\Program Files (x86)\PICC\Devices\string.h"
+    Not in "C:\Program Files (x86)\PICC\Drivers\string.h"
+    Not in "C:\Users\Alihan\Desktop\TELGRAF\src\string.h"
+    Not in project "Z:\home\sups\Documents\Code\mikroproje\Pic_Telegraph\src\string.h"
+*** Error 18 "main.c" Line 7(10,20): File can not be opened
+    Not in "C:\Program Files (x86)\PICC\Devices\stdlib.h"
+    Not in "C:\Program Files (x86)\PICC\Drivers\stdlib.h"
+    Not in "C:\Users\Alihan\Desktop\TELGRAF\src\stdlib.h"
+    Not in project "Z:\home\sups\Documents\Code\mikroproje\Pic_Telegraph\src\stdlib.h"
+*** Error 128 "Z:\home\sups\Documents\Code\mikroproje\Pic_Telegraph\src\LCD.C" Line 76(9,15): A #DEVICE required before this line
+      5 Errors,  0 Warnings.
+Build Failed.
