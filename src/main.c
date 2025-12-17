@@ -185,7 +185,8 @@ void timer1_isr()
     set_timer1(63036);
 
     // Buton Durumu Oku
-    int1 btn_current = input(BTN_SIGNAL);
+    // Pull-up aktif oldugu icin buton basili degilken 1, basilinca 0 olur. Tersini aliyoruz.
+    int1 btn_current = !input(BTN_SIGNAL);
 
     if (btn_current) // Butona Basılıysa
     {
@@ -201,7 +202,8 @@ void timer1_isr()
         // Düşen Kenar (Buton az önce bırakıldı)
         if (btn_prev_state == 1) 
         {
-            if (morse_index < 6) 
+            // Debounce: 30ms'den kisa basislari gürültü olarak kabul et ve yoksay
+            if (morse_index < 6 && press_counter > 3) 
             {
                 // 25 birim = 250ms (Nokta/Çizgi Eşiği)
                 if (press_counter < 25) 
@@ -224,7 +226,7 @@ void timer1_isr()
 void main()
 {
     setup_spi(SPI_MASTER | SPI_L_TO_H | SPI_CLK_DIV_64);
-    port_b_pullups(FALSE);
+    port_b_pullups(TRUE); // Dahili Pull-up direncleri aktif (Paraziti onler)
     set_tris_b(0xFF);
 
     output_drive(LED_PIN);
@@ -268,10 +270,10 @@ void main()
         }
 
         // --- YÜKLE TUŞU (Onaylama İşlemi) ---
-        if (input(BTN_UPLOAD))
+        if (!input(BTN_UPLOAD)) // Active Low
         {
             // Debounce
-            while(input(BTN_UPLOAD)); 
+            while(!input(BTN_UPLOAD)); 
             
             // Eğer bufferda bir mors kodu varsa onu onayla ve metne ekle
             if (morse_index > 0)
@@ -307,9 +309,9 @@ void main()
         }
 
         // --- SİL TUŞU ---
-        if (input(BTN_DELETE))
+        if (!input(BTN_DELETE))
         {
-            while(input(BTN_DELETE)); // Bırakılmasını bekle
+            while(!input(BTN_DELETE)); // Bırakılmasını bekle
             
             // Önce yazılmakta olan mors kodunu sil
             if (morse_index > 0) {
@@ -324,9 +326,9 @@ void main()
         }
 
         // --- RESET ---
-        if (input(BTN_RESET))
+        if (!input(BTN_RESET))
         {
-            while(input(BTN_RESET));
+            while(!input(BTN_RESET));
             text_index = 0; text_buffer[0] = '\0';
             morse_index = 0; morse_buffer[0] = '\0';
             update_lcd();
