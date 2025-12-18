@@ -13,7 +13,8 @@ Type=4
 1=main.c
 [Opened Files]
 1=main.c
-2=
+2=test.c
+3=
 [Units]
 Count=1
 1=main (main)
