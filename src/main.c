@@ -47,18 +47,15 @@ volatile int16 press_counter = 0; // Basılma süresi sayacı
 int1 btn_prev_state = 0;          // Butonun önceki durumu
 int1 update_needed = 0;           // Ekran güncelleme bayrağı
 
-// --- Mors Alfabesi ---
-const char *morse_code[] = {
-    ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---",
-    "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-",
-    "..-", "...-", ".--", "-..-", "-.--", "--..",
-    "-----", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----."};
-
-const char ascii_char[] = {
-    'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
-    'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
-    'U', 'V', 'W', 'X', 'Y', 'Z',
-    '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
+// --- Mors Alfabesi (Binary Tree Map) ---
+// Algoritma: Sentinel biti (1) ile başla. Nokta=0, Çizgi=1 ekle.
+// Örnek: A (.-) -> 1 -> 10 -> 101 (5. index)
+const char morse_tree[64] = {
+    0, 0, 'E', 'T', 'I', 'A', 'N', 'M', 'S', 'U', 'R', 'W', 'D', 'K', 'G', 'O',
+    'H', 'V', 'F', 0, 'L', 0, 'P', 'J', 'B', 'X', 'C', 'Y', 'Z', 'Q', 0, 0,
+    '5', '4', 0, '3', 0, 0, 0, '2', 0, 0, 0, 0, 0, 0, 0, '1',
+    '6', 0, 0, 0, 0, 0, 0, 0, '7', 0, 0, 0, 0, '8', 0, '9', '0'
+};
 
 // ================= SPI / SD KART (Aynı) =================
 char spi_transfer(char data_out) { return spi_read(data_out); }
@@ -114,16 +111,31 @@ int8 sd_write_block(int32 address, char *data, int8 len)
 
 char decode_morse(char *code)
 {
-    int8 i;
-    // Eğer buffer boşsa boşluk dön
-    if(strlen(code) == 0) return ' '; 
+    int8 i, len;
+    int8 index = 1; // Sentinel bit (Binary 1 ile başla)
 
-    for (i = 0; i < 36; i++)
+    len = strlen(code);
+    if(len == 0) 
     {
-        if (strcmp(code, morse_code[i]) == 0)
-            return ascii_char[i];
+        return ' '
+    };
+
+    // Binary Dönüşüm Algoritması: .- -> 01
+    for (i = 0; i < len; i++) {
+        index = index << 1; // Sola kaydır (0 ekle)
+        if (code[i] == '-') {
+            index |= 1;     // Çizgi ise son biti 1 yap
+        }
+        if (index >= 64)
+        {
+            return '?'; // Taşma kontrolü
+        }    
     }
-    return '?'; // Bulunamazsa ? döner
+    if (morse_tree[index] == 0) 
+    {
+        return '?';
+    }
+    return morse_tree[index];
 }
 
 // 4 Satırlı LCD için Özel İmleç Fonksiyonu
