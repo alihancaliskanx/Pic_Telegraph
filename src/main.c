@@ -1,7 +1,7 @@
 #include <16F887.h>
-// WDT Eklendi
-#fuses INTRC_IO, WDT, NOPROTECT, NOLVP, NOBROWNOUT, NOPUT, NOMCLR
+#fuses INTRC_IO, NOWDT, NOPROTECT, NOLVP, NOBROWNOUT, NOPUT, NOMCLR
 #use delay(clock = 8000000)
+#use rs232(baud = 9600, parity = N, xmit = PIN_C6, rcv = PIN_C7, bits = 8, stream = BT_MODUL)
 
 #include <string.h>
 #include <stdlib.h>
@@ -22,12 +22,17 @@
 #define BTN_UPLOAD PIN_B1
 #define BTN_DELETE PIN_B2
 #define BTN_RESET PIN_B3
-#define BTN_HARD_RESET PIN_B4 // YENİ: Hard Reset Pini
+#define BTN_HARD_RESET PIN_B4
 
 char morse_buffer[10];
 char text_buffer[21];
 int8 morse_index = 0;
 int8 text_index = 0;
+
+char rx_temp_buffer[25];
+char rx_display_buffer[25];
+int8 rx_temp_index = 0;
+int1 rx_data_ready = 0;
 
 volatile int16 press_counter = 0;
 volatile int16 idle_counter = 0;
@@ -35,6 +40,10 @@ volatile int16 idle_counter = 0;
 
 int1 btn_prev_state = 0;
 int1 update_needed = 0;
+
+volatile int8 scroll_tick = 0;
+int1 scroll_now = 0;
+int8 scroll_pos = 0;
 
 const char morse_tree[64] = {
     0, 0, 'E', 'T', 'I', 'A', 'N', 'M', 'S', 'U', 'R', 'W', 'D', 'K', 'G', 'O',
@@ -63,6 +72,31 @@ void load_text_from_eeprom()
         text_buffer[i] = read_eeprom(i + 1);
     }
     text_buffer[text_index] = '\0';
+}
+
+void save_bt_to_eeprom()
+{
+    int8 i, len;
+    len = strlen(rx_display_buffer);
+    write_eeprom(50, len);
+    for (i = 0; i < len; i++)
+    {
+        write_eeprom(51 + i, rx_display_buffer[i]);
+    }
+}
+
+void load_bt_from_eeprom()
+{
+    int8 i, len;
+    len = read_eeprom(50);
+    if (len > 20)
+        len = 0;
+
+    for (i = 0; i < len; i++)
+    {
+        rx_display_buffer[i] = read_eeprom(51 + i);
+    }
+    rx_display_buffer[len] = '\0';
 }
 
 char decode_morse(char *code)
@@ -111,6 +145,28 @@ void lcd_locate(int8 x, int8 y)
     lcd_send_byte(0, 0x80 | address);
 }
 
+void update_scroll_line()
+{
+    int8 len, i, current_char_idx;
+    int8 gap_size = 4;
+
+    if (rx_display_buffer[0] == '\0')
+        return;
+
+    len = strlen(rx_display_buffer);
+    lcd_locate(1, 4);
+
+    for (i = 0; i < 20; i++)
+    {
+        current_char_idx = (scroll_pos + i) % (len + gap_size);
+
+        if (current_char_idx < len)
+            lcd_putc(rx_display_buffer[current_char_idx]);
+        else
+            lcd_putc(' ');
+    }
+}
+
 void update_lcd()
 {
     int8 i, len;
@@ -154,21 +210,47 @@ void enter_sleep_mode()
 
     while (TRUE)
     {
-        setup_wdt(WDT_2304MS);
         sleep();
-        // B4 de uyandırma tuşu olarak eklendi
         if (!input(BTN_SIGNAL) || !input(BTN_UPLOAD) || !input(BTN_DELETE) || !input(BTN_RESET) || !input(BTN_HARD_RESET))
         {
             break;
         }
     }
 
-    setup_wdt(WDT_18MS);
     lcd_init();
     lcd_locate(1, 1);
     printf(lcd_putc, "MOD: YAZIM");
     update_lcd();
     idle_counter = 0;
+}
+
+#INT_RDA
+void serial_isr()
+{
+    char incoming;
+    if (kbhit(BT_MODUL))
+    {
+        incoming = fgetc(BT_MODUL);
+
+        if (incoming == '\\' || incoming == '\n' || incoming == '\r')
+        {
+            if (rx_temp_index > 0)
+            {
+                rx_temp_buffer[rx_temp_index] = '\0';
+                strcpy(rx_display_buffer, rx_temp_buffer);
+                rx_data_ready = 1;
+                rx_temp_index = 0;
+                scroll_pos = 0;
+            }
+        }
+        else
+        {
+            if (rx_temp_index < 20)
+            {
+                rx_temp_buffer[rx_temp_index++] = incoming;
+            }
+        }
+    }
 }
 
 #INT_TIMER1
@@ -213,30 +295,42 @@ void timer1_isr()
     btn_prev_state = btn_current;
 }
 
+#INT_TIMER0
+void timer0_isr()
+{
+    scroll_tick++;
+    if (scroll_tick > 10)
+    {
+        scroll_tick = 0;
+        scroll_now = 1;
+    }
+}
+
 void main()
 {
-    setup_wdt(WDT_2304MS);
-
     set_tris_b(0xFF);
     port_b_pullups(TRUE);
     output_drive(LED_PIN);
     output_drive(BUZZER_PIN);
 
-    restart_wdt();
     lcd_init();
-    restart_wdt();
     delay_ms(100);
 
     load_text_from_eeprom();
+    load_bt_from_eeprom();
 
     setup_timer_1(T1_INTERNAL | T1_DIV_BY_8);
     set_timer1(63036);
+
+    setup_timer_0(T0_INTERNAL | T0_DIV_256);
+
     enable_interrupts(INT_TIMER1);
+    enable_interrupts(INT_TIMER0);
+    enable_interrupts(INT_RDA);
     enable_interrupts(GLOBAL);
 
     lcd_locate(1, 1);
     printf(lcd_putc, "Mors Telgraf");
-    restart_wdt();
     delay_ms(1000);
 
     lcd_putc('\f');
@@ -246,7 +340,22 @@ void main()
 
     while (TRUE)
     {
-        restart_wdt();
+        if (scroll_now)
+        {
+            scroll_now = 0;
+            if (rx_display_buffer[0] != '\0')
+            {
+                scroll_pos++;
+                update_scroll_line();
+            }
+        }
+
+        if (rx_data_ready)
+        {
+            save_bt_to_eeprom();
+            rx_data_ready = 0;
+            update_lcd();
+        }
 
         if (idle_counter > SLEEP_TIMEOUT)
         {
@@ -262,103 +371,132 @@ void main()
         if (!input(BTN_UPLOAD))
         {
             idle_counter = 0;
-            while (!input(BTN_UPLOAD))
+            int16 hold_counter = 0;
+
+            while (!input(BTN_UPLOAD) && hold_counter < 50)
             {
-                restart_wdt();
+                delay_ms(10);
+                hold_counter++;
             }
 
-            if (morse_index > 0)
+            if (hold_counter >= 50)
             {
-                char final_char = decode_morse(morse_buffer);
-                if (text_index < 20 && final_char != '?')
+                if (text_index > 0)
                 {
-                    text_buffer[text_index++] = final_char;
-                    text_buffer[text_index] = '\0';
-                    save_text_to_eeprom();
+                    fprintf(BT_MODUL, "%s\r\n", text_buffer);
+                    output_high(BUZZER_PIN);
+                    delay_ms(100);
+                    output_low(BUZZER_PIN);
                 }
+
+                while (!input(BTN_UPLOAD))
+                    ;
+
+                text_index = 0;
+                text_buffer[0] = '\0';
                 morse_index = 0;
                 morse_buffer[0] = '\0';
+                save_text_to_eeprom();
+
+                lcd_putc('\f');
+                lcd_locate(1, 1);
+                printf(lcd_putc, "VERI GONDERILDI");
+                delay_ms(1000);
+
+                lcd_putc('\f');
+                lcd_locate(1, 1);
+                printf(lcd_putc, "MOD: YAZIM");
                 update_lcd();
+            }
+            else
+            {
+                while (!input(BTN_UPLOAD))
+                    ;
+
+                if (morse_index > 0)
+                {
+                    char final_char = decode_morse(morse_buffer);
+                    if (text_index < 20 && final_char != '?')
+                    {
+                        text_buffer[text_index++] = final_char;
+                        text_buffer[text_index] = '\0';
+                        save_text_to_eeprom();
+                    }
+                    morse_index = 0;
+                    morse_buffer[0] = '\0';
+                    update_lcd();
+                }
             }
         }
 
         if (!input(BTN_DELETE))
         {
-            idle_counter = 0;
-            while (!input(BTN_DELETE))
+            delay_ms(20);
+            if (!input(BTN_DELETE))
             {
-                restart_wdt();
-            }
+                idle_counter = 0;
 
-            if (morse_index > 0)
-                morse_buffer[--morse_index] = '\0';
-            else if (text_index > 0)
-            {
-                text_buffer[--text_index] = '\0';
-                save_text_to_eeprom();
+                if (morse_index > 0)
+                {
+                    morse_buffer[--morse_index] = '\0';
+                }
+                else if (text_index > 0)
+                {
+                    text_buffer[--text_index] = '\0';
+                    save_text_to_eeprom();
+                }
+                update_lcd();
+
+                while (!input(BTN_DELETE))
+                    ;
             }
-            update_lcd();
         }
 
-        // --- NORMAL RESET (Sadece ekranı temizler) ---
         if (!input(BTN_RESET))
         {
             idle_counter = 0;
             while (!input(BTN_RESET))
-            {
-                restart_wdt();
-            }
+                ;
 
             text_index = 0;
             text_buffer[0] = '\0';
             morse_index = 0;
             morse_buffer[0] = '\0';
-            // Not: Normal reset sadece RAM'i siler, EEPROM'u ellemiyor (eski kodun gibi)
-            // Eğer normal resette de eeprom silinsin istiyorsan buraya save_text_to_eeprom(); ekle
+
             update_lcd();
         }
 
-        // --- HARD RESET (B4 - EEPROM TEMİZLEME) ---
         if (!input(BTN_HARD_RESET))
         {
             idle_counter = 0;
 
-            // Kullanıcıya bilgi ver
             lcd_putc('\f');
             lcd_locate(1, 1);
             printf(lcd_putc, "FORMAT ATILIYOR!");
-            output_high(BUZZER_PIN); // Sesli uyarı
+            output_high(BUZZER_PIN);
             delay_ms(200);
             output_low(BUZZER_PIN);
 
-            // Tuş bırakılana kadar bekle
             while (!input(BTN_HARD_RESET))
-            {
-                restart_wdt();
-            }
+                ;
 
-            // EEPROM TEMİZLİĞİ
             int8 i;
-            // İlk 30 adresi 0 yapıyoruz (text uzunluğu ve karakterler)
-            for (i = 0; i < 30; i++)
+            for (i = 0; i < 100; i++)
             {
                 write_eeprom(i, 0);
-                restart_wdt(); // Yazma işlemi sırasında WDT resetle
             }
 
-            // Değişkenleri sıfırla
             text_index = 0;
             text_buffer[0] = '\0';
             morse_index = 0;
             morse_buffer[0] = '\0';
+            rx_display_buffer[0] = '\0';
 
-            // Ekranı güncelle
             lcd_putc('\f');
             lcd_locate(1, 1);
             printf(lcd_putc, "MOD: YAZIM");
             update_lcd();
 
-            // İşlem bitti sesi
             output_high(BUZZER_PIN);
             delay_ms(50);
             output_low(BUZZER_PIN);
