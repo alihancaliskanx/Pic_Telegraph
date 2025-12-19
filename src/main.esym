@@ -1,7 +1,7 @@
-D G "__PCM__" 0 245 ""5.007""
-D G "__DEVICE__" 0 245 "887"
-D G "__DATE__" 0 245 ""18-Ara-25""
-D G "__TIME__" 0 245 ""09:04:22"" "Standard Header file for the PIC16F887 device ////////////////"
+D G "__PCM__" 0 350 ""5.007""
+D G "__DEVICE__" 0 350 "887"
+D G "__DATE__" 0 350 ""19-Ara-25""
+D G "__TIME__" 0 350 ""16:20:27"" "Standard Header file for the PIC16F887 device ////////////////"
 c L "set_tris_a" 1 5 15 "FUNCTION"
 v L "value" 1 30 "int8" `54 
 f B "set_tris_a" 1 30 "void(int8 value)" `53 
@@ -1254,13 +1254,13 @@ V L "n" 5 1322 "int16" `885
 V L "pivot" 5 1323 "int16" `886 
 V L "val" 5 1324 "sint8" `887 
 C L "bsearch" 5 397 1 "FUNCTION"
-D G "LCD_RS_PIN" 0 10 "PIN_D1"
-D G "LCD_RW_PIN" 0 11 "PIN_D2"
-D G "LCD_ENABLE_PIN" 0 12 "PIN_D3"
-D G "LCD_DATA4" 0 13 "PIN_D4"
-D G "LCD_DATA5" 0 14 "PIN_D5"
-D G "LCD_DATA6" 0 15 "PIN_D6"
-D G "LCD_DATA7" 0 16 "PIN_D7"
+D G "LCD_RS_PIN" 0 9 "PIN_D1"
+D G "LCD_RW_PIN" 0 10 "PIN_D2"
+D G "LCD_ENABLE_PIN" 0 11 "PIN_D3"
+D G "LCD_DATA4" 0 12 "PIN_D4"
+D G "LCD_DATA5" 0 13 "PIN_D5"
+D G "LCD_DATA6" 0 14 "PIN_D6"
+D G "LCD_DATA7" 0 15 "PIN_D7"
 D G "__LCD_C__" 6 76 ""
 T G "LCD_PIN_MAP" 6 90 "{int1 enable,int1 rs,int1 rw,int1 unused,int4 data}" `897  "this is to improve compatability with previous LCD drivers that accepted"
 D G "lcd_output_enable" 6 112 "(x) output_bit(LCD_ENABLE_PIN, x)"
@@ -1310,46 +1310,58 @@ V L "on" 6 443 "int8" `928
 F G "lcd_cursor_on" 6 444 "void(int8 on)" `927 
 C L "lcd_cursor_on" 6 2 1 "FUNCTION"
 C L "lcd_cursor_on" 6 2 1 "FUNCTION"
-D G "LED_PIN" 0 20 "PIN_A0"
-D G "BUZZER_PIN" 0 21 "PIN_A1"
-D G "BTN_SIGNAL" 0 24 "PIN_B0"
-D G "BTN_UPLOAD" 0 25 "PIN_B1"
-D G "BTN_DELETE" 0 26 "PIN_B2"
-D G "BTN_RESET" 0 27 "PIN_B3"
-V G "morse_buffer" 0 30 "int8[10]" `929 
-V G "text_buffer" 0 31 "int8[21]" `930 
-V G "morse_index" 0 32 "int8" `931 
-V G "text_index" 0 33 "int8" `932 
-V G "press_counter" 0 36 "int16" `933 
-V G "btn_prev_state" 0 37 "int1" `934 
-V G "update_needed" 0 38 "int1" `935 
-V G "morse_tree" 0 41 "[64]" `936 
-C L "decode_morse" 0 19 1 "FUNCTION"
-V L "code" 0 48 "*int8" `940 
-F G "decode_morse" 0 49 "int8(*int8 code)" `939 
-V L "i" 0 50 "int8" `941 
-V L "len" 0 50 "int8" `942 
-V L "index" 0 51 "int8" `943 
-V L "x" 0 69 "int8" `945 
-V L "y" 0 69 "int8" `946 
-F G "lcd_locate" 0 70 "void(int8 x,int8 y)" `944 
-V L "address" 0 71 "int8" `947 
-F G "update_lcd" 0 95 "void()" `948 
-V L "i" 0 96 "int8" `949 
-V L "len" 0 96 "int8" `950 
-V L "preview_char" 0 97 "int8" `951 
-C L "timer1_isr" 0 19 1 "FUNCTION"
-F G "timer1_isr" 0 127 "void()" `957 
-V L "btn_current" 0 129 "int1" `958 
-C L "timer1_isr" 0 19 1 "FUNCTION"
-C L "MAIN" 0 19 1 "FUNCTION"
-F G "MAIN" 0 161 "void()" `959 
-C L "MAIN" 0 19 1 "FUNCTION"
-C L "MAIN" 0 19 1 "FUNCTION"
-C L "MAIN" 0 19 1 "FUNCTION"
-V L "final_char" 0 202 "int8" `964 
-C L "MAIN" 0 19 1 "FUNCTION"
-C L "MAIN" 0 19 1 "FUNCTION"
+D G "LED_PIN" 0 18 "PIN_A0"
+D G "BUZZER_PIN" 0 19 "PIN_A1"
+D G "BTN_SIGNAL" 0 21 "PIN_B0"
+D G "BTN_UPLOAD" 0 22 "PIN_B1"
+D G "BTN_DELETE" 0 23 "PIN_B2"
+D G "BTN_RESET" 0 24 "PIN_B3"
+D G "BTN_HARD_RESET" 0 25 "PIN_B4" "YENİ: Hard Reset Pini"
+V G "morse_buffer" 0 27 "int8[10]" `929 
+V G "text_buffer" 0 28 "int8[21]" `930 
+V G "morse_index" 0 29 "int8" `931 
+V G "text_index" 0 30 "int8" `932 
+V G "press_counter" 0 32 "int16" `933 
+V G "idle_counter" 0 33 "int16" `934 
+D G "SLEEP_TIMEOUT" 0 34 "3000"
+V G "btn_prev_state" 0 36 "int1" `935 
+V G "update_needed" 0 37 "int1" `936 
+V G "morse_tree" 0 39 "[64]" `937 
+F G "save_text_to_eeprom" 0 46 "void()" `940 
+V L "i" 0 47 "int8" `941 
+F G "load_text_from_eeprom" 0 56 "void()" `942 
+V L "i" 0 57 "int8" `943 
+V L "code" 0 68 "*int8" `945 
+F G "decode_morse" 0 69 "int8(*int8 code)" `944 
+V L "i" 0 70 "int8" `946 
+V L "len" 0 70 "int8" `947 
+V L "index" 0 71 "int8" `948 
+V L "x" 0 89 "int8" `950 
+V L "y" 0 89 "int8" `951 
+F G "lcd_locate" 0 90 "void(int8 x,int8 y)" `949 
+V L "address" 0 91 "int8" `952 
+F G "update_lcd" 0 115 "void()" `953 
+V L "i" 0 116 "int8" `954 
+V L "len" 0 116 "int8" `955 
+V L "preview_char" 0 117 "int8" `956 
+F G "enter_sleep_mode" 0 145 "void()" `962 
+C L "enter_sleep_mode" 0 159 1 "FUNCTION"
+F G "timer1_isr" 0 176 "void()" `965 
+V L "btn_current" 0 184 "int1" `966 
+F G "MAIN" 0 217 "void()" `967 
+V L "final_char" 0 272 "int8" `972 
+C L "MAIN" 0 159 1 "FUNCTION"
+C L "MAIN" 0 159 2 "FUNCTION"
+C L "MAIN" 0 159 1 "FUNCTION"
+C L "MAIN" 0 159 1 "FUNCTION"
+C L "MAIN" 0 159 1 "FUNCTION"
+C L "MAIN" 0 159 1 "FUNCTION"
+C L "MAIN" 0 159 1 "FUNCTION"
+V L "i" 0 341 "int8" `974  "İlk 30 adresi 0 yapıyoruz (text uzunluğu ve karakterler)"
+C L "MAIN" 0 159 1 "FUNCTION"
+C L "MAIN" 0 159 1 "FUNCTION"
+C L "MAIN" 0 159 1 "FUNCTION"
+C L "MAIN" 0 159 1 "FUNCTION"
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep_ulpwu" 1 0

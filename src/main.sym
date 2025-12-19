@@ -1,10 +1,10 @@
 004-005 @READ_PROGRAM_MEMORY8.P1
 004-005 @WRITE_PROGRAM_MEMORY8.P2
-015     CCP_1_LOW
 015     CCP_1
+015     CCP_1_LOW
 016     CCP_1_HIGH
-01B     CCP_2_LOW
 01B     CCP_2
+01B     CCP_2_LOW
 01C     CCP_2_HIGH
 020     @INTERRUPT_AREA
 021     @INTERRUPT_AREA
@@ -20,53 +20,63 @@
 04C     morse_index
 04D     text_index
 04E-04F press_counter
-050.0   btn_prev_state
-050.1   update_needed
-051     MAIN.final_char
-052     update_lcd.i
-052     lcd_init.i
-052     MAIN.@SCRATCH1
-053     update_lcd.len
-053     lcd_init.@SCRATCH1
-053     MAIN.@SCRATCH2
-054     update_lcd.preview_char
-055     lcd_locate.x
-055-056 decode_morse.code
-055     update_lcd.@SCRATCH1
-055     @PSTRINGR_917.@SCRATCH1
-055     @PSTRINGC7_917.@SCRATCH1
-056     lcd_locate.y
-056     @PSTRINGR_917.@SCRATCH2
-056     @PSTRINGC7_917.@SCRATCH2
-057     decode_morse.i
-057     lcd_locate.address
-057     @PSTRINGC7_917.@SCRATCH3
-058     decode_morse.len
-058     lcd_locate.@SCRATCH1
-058     @PSTRINGC7_917.@SCRATCH4
-059     decode_morse.index
-059     lcd_putc.c
-05A     @delay_ms1.P1
-05A     lcd_gotoxy.x
-05A-05B strlen.s
-05A     decode_morse.@SCRATCH1
-05B     lcd_gotoxy.y
-05C     lcd_gotoxy.address
-05C-05D strlen.sc
-05D     lcd_gotoxy.@SCRATCH1
-05E     lcd_send_byte.address
-05E     strlen.@SCRATCH1
-05F     lcd_send_byte.n
-060     lcd_read_byte.low
-060     lcd_send_byte.@SCRATCH1
-061     lcd_send_nibble.n
-061     lcd_read_byte.high
-062     lcd_read_nibble.n
-062     lcd_read_byte.@SCRATCH1
-063     lcd_read_nibble.@SCRATCH1
-064.0   timer1_isr.btn_current
-065     timer1_isr.@SCRATCH1
-066     timer1_isr.@SCRATCH2
+050-051 idle_counter
+052.0   btn_prev_state
+052.1   update_needed
+053     MAIN.final_char
+054     MAIN.i
+055     save_text_to_eeprom.i
+055     lcd_init.i
+055     update_lcd.i
+055     load_text_from_eeprom.i
+055     enter_sleep_mode.@SCRATCH1
+055     MAIN.@SCRATCH1
+056     update_lcd.len
+056     lcd_init.@SCRATCH1
+056     save_text_to_eeprom.@SCRATCH1
+056     load_text_from_eeprom.@SCRATCH1
+056     MAIN.@SCRATCH2
+057     update_lcd.preview_char
+057     save_text_to_eeprom.@SCRATCH2
+057     load_text_from_eeprom.@SCRATCH2
+058     lcd_locate.x
+058-059 decode_morse.code
+058     load_text_from_eeprom.@SCRATCH3
+058     update_lcd.@SCRATCH1
+058     @PSTRINGR_917.@SCRATCH1
+058     @PSTRINGC7_917.@SCRATCH1
+059     lcd_locate.y
+059     @PSTRINGR_917.@SCRATCH2
+059     @PSTRINGC7_917.@SCRATCH2
+05A     lcd_locate.address
+05A     decode_morse.i
+05A     @PSTRINGC7_917.@SCRATCH3
+05B     decode_morse.len
+05B     lcd_locate.@SCRATCH1
+05B     @PSTRINGC7_917.@SCRATCH4
+05C     decode_morse.index
+05C     lcd_putc.c
+05D     @delay_ms1.P1
+05D-05E strlen.s
+05D     lcd_gotoxy.x
+05D     decode_morse.@SCRATCH1
+05E     lcd_gotoxy.y
+05F-060 strlen.sc
+05F     lcd_gotoxy.address
+060     lcd_gotoxy.@SCRATCH1
+061     lcd_send_byte.address
+061     strlen.@SCRATCH1
+062     lcd_send_byte.n
+063     lcd_read_byte.low
+063     lcd_send_byte.@SCRATCH1
+064     lcd_read_byte.high
+064     lcd_send_nibble.n
+065     lcd_read_nibble.n
+065     lcd_read_byte.@SCRATCH1
+066     lcd_read_nibble.@SCRATCH1
+067.0   timer1_isr.btn_current
+068     timer1_isr.@SCRATCH1
+069     timer1_isr.@SCRATCH2
 077     @SCRATCH
 078     @SCRATCH
 078     _RETURN_
@@ -114,43 +124,50 @@ ROM Allocation:
 000035  LCD_INIT_STRING.data
 000039  morse_tree.call
 00003D  morse_tree.data
-00007D  @const954.call
-00007F  timer1_isr
-0000CE  @const962.call
-0000D8  @const963.call
-0000DE  @delay_ms1
-0000F2  lcd_send_nibble
-00011E  lcd_read_nibble
-00014F  lcd_send_byte
-000157  lcd_read_byte
-0001AB  lcd_init
-0001E8  lcd_locate
-00020D  lcd_gotoxy
-00021F  lcd_putc
-00024B  @PSTRINGC7_917
-000296  @PSTRINGR_917
-0002AC  strlen
-0002CA  decode_morse
-000300  update_lcd
-000356  MAIN
-000356  @cinit1
-000370  @cinit2
+00007D  @const959.call
+00007F  @const963.call
+000086  @const964.call
+00008C  timer1_isr
+0000E6  @const970.call
+0000ED  @const971.call
+0000F3  @const973.call
+0000FC  @const975.call
+000102  @delay_ms1
+000116  lcd_send_nibble
+000142  lcd_read_nibble
+000173  lcd_send_byte
+00017B  lcd_read_byte
+0001CF  lcd_init
+00020A  load_text_from_eeprom
+000237  lcd_locate
+00025C  lcd_gotoxy
+00026E  lcd_putc
+00029A  @PSTRINGC7_917
+0002E5  @PSTRINGR_917
+0002FB  strlen
+000319  decode_morse
+00034F  update_lcd
+0003A5  enter_sleep_mode
+000412  save_text_to_eeprom
+000454  MAIN
+000454  @cinit1
+000470  @cinit2
 0136  StrtoulGO
 0136  StrtolGO
 
 Project Directory:
-    C:\Users\Alihan\Desktop\DERS\Pic_Telegraph\temp\Pic_Telegraph\src\
+    C:\Users\Alihan\Desktop\DERS\Pic_Telegraph\src\
 
 Project Files:
-    main.c                                                  [18-Ara-25 09:04  CRC=89D557FF]
-    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h [21-Haz-13 16:04  CRC=9FD133B5]
-    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h [14-Tem-11 10:13  CRC=23EDEC8F]
-    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h [16-Tem-10 09:27  CRC=897CEC6C]
-    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h [03-Oca-08 13:55  CRC=2D1F019F]
-    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdlib.h [08-Haz-11 14:39  CRC=0B6669CF]
-    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\LCD.C [23-Aðu-12 09:01  CRC=D28E8746]
+    main.c                                                  [19-Ara-25 16:20  CRC=D451D6CD]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h [21-Haz-13 16:04  CRC=9FD133B5]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h [14-Tem-11 10:13  CRC=23EDEC8F]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h [16-Tem-10 09:27  CRC=897CEC6C]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h [03-Oca-08 13:55  CRC=2D1F019F]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdlib.h [08-Haz-11 14:39  CRC=0B6669CF]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\LCD.C [23-Aðu-12 09:01  CRC=D28E8746]
 
-Source signature=B4B3DEA9
+Source signature=FF305D77
 
 Units:
     main (main)
