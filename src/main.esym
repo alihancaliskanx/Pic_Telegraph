@@ -1,7 +1,7 @@
-D G "__PCM__" 0 511 ""5.007""
-D G "__DEVICE__" 0 511 "887"
-D G "__DATE__" 0 511 ""19-Ara-25""
-D G "__TIME__" 0 511 ""19:18:28"" "Standard Header file for the PIC16F887 device ////////////////"
+D G "__PCM__" 0 592 ""5.007""
+D G "__DEVICE__" 0 592 "887"
+D G "__DATE__" 0 592 ""20-Ara-25""
+D G "__TIME__" 0 592 ""10:42:56"" "Standard Header file for the PIC16F887 device ////////////////"
 c L "set_tris_a" 1 5 15 "FUNCTION"
 v L "value" 1 30 "int8" `54 
 f B "set_tris_a" 1 30 "void(int8 value)" `53 
@@ -1315,7 +1315,7 @@ D G "BTN_SIGNAL" 0 21 "PIN_B0"
 D G "BTN_UPLOAD" 0 22 "PIN_B1"
 D G "BTN_DELETE" 0 23 "PIN_B2"
 D G "BTN_RESET" 0 24 "PIN_B3"
-D G "BTN_HARD_RESET" 0 25 "PIN_B4"
+D G "BTN_MODE" 0 25 "PIN_B4"
 V G "morse_buffer" 0 27 "int8[10]" `931 
 V G "text_buffer" 0 28 "int8[21]" `932 
 V G "morse_index" 0 29 "int8" `933 
@@ -1332,45 +1332,56 @@ V G "update_needed" 0 42 "int1" `942
 V G "scroll_tick" 0 44 "int8" `943 
 V G "scroll_now" 0 45 "int1" `944 
 V G "scroll_pos" 0 46 "int8" `945 
-V G "morse_tree" 0 48 "[64]" `946 
-F G "save_text_to_eeprom" 0 55 "void()" `949 
-V L "i" 0 56 "int8" `950 
-F G "load_text_from_eeprom" 0 65 "void()" `951 
-V L "i" 0 66 "int8" `952 
-F G "save_bt_to_eeprom" 0 78 "void()" `953 
-V L "i" 0 79 "int8" `954 
-V L "len" 0 79 "int8" `955 
-F G "load_bt_from_eeprom" 0 89 "void()" `956 
-V L "i" 0 90 "int8" `957 
-V L "len" 0 90 "int8" `958 
-V L "code" 0 102 "*int8" `960 
-F G "decode_morse" 0 103 "int8(*int8 code)" `959 
-V L "i" 0 104 "int8" `961 
-V L "len" 0 104 "int8" `962 
-V L "index" 0 105 "int8" `963 
-V L "x" 0 123 "int8" `965 
-V L "y" 0 123 "int8" `966 
-F G "lcd_locate" 0 124 "void(int8 x,int8 y)" `964 
-V L "address" 0 125 "int8" `967 
-F G "update_scroll_line" 0 149 "void()" `968 
-V L "len" 0 150 "int8" `969 
-V L "i" 0 150 "int8" `970 
-V L "current_char_idx" 0 150 "int8" `971 
-V L "gap_size" 0 151 "int8" `972 
-F G "update_lcd" 0 171 "void()" `976 
-V L "i" 0 172 "int8" `977 
-V L "len" 0 172 "int8" `978 
-V L "preview_char" 0 173 "int8" `979 
-F G "enter_sleep_mode" 0 201 "void()" `985 
-F G "serial_isr" 0 229 "void()" `988 
-V L "incoming" 0 230 "int8" `989 
-F G "timer1_isr" 0 258 "void()" `990 
-V L "btn_current" 0 266 "int1" `991 
-F G "timer0_isr" 0 300 "void()" `992 
-F G "MAIN" 0 310 "void()" `993 
-V L "hold_counter" 0 374 "int16" `998 
-V L "final_char" 0 418 "int8" `1003 
-V L "i" 0 483 "int8" `1005 
+V G "app_mode" 0 48 "int1" `946 
+V G "morse_tree" 0 50 "[64]" `947 
+V L "time" 0 56 "int16" `951 
+F G "wdt_delay_ms" 0 57 "void(int16 time)" `950 
+V L "i" 0 58 "int16" `952 
+F G "save_text_to_eeprom" 0 67 "void()" `953 
+V L "i" 0 68 "int8" `954 
+F G "load_text_from_eeprom" 0 78 "void()" `955 
+V L "i" 0 79 "int8" `956 
+F G "save_bt_to_eeprom" 0 92 "void()" `957 
+V L "i" 0 93 "int8" `958 
+V L "len" 0 93 "int8" `959 
+F G "load_bt_from_eeprom" 0 104 "void()" `960 
+V L "i" 0 105 "int8" `961 
+V L "len" 0 105 "int8" `962 
+V L "code" 0 118 "*int8" `964 
+F G "decode_morse" 0 119 "int8(*int8 code)" `963 
+V L "i" 0 120 "int8" `965 
+V L "len" 0 120 "int8" `966 
+V L "index" 0 121 "int8" `967 
+V L "x" 0 139 "int8" `969 
+V L "y" 0 139 "int8" `970 
+F G "lcd_locate" 0 140 "void(int8 x,int8 y)" `968 
+V L "address" 0 141 "int8" `971 
+F G "update_scroll_line" 0 165 "void()" `972 
+V L "len" 0 166 "int8" `973 
+V L "i" 0 166 "int8" `974 
+V L "current_char_idx" 0 166 "int8" `975 
+V L "gap_size" 0 167 "int8" `976 
+F G "update_lcd" 0 190 "void()" `982 
+V L "i" 0 191 "int8" `983 
+V L "len" 0 191 "int8" `984 
+V L "preview_char" 0 192 "int8" `985 
+F G "send_nmea_packet" 0 232 "void()" `993 
+V L "type_char" 0 233 "int8" `994 
+V L "checksum" 0 234 "int8" `995 
+V L "i" 0 235 "int8" `996 
+V L "len" 0 235 "int8" `997 
+V L "char_to_send" 0 236 "int8" `998 
+F G "enter_sleep_mode" 0 259 "void()" `1004 
+F G "full_wipe_reset" 0 290 "void()" `1006 
+F G "serial_isr" 0 316 "void()" `1008 
+V L "incoming" 0 317 "int8" `1009 
+F G "timer1_isr" 0 342 "void()" `1010 
+V L "btn_current" 0 347 "int1" `1011 
+F G "timer0_isr" 0 384 "void()" `1012 
+F G "MAIN" 0 394 "void()" `1013 
+V L "hold_counter" 0 490 "int16" `1017 
+V L "final_char" 0 530 "int8" `1019 
+V L "reset_hold" 0 566 "int16" `1020 
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep_ulpwu" 1 0
