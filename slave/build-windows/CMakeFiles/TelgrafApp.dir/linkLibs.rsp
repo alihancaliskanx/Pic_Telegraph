@@ -1,1 +1,0 @@
- "/usr/x86_64-w64-mingw32/lib/libQt6Widgets.dll.a" "/usr/x86_64-w64-mingw32/lib/libQt6SerialPort.dll.a" "/usr/x86_64-w64-mingw32/lib/libQt6Gui.dll.a" -ld3d11 -ldxgi -ldxguid -ld3d12 "/usr/x86_64-w64-mingw32/lib/libQt6Core.dll.a" -lmpr -luserenv -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

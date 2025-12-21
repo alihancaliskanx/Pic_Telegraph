@@ -1,5 +1,0 @@
-/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-linux/CMakeFiles/TelgrafApp.dir
-/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-linux/CMakeFiles/edit_cache.dir
-/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-linux/CMakeFiles/rebuild_cache.dir
-/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-linux/CMakeFiles/TelgrafApp_autogen_timestamp_deps.dir
-/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-linux/CMakeFiles/TelgrafApp_autogen.dir
