@@ -98,6 +98,7 @@
  /usr/include/c++/15.2.1/bits/allocated_ptr.h
  /usr/include/c++/15.2.1/bits/allocator.h
  /usr/include/c++/15.2.1/bits/atomic_base.h
+ /usr/include/c++/15.2.1/bits/atomic_futex.h
  /usr/include/c++/15.2.1/bits/atomic_lockfree_defines.h
  /usr/include/c++/15.2.1/bits/basic_string.h
  /usr/include/c++/15.2.1/bits/basic_string.tcc
@@ -146,6 +147,8 @@
  /usr/include/c++/15.2.1/bits/specfun.h
  /usr/include/c++/15.2.1/bits/std_abs.h
  /usr/include/c++/15.2.1/bits/std_function.h
+ /usr/include/c++/15.2.1/bits/std_mutex.h
+ /usr/include/c++/15.2.1/bits/std_thread.h
  /usr/include/c++/15.2.1/bits/stl_algo.h
  /usr/include/c++/15.2.1/bits/stl_algobase.h
  /usr/include/c++/15.2.1/bits/stl_bvector.h
@@ -174,6 +177,7 @@
  /usr/include/c++/15.2.1/bits/string_view.tcc
  /usr/include/c++/15.2.1/bits/stringfwd.h
  /usr/include/c++/15.2.1/bits/uniform_int_dist.h
+ /usr/include/c++/15.2.1/bits/unique_lock.h
  /usr/include/c++/15.2.1/bits/unique_ptr.h
  /usr/include/c++/15.2.1/bits/unordered_map.h
  /usr/include/c++/15.2.1/bits/unordered_set.h
@@ -191,6 +195,7 @@
  /usr/include/c++/15.2.1/cmath
  /usr/include/c++/15.2.1/compare
  /usr/include/c++/15.2.1/concepts
+ /usr/include/c++/15.2.1/condition_variable
  /usr/include/c++/15.2.1/cstddef
  /usr/include/c++/15.2.1/cstdint
  /usr/include/c++/15.2.1/cstdio
@@ -201,6 +206,7 @@
  /usr/include/c++/15.2.1/debug/assertions.h
  /usr/include/c++/15.2.1/debug/debug.h
  /usr/include/c++/15.2.1/exception
+ /usr/include/c++/15.2.1/experimental/source_location
  /usr/include/c++/15.2.1/ext/aligned_buffer.h
  /usr/include/c++/15.2.1/ext/alloc_traits.h
  /usr/include/c++/15.2.1/ext/atomicity.h
@@ -210,6 +216,7 @@
  /usr/include/c++/15.2.1/ext/type_traits.h
  /usr/include/c++/15.2.1/filesystem
  /usr/include/c++/15.2.1/functional
+ /usr/include/c++/15.2.1/future
  /usr/include/c++/15.2.1/initializer_list
  /usr/include/c++/15.2.1/iosfwd
  /usr/include/c++/15.2.1/iterator
@@ -217,6 +224,7 @@
  /usr/include/c++/15.2.1/list
  /usr/include/c++/15.2.1/map
  /usr/include/c++/15.2.1/memory
+ /usr/include/c++/15.2.1/mutex
  /usr/include/c++/15.2.1/new
  /usr/include/c++/15.2.1/numeric
  /usr/include/c++/15.2.1/optional
@@ -306,6 +314,7 @@
  /usr/include/qt6/QtCore/QSharedPointer
  /usr/include/qt6/QtCore/QString
  /usr/include/qt6/QtCore/QTextStream
+ /usr/include/qt6/QtCore/QThread
  /usr/include/qt6/QtCore/QUuid
  /usr/include/qt6/QtCore/QVariant
  /usr/include/qt6/QtCore/QtGlobal
@@ -399,6 +408,8 @@
  /usr/include/qt6/QtCore/qpoint.h
  /usr/include/qt6/QtCore/qprocess.h
  /usr/include/qt6/QtCore/qprocessordetection.h
+ /usr/include/qt6/QtCore/qproperty.h
+ /usr/include/qt6/QtCore/qpropertyprivate.h
  /usr/include/qt6/QtCore/qrandom.h
  /usr/include/qt6/QtCore/qrect.h
  /usr/include/qt6/QtCore/qrefcount.h
@@ -438,6 +449,7 @@
  /usr/include/qt6/QtCore/qtenvironmentvariables.h
  /usr/include/qt6/QtCore/qtextstream.h
  /usr/include/qt6/QtCore/qtformat_impl.h
+ /usr/include/qt6/QtCore/qthread.h
  /usr/include/qt6/QtCore/qtmetamacros.h
  /usr/include/qt6/QtCore/qtnoop.h
  /usr/include/qt6/QtCore/qtpreprocessorsupport.h
@@ -491,6 +503,12 @@
  /usr/include/qt6/QtGui/qtransform.h
  /usr/include/qt6/QtGui/qvalidator.h
  /usr/include/qt6/QtGui/qwindowdefs.h
+ /usr/include/qt6/QtSerialPort/QSerialPort
+ /usr/include/qt6/QtSerialPort/QSerialPortInfo
+ /usr/include/qt6/QtSerialPort/qserialport.h
+ /usr/include/qt6/QtSerialPort/qserialportglobal.h
+ /usr/include/qt6/QtSerialPort/qserialportinfo.h
+ /usr/include/qt6/QtSerialPort/qtserialportexports.h
  /usr/include/qt6/QtWidgets/QApplication
  /usr/include/qt6/QtWidgets/QComboBox
  /usr/include/qt6/QtWidgets/QGroupBox

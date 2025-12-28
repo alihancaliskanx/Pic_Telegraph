@@ -163,6 +163,7 @@
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/allocated_ptr.h
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/allocator.h
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/atomic_base.h
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/atomic_futex.h
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/atomic_lockfree_defines.h
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/basic_string.h
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/basic_string.tcc
@@ -211,6 +212,8 @@
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/specfun.h
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/std_abs.h
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/std_function.h
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/std_mutex.h
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/std_thread.h
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stl_algo.h
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stl_algobase.h
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stl_bvector.h
@@ -239,6 +242,7 @@
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/string_view.tcc
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stringfwd.h
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/uniform_int_dist.h
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/unique_lock.h
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/unique_ptr.h
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/unordered_map.h
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/unordered_set.h
@@ -256,6 +260,7 @@
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/cmath
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/compare
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/concepts
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/condition_variable
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/cstddef
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/cstdint
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/cstdio
@@ -266,6 +271,7 @@
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/debug/assertions.h
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/debug/debug.h
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/exception
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/experimental/source_location
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/ext/aligned_buffer.h
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/ext/alloc_traits.h
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/ext/atomicity.h
@@ -275,6 +281,7 @@
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/ext/type_traits.h
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/filesystem
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/functional
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/future
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/initializer_list
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/iosfwd
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/iterator
@@ -282,6 +289,7 @@
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/list
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/map
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/memory
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/mutex
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/new
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/numeric
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/optional
@@ -372,6 +380,7 @@
  /usr/x86_64-w64-mingw32/include/qt6/QtCore/QSharedPointer
  /usr/x86_64-w64-mingw32/include/qt6/QtCore/QString
  /usr/x86_64-w64-mingw32/include/qt6/QtCore/QTextStream
+ /usr/x86_64-w64-mingw32/include/qt6/QtCore/QThread
  /usr/x86_64-w64-mingw32/include/qt6/QtCore/QUuid
  /usr/x86_64-w64-mingw32/include/qt6/QtCore/QVariant
  /usr/x86_64-w64-mingw32/include/qt6/QtCore/QtGlobal
@@ -465,6 +474,8 @@
  /usr/x86_64-w64-mingw32/include/qt6/QtCore/qpoint.h
  /usr/x86_64-w64-mingw32/include/qt6/QtCore/qprocess.h
  /usr/x86_64-w64-mingw32/include/qt6/QtCore/qprocessordetection.h
+ /usr/x86_64-w64-mingw32/include/qt6/QtCore/qproperty.h
+ /usr/x86_64-w64-mingw32/include/qt6/QtCore/qpropertyprivate.h
  /usr/x86_64-w64-mingw32/include/qt6/QtCore/qrandom.h
  /usr/x86_64-w64-mingw32/include/qt6/QtCore/qrect.h
  /usr/x86_64-w64-mingw32/include/qt6/QtCore/qrefcount.h
@@ -504,6 +515,7 @@
  /usr/x86_64-w64-mingw32/include/qt6/QtCore/qtenvironmentvariables.h
  /usr/x86_64-w64-mingw32/include/qt6/QtCore/qtextstream.h
  /usr/x86_64-w64-mingw32/include/qt6/QtCore/qtformat_impl.h
+ /usr/x86_64-w64-mingw32/include/qt6/QtCore/qthread.h
  /usr/x86_64-w64-mingw32/include/qt6/QtCore/qtmetamacros.h
  /usr/x86_64-w64-mingw32/include/qt6/QtCore/qtnoop.h
  /usr/x86_64-w64-mingw32/include/qt6/QtCore/qtpreprocessorsupport.h
@@ -558,6 +570,12 @@
  /usr/x86_64-w64-mingw32/include/qt6/QtGui/qvalidator.h
  /usr/x86_64-w64-mingw32/include/qt6/QtGui/qwindowdefs.h
  /usr/x86_64-w64-mingw32/include/qt6/QtGui/qwindowdefs_win.h
+ /usr/x86_64-w64-mingw32/include/qt6/QtSerialPort/QSerialPort
+ /usr/x86_64-w64-mingw32/include/qt6/QtSerialPort/QSerialPortInfo
+ /usr/x86_64-w64-mingw32/include/qt6/QtSerialPort/qserialport.h
+ /usr/x86_64-w64-mingw32/include/qt6/QtSerialPort/qserialportglobal.h
+ /usr/x86_64-w64-mingw32/include/qt6/QtSerialPort/qserialportinfo.h
+ /usr/x86_64-w64-mingw32/include/qt6/QtSerialPort/qtserialportexports.h
  /usr/x86_64-w64-mingw32/include/qt6/QtWidgets/QApplication
  /usr/x86_64-w64-mingw32/include/qt6/QtWidgets/QComboBox
  /usr/x86_64-w64-mingw32/include/qt6/QtWidgets/QGroupBox

@@ -433,7 +433,22 @@ CMakeFiles/TelgrafApp.dir/main.cpp.o: \
  /usr/include/qt6/QtCore/qrandom.h /usr/include/c++/15.2.1/random \
  /usr/include/c++/15.2.1/bits/random.h \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/opt_random.h \
- /usr/include/c++/15.2.1/bits/random.tcc \
+ /usr/include/c++/15.2.1/bits/random.tcc /usr/include/qt6/QtCore/QThread \
+ /usr/include/qt6/QtCore/qthread.h /usr/include/c++/15.2.1/future \
+ /usr/include/c++/15.2.1/mutex /usr/include/c++/15.2.1/bits/std_mutex.h \
+ /usr/include/c++/15.2.1/bits/unique_lock.h \
+ /usr/include/c++/15.2.1/condition_variable \
+ /usr/include/c++/15.2.1/bits/atomic_futex.h \
+ /usr/include/c++/15.2.1/bits/std_thread.h \
+ /usr/include/qt6/QtSerialPort/QSerialPort \
+ /usr/include/qt6/QtSerialPort/qserialport.h \
+ /usr/include/qt6/QtCore/qproperty.h \
+ /usr/include/qt6/QtCore/qpropertyprivate.h \
+ /usr/include/c++/15.2.1/experimental/source_location \
+ /usr/include/qt6/QtSerialPort/qserialportglobal.h \
+ /usr/include/qt6/QtSerialPort/qtserialportexports.h \
+ /usr/include/qt6/QtSerialPort/QSerialPortInfo \
+ /usr/include/qt6/QtSerialPort/qserialportinfo.h \
  /usr/include/qt6/QtBluetooth/QBluetoothDeviceDiscoveryAgent \
  /usr/include/qt6/QtBluetooth/qbluetoothdevicediscoveryagent.h \
  /usr/include/qt6/QtBluetooth/qtbluetoothglobal.h \

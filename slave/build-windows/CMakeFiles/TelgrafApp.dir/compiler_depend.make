@@ -162,6 +162,7 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/allocated_ptr.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/allocator.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/atomic_base.h \
+  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/atomic_futex.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/atomic_lockfree_defines.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/basic_string.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/basic_string.tcc \
@@ -210,6 +211,8 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/specfun.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/std_abs.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/std_function.h \
+  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/std_mutex.h \
+  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/std_thread.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stl_algo.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stl_algobase.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stl_bvector.h \
@@ -238,6 +241,7 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/string_view.tcc \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stringfwd.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/uniform_int_dist.h \
+  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/unique_lock.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/unique_ptr.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/unordered_map.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/unordered_set.h \
@@ -255,6 +259,7 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/cmath \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/compare \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/concepts \
+  /usr/x86_64-w64-mingw32/include/c++/15.2.0/condition_variable \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/cstddef \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/cstdint \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/cstdio \
@@ -265,6 +270,7 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/debug/assertions.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/debug/debug.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/exception \
+  /usr/x86_64-w64-mingw32/include/c++/15.2.0/experimental/source_location \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/ext/aligned_buffer.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/ext/alloc_traits.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/ext/atomicity.h \
@@ -274,6 +280,7 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/ext/type_traits.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/filesystem \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/functional \
+  /usr/x86_64-w64-mingw32/include/c++/15.2.0/future \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/initializer_list \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/iosfwd \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/iterator \
@@ -281,6 +288,7 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/list \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/map \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/memory \
+  /usr/x86_64-w64-mingw32/include/c++/15.2.0/mutex \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/new \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/numeric \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/optional \
@@ -371,6 +379,7 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
   /usr/x86_64-w64-mingw32/include/qt6/QtCore/QSharedPointer \
   /usr/x86_64-w64-mingw32/include/qt6/QtCore/QString \
   /usr/x86_64-w64-mingw32/include/qt6/QtCore/QTextStream \
+  /usr/x86_64-w64-mingw32/include/qt6/QtCore/QThread \
   /usr/x86_64-w64-mingw32/include/qt6/QtCore/QUuid \
   /usr/x86_64-w64-mingw32/include/qt6/QtCore/QVariant \
   /usr/x86_64-w64-mingw32/include/qt6/QtCore/QtGlobal \
@@ -464,6 +473,8 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
   /usr/x86_64-w64-mingw32/include/qt6/QtCore/qpoint.h \
   /usr/x86_64-w64-mingw32/include/qt6/QtCore/qprocess.h \
   /usr/x86_64-w64-mingw32/include/qt6/QtCore/qprocessordetection.h \
+  /usr/x86_64-w64-mingw32/include/qt6/QtCore/qproperty.h \
+  /usr/x86_64-w64-mingw32/include/qt6/QtCore/qpropertyprivate.h \
   /usr/x86_64-w64-mingw32/include/qt6/QtCore/qrandom.h \
   /usr/x86_64-w64-mingw32/include/qt6/QtCore/qrect.h \
   /usr/x86_64-w64-mingw32/include/qt6/QtCore/qrefcount.h \
@@ -503,6 +514,7 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
   /usr/x86_64-w64-mingw32/include/qt6/QtCore/qtenvironmentvariables.h \
   /usr/x86_64-w64-mingw32/include/qt6/QtCore/qtextstream.h \
   /usr/x86_64-w64-mingw32/include/qt6/QtCore/qtformat_impl.h \
+  /usr/x86_64-w64-mingw32/include/qt6/QtCore/qthread.h \
   /usr/x86_64-w64-mingw32/include/qt6/QtCore/qtmetamacros.h \
   /usr/x86_64-w64-mingw32/include/qt6/QtCore/qtnoop.h \
   /usr/x86_64-w64-mingw32/include/qt6/QtCore/qtpreprocessorsupport.h \
@@ -557,6 +569,12 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
   /usr/x86_64-w64-mingw32/include/qt6/QtGui/qvalidator.h \
   /usr/x86_64-w64-mingw32/include/qt6/QtGui/qwindowdefs.h \
   /usr/x86_64-w64-mingw32/include/qt6/QtGui/qwindowdefs_win.h \
+  /usr/x86_64-w64-mingw32/include/qt6/QtSerialPort/QSerialPort \
+  /usr/x86_64-w64-mingw32/include/qt6/QtSerialPort/QSerialPortInfo \
+  /usr/x86_64-w64-mingw32/include/qt6/QtSerialPort/qserialport.h \
+  /usr/x86_64-w64-mingw32/include/qt6/QtSerialPort/qserialportglobal.h \
+  /usr/x86_64-w64-mingw32/include/qt6/QtSerialPort/qserialportinfo.h \
+  /usr/x86_64-w64-mingw32/include/qt6/QtSerialPort/qtserialportexports.h \
   /usr/x86_64-w64-mingw32/include/qt6/QtWidgets/QApplication \
   /usr/x86_64-w64-mingw32/include/qt6/QtWidgets/QComboBox \
   /usr/x86_64-w64-mingw32/include/qt6/QtWidgets/QGroupBox \
@@ -809,8 +827,6 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
 
 /usr/x86_64-w64-mingw32/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginAdditionalTargetInfo.cmake:
 
-/usr/x86_64-w64-mingw32/lib/cmake/Qt6Network/Qt6QTlsBackendCertOnlyPluginTargets.cmake:
-
 /usr/x86_64-w64-mingw32/lib/cmake/Qt6Network/Qt6QTlsBackendCertOnlyPluginConfig.cmake:
 
 /usr/x86_64-w64-mingw32/lib/cmake/Qt6Network/Qt6QSchannelBackendPluginTargets.cmake:
@@ -983,8 +999,6 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
 
 /usr/x86_64-w64-mingw32/include/sec_api/stdlib_s.h:
 
-/usr/x86_64-w64-mingw32/include/sched.h:
-
 /usr/x86_64-w64-mingw32/include/qt6/QtWidgets/qtwidgetsglobal.h:
 
 /usr/x86_64-w64-mingw32/include/qt6/QtWidgets/qtwidgetsexports.h:
@@ -1055,6 +1069,18 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
 
 /usr/x86_64-w64-mingw32/include/qt6/QtWidgets/QComboBox:
 
+/usr/x86_64-w64-mingw32/include/qt6/QtSerialPort/qtserialportexports.h:
+
+/usr/x86_64-w64-mingw32/include/qt6/QtSerialPort/qserialportinfo.h:
+
+/usr/x86_64-w64-mingw32/lib/cmake/Qt6Network/Qt6QTlsBackendCertOnlyPluginTargets.cmake:
+
+/usr/x86_64-w64-mingw32/include/qt6/QtSerialPort/qserialportglobal.h:
+
+/usr/x86_64-w64-mingw32/include/qt6/QtSerialPort/QSerialPortInfo:
+
+/usr/x86_64-w64-mingw32/include/qt6/QtSerialPort/QSerialPort:
+
 /usr/x86_64-w64-mingw32/include/qt6/QtGui/qwindowdefs_win.h:
 
 /usr/x86_64-w64-mingw32/include/qt6/QtGui/qvalidator.h:
@@ -1083,7 +1109,27 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
 
 /usr/x86_64-w64-mingw32/include/qt6/QtGui/qpolygon.h:
 
-/usr/x86_64-w64-mingw32/include/c++/15.2.0/cstdio:
+/usr/x86_64-w64-mingw32/include/qt6/QtGui/qpixelformat.h:
+
+/usr/x86_64-w64-mingw32/include/qt6/QtGui/qpicture.h:
+
+/usr/x86_64-w64-mingw32/include/qt6/QtGui/qpen.h:
+
+/usr/x86_64-w64-mingw32/include/qt6/QtGui/qpalette.h:
+
+/usr/x86_64-w64-mingw32/include/qt6/QtGui/qkeysequence.h:
+
+/usr/x86_64-w64-mingw32/include/qt6/QtGui/qinputmethod.h:
+
+/usr/x86_64-w64-mingw32/include/qt6/QtGui/qtgui-config.h:
+
+/usr/x86_64-w64-mingw32/include/qt6/QtGui/qimage.h:
+
+/usr/x86_64-w64-mingw32/include/qt6/QtGui/qguiapplication_platform.h:
+
+/usr/x86_64-w64-mingw32/lib/cmake/Qt6SerialPort/Qt6SerialPortConfigVersionImpl.cmake:
+
+/usr/x86_64-w64-mingw32/include/qt6/QtGui/qguiapplication.h:
 
 /usr/x86_64-w64-mingw32/include/stdio.h:
 
@@ -1133,6 +1179,12 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
 
 /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/unique_ptr.h:
 
+/usr/x86_64-w64-mingw32/include/sched.h:
+
+/usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/unique_lock.h:
+
+/usr/x86_64-w64-mingw32/include/qt6/QtCore/qprocess.h:
+
 /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/uniform_int_dist.h:
 
 /usr/x86_64-w64-mingw32/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:
@@ -1177,7 +1229,13 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
 
 /usr/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake:
 
+/usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/std_thread.h:
+
 /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/std_function.h:
+
+/usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/std_mutex.h:
+
+/usr/x86_64-w64-mingw32/include/qt6/QtCore/qtextstream.h:
 
 /usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsAdditionalTargetInfo.cmake:
 
@@ -1204,8 +1262,6 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
 /usr/x86_64-w64-mingw32/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginTargets-none.cmake:
 
 /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/memoryfwd.h:
-
-/usr/x86_64-w64-mingw32/include/qt6/QtGui/qguiapplication_platform.h:
 
 /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/version.h:
 
@@ -1365,10 +1421,6 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
 
 /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/locale_classes.h:
 
-/usr/x86_64-w64-mingw32/lib/cmake/Qt6SerialPort/Qt6SerialPortConfigVersionImpl.cmake:
-
-/usr/x86_64-w64-mingw32/include/qt6/QtGui/qguiapplication.h:
-
 /usr/share/cmake/Modules/Platform/Windows-GNU.cmake:
 
 /usr/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:
@@ -1415,10 +1467,6 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
 
 /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsVersionlessTargets.cmake:
 
-/usr/x86_64-w64-mingw32/include/_mingw_off_t.h:
-
-/usr/x86_64-w64-mingw32/include/assert.h:
-
 /usr/x86_64-w64-mingw32/include/qt6/QtCore/qfunctionpointer.h:
 
 /usr/x86_64-w64-mingw32/include/qt6/QtCore/qhash.h:
@@ -1450,10 +1498,6 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
 /usr/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersionImpl.cmake:
 
 /usr/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake:
-
-/usr/x86_64-w64-mingw32/include/c++/15.2.0/concepts:
-
-/usr/x86_64-w64-mingw32/include/qt6/QtCore/qiodevice.h:
 
 /usr/x86_64-w64-mingw32/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginTargets.cmake:
 
@@ -1503,8 +1547,6 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
 
 /usr/x86_64-w64-mingw32/include/qt6/QtCore/qtnoop.h:
 
-/usr/x86_64-w64-mingw32/include/qt6/QtGui/qinputmethod.h:
-
 /usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:
 
 /usr/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake:
@@ -1545,12 +1587,6 @@ CMakeFiles/4.2.1/CMakeRCCompiler.cmake:
 
 /usr/x86_64-w64-mingw32/include/qt6/QtCore/qcoreapplication.h:
 
-/usr/x86_64-w64-mingw32/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:
-
-/usr/x86_64-w64-mingw32/include/_timeval.h:
-
-/usr/x86_64-w64-mingw32/include/c++/15.2.0/cstddef:
-
 /usr/share/cmake/Modules/CMakeDetermineRCCompiler.cmake:
 
 /usr/x86_64-w64-mingw32/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateConfigVersionImpl.cmake:
@@ -1558,6 +1594,10 @@ CMakeFiles/4.2.1/CMakeRCCompiler.cmake:
 CMakeFiles/4.2.1/CMakeSystem.cmake:
 
 /home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/CMakeLists.txt:
+
+/usr/x86_64-w64-mingw32/include/qt6/QtGui/qpaintdevice.h:
+
+/usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/uses_allocator.h:
 
 /usr/x86_64-w64-mingw32/lib/cmake/Qt6Core/Qt6CoreConfigVersion.cmake:
 
@@ -1592,8 +1632,6 @@ CMakeFiles/4.2.1/CMakeSystem.cmake:
 /usr/share/cmake/Modules/Platform/Windows.cmake:
 
 /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsDependencies.cmake:
-
-/usr/x86_64-w64-mingw32/include/qt6/QtCore/qanystringview.h:
 
 /usr/x86_64-w64-mingw32/include/c++/15.2.0/memory:
 
@@ -1651,7 +1689,13 @@ CMakeFiles/4.2.1/CMakeSystem.cmake:
 
 /usr/share/cmake/Modules/Compiler/Diab-DetermineCompiler.cmake:
 
+/usr/x86_64-w64-mingw32/include/assert.h:
+
+/usr/x86_64-w64-mingw32/include/c++/15.2.0/experimental/source_location:
+
 /usr/share/cmake/Modules/CMakeTestRCCompiler.cmake:
+
+/usr/x86_64-w64-mingw32/include/c++/15.2.0/condition_variable:
 
 /usr/x86_64-w64-mingw32/include/qt6/QtCore/qchar.h:
 
@@ -1721,10 +1765,6 @@ TelgrafApp_autogen/moc_predefs.h:
 
 /usr/share/cmake/Modules/CMakeDetermineCompilerSupport.cmake:
 
-/usr/x86_64-w64-mingw32/include/qt6/QtGui/qtgui-config.h:
-
-/usr/x86_64-w64-mingw32/include/qt6/QtGui/qimage.h:
-
 /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/exception_defines.h:
 
 /usr/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake:
@@ -1764,6 +1804,10 @@ TelgrafApp_autogen/moc_predefs.h:
 /usr/x86_64-w64-mingw32/include/_mingw.h:
 
 /usr/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake:
+
+/usr/x86_64-w64-mingw32/include/qt6/QtGui/qpixmap.h:
+
+/usr/share/cmake/Modules/Compiler/Renesas-DetermineCompiler.cmake:
 
 /usr/share/cmake/Modules/Compiler/XL-CXX-DetermineCompiler.cmake:
 
@@ -1813,7 +1857,23 @@ TelgrafApp_autogen/moc_predefs.h:
 
 /usr/share/cmake/Modules/Internal/CheckFlagCommonConfig.cmake:
 
+/usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/atomic_futex.h:
+
+/usr/x86_64-w64-mingw32/include/qt6/QtCore/qmetacontainer.h:
+
 /usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:
+
+/usr/x86_64-w64-mingw32/include/c++/15.2.0/concepts:
+
+/usr/x86_64-w64-mingw32/include/qt6/QtCore/qiodevice.h:
+
+/usr/x86_64-w64-mingw32/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:
+
+/usr/x86_64-w64-mingw32/include/_timeval.h:
+
+/usr/x86_64-w64-mingw32/include/c++/15.2.0/cstddef:
+
+/usr/x86_64-w64-mingw32/include/c++/15.2.0/cstdio:
 
 /usr/x86_64-w64-mingw32/include/c++/15.2.0/cstdlib:
 
@@ -1853,12 +1913,6 @@ TelgrafApp_autogen/moc_predefs.h:
 
 /usr/x86_64-w64-mingw32/include/c++/15.2.0/ext/string_conversions.h:
 
-/usr/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake:
-
-/usr/x86_64-w64-mingw32/include/c++/15.2.0/exception:
-
-/usr/x86_64-w64-mingw32/include/process.h:
-
 /usr/x86_64-w64-mingw32/include/qt6/QtCore/QProcess:
 
 /usr/x86_64-w64-mingw32/include/c++/15.2.0/ext/type_traits.h:
@@ -1872,6 +1926,10 @@ TelgrafApp_autogen/moc_predefs.h:
 /usr/x86_64-w64-mingw32/include/qt6/QtCore/qcheckedint_impl.h:
 
 /usr/x86_64-w64-mingw32/include/c++/15.2.0/functional:
+
+/usr/x86_64-w64-mingw32/include/_mingw_off_t.h:
+
+/usr/x86_64-w64-mingw32/include/c++/15.2.0/future:
 
 /usr/x86_64-w64-mingw32/include/qt6/QtCore/q20type_traits.h:
 
@@ -1891,11 +1949,17 @@ TelgrafApp_autogen/moc_predefs.h:
 
 /usr/x86_64-w64-mingw32/include/qt6/QtBluetooth/QBluetoothDeviceDiscoveryAgent:
 
+/usr/x86_64-w64-mingw32/include/qt6/QtCore/qanystringview.h:
+
+/usr/x86_64-w64-mingw32/include/c++/15.2.0/mutex:
+
+/usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/hashtable.h:
+
+/usr/x86_64-w64-mingw32/include/qt6/QtCore/QString:
+
 /usr/x86_64-w64-mingw32/include/qt6/QtCore/q20utility.h:
 
 /usr/x86_64-w64-mingw32/include/c++/15.2.0/new:
-
-/usr/x86_64-w64-mingw32/include/qt6/QtCore/qmetacontainer.h:
 
 /usr/x86_64-w64-mingw32/include/c++/15.2.0/random:
 
@@ -1951,9 +2015,9 @@ TelgrafApp_autogen/moc_predefs.h:
 
 /usr/x86_64-w64-mingw32/include/qt6/QtCore/qshareddata.h:
 
-/usr/x86_64-w64-mingw32/include/qt6/QtCore/qpair.h:
-
 /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/ptr_traits.h:
+
+/usr/x86_64-w64-mingw32/include/qt6/QtCore/qpair.h:
 
 /usr/x86_64-w64-mingw32/include/c++/15.2.0/variant:
 
@@ -2011,6 +2075,8 @@ TelgrafApp_autogen/moc_predefs.h:
 
 /usr/x86_64-w64-mingw32/include/qt6/QtBluetooth/QBluetoothUuid:
 
+/usr/x86_64-w64-mingw32/include/qt6/QtCore/QThread:
+
 /usr/x86_64-w64-mingw32/include/qt6/QtBluetooth/qbluetooth.h:
 
 /usr/x86_64-w64-mingw32/include/qt6/QtCore/qset.h:
@@ -2055,17 +2121,9 @@ CMakeFiles/4.2.1/CMakeCXXCompiler.cmake:
 
 /usr/x86_64-w64-mingw32/include/qt6/QtCore/QMap:
 
-/usr/x86_64-w64-mingw32/include/qt6/QtGui/qpen.h:
-
 /usr/x86_64-w64-mingw32/include/qt6/QtCore/QObject:
 
 /usr/x86_64-w64-mingw32/include/qt6/QtCore/QRandomGenerator:
-
-/usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/hashtable.h:
-
-/usr/x86_64-w64-mingw32/include/qt6/QtCore/QString:
-
-/usr/x86_64-w64-mingw32/include/qt6/QtGui/qpixelformat.h:
 
 /usr/x86_64-w64-mingw32/include/qt6/QtCore/QVariant:
 
@@ -2105,10 +2163,6 @@ CMakeFiles/4.2.1/CMakeCXXCompiler.cmake:
 
 /usr/x86_64-w64-mingw32/include/qt6/QtCore/qatomic.h:
 
-/usr/share/cmake/Modules/Compiler/Renesas-DetermineCompiler.cmake:
-
-/usr/x86_64-w64-mingw32/include/qt6/QtGui/qpixmap.h:
-
 /usr/x86_64-w64-mingw32/include/qt6/QtCore/qatomic_cxx11.h:
 
 /usr/x86_64-w64-mingw32/include/qt6/QtCore/qstringconverter.h:
@@ -2122,6 +2176,14 @@ CMakeFiles/4.2.1/CMakeCXXCompiler.cmake:
 /usr/x86_64-w64-mingw32/include/qt6/QtCore/qbasictimer.h:
 
 /usr/x86_64-w64-mingw32/include/qt6/QtCore/qbindingstorage.h:
+
+/usr/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake:
+
+/usr/x86_64-w64-mingw32/include/c++/15.2.0/exception:
+
+/usr/x86_64-w64-mingw32/include/process.h:
+
+/usr/x86_64-w64-mingw32/include/qt6/QtCore/qpropertyprivate.h:
 
 /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/functional_hash.h:
 
@@ -2137,13 +2199,7 @@ CMakeFiles/4.2.1/CMakeCXXCompiler.cmake:
 
 /usr/x86_64-w64-mingw32/include/qt6/QtCore/qcompare.h:
 
-/usr/x86_64-w64-mingw32/include/qt6/QtGui/qkeysequence.h:
-
 /usr/x86_64-w64-mingw32/include/qt6/QtCore/qcompare_impl.h:
-
-/usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/uses_allocator.h:
-
-/usr/x86_64-w64-mingw32/include/qt6/QtGui/qpaintdevice.h:
 
 /usr/share/cmake/Modules/CMakeDetermineSystem.cmake:
 
@@ -2163,15 +2219,17 @@ CMakeFiles/4.2.1/CMakeCXXCompiler.cmake:
 
 /usr/x86_64-w64-mingw32/lib/cmake/Qt6/QtPublicSbomQtEntityHelpers.cmake:
 
-/usr/x86_64-w64-mingw32/include/c++/15.2.0/cstdint:
-
 /usr/x86_64-w64-mingw32/include/_mingw_secapi.h:
+
+/usr/x86_64-w64-mingw32/include/c++/15.2.0/cstdint:
 
 /usr/x86_64-w64-mingw32/include/qt6/QtCore/qmath.h:
 
 /usr/x86_64-w64-mingw32/include/c++/15.2.0/list:
 
 /usr/x86_64-w64-mingw32/include/qt6/QtCore/qvariant.h:
+
+/usr/x86_64-w64-mingw32/include/qt6/QtSerialPort/qserialport.h:
 
 /usr/x86_64-w64-mingw32/include/qt6/QtCore/qcontiguouscache.h:
 
@@ -2235,7 +2293,7 @@ CMakeFiles/4.2.1/CMakeCXXCompiler.cmake:
 
 /usr/x86_64-w64-mingw32/include/qt6/QtCore/qpoint.h:
 
-/usr/x86_64-w64-mingw32/include/qt6/QtCore/qprocess.h:
+/usr/x86_64-w64-mingw32/include/qt6/QtCore/qproperty.h:
 
 /usr/x86_64-w64-mingw32/include/qt6/QtCore/qrefcount.h:
 
@@ -2293,7 +2351,11 @@ CMakeFiles/4.2.1/CMakeCXXCompiler.cmake:
 
 /usr/x86_64-w64-mingw32/include/qt6/QtCore/qtenvironmentvariables.h:
 
-/usr/x86_64-w64-mingw32/include/qt6/QtCore/qtextstream.h:
+/usr/x86_64-w64-mingw32/include/qt6/QtCore/qthread.h:
+
+/usr/x86_64-w64-mingw32/lib/cmake/Qt6Gui/Qt6QWindowsDirect2DIntegrationPluginTargets.cmake:
+
+/usr/x86_64-w64-mingw32/include/qt6/QtCore/qurl.h:
 
 /usr/x86_64-w64-mingw32/include/qt6/QtCore/qtresource.h:
 
@@ -2306,10 +2368,6 @@ CMakeFiles/4.2.1/CMakeCXXCompiler.cmake:
 /usr/x86_64-w64-mingw32/include/qt6/QtCore/qtversionchecks.h:
 
 /usr/x86_64-w64-mingw32/include/qt6/QtCore/qtypeinfo.h:
-
-/usr/x86_64-w64-mingw32/lib/cmake/Qt6Gui/Qt6QWindowsDirect2DIntegrationPluginTargets.cmake:
-
-/usr/x86_64-w64-mingw32/include/qt6/QtCore/qurl.h:
 
 /usr/x86_64-w64-mingw32/include/qt6/QtCore/qvarlengtharray.h:
 
@@ -2326,7 +2384,3 @@ CMakeFiles/4.2.1/CMakeCXXCompiler.cmake:
 /usr/share/cmake/Modules/CheckCXXSourceCompiles.cmake:
 
 /usr/x86_64-w64-mingw32/include/qt6/QtGui/qcolor.h:
-
-/usr/x86_64-w64-mingw32/include/qt6/QtGui/qpalette.h:
-
-/usr/x86_64-w64-mingw32/include/qt6/QtGui/qpicture.h:

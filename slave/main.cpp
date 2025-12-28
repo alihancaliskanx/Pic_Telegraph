@@ -16,6 +16,9 @@
 #include <QScrollBar>
 #include <QMessageBox>
 #include <QRandomGenerator>
+#include <QThread>
+#include <QSerialPort>
+#include <QSerialPortInfo>
 #include <QtBluetooth/QBluetoothDeviceDiscoveryAgent>
 #include <QtBluetooth/QBluetoothSocket>
 #include <QtBluetooth/QBluetoothDeviceInfo>
@@ -28,12 +31,72 @@ struct CommandConfig {
     int offsetMs;
 };
 
+class SerialWorker : public QObject {
+    Q_OBJECT
+public:
+    QSerialPort *serialPort;
+
+    SerialWorker() {
+        serialPort = new QSerialPort();
+    }
+    ~SerialWorker() {
+        if(serialPort->isOpen()) serialPort->close();
+        delete serialPort;
+    }
+
+public slots:
+    void openPort(QString name, int baud) {
+        serialPort->setPortName(name);
+        serialPort->setBaudRate(baud);
+        serialPort->setDataBits(QSerialPort::Data8);
+        serialPort->setParity(QSerialPort::NoParity);
+        serialPort->setStopBits(QSerialPort::OneStop);
+        
+        if(serialPort->open(QIODevice::ReadWrite)) {
+            emit connectionStatusChanged(true, name);
+            connect(serialPort, &QSerialPort::readyRead, this, &SerialWorker::readData);
+        } else {
+            emit connectionStatusChanged(false, "");
+            emit errorOccurred("SERI PORT HATASI: " + serialPort->errorString());
+        }
+    }
+
+    void closePort() {
+        if(serialPort->isOpen()) {
+            serialPort->close();
+            disconnect(serialPort, &QSerialPort::readyRead, this, &SerialWorker::readData);
+        }
+        emit connectionStatusChanged(false, "");
+    }
+
+    void writeData(QString data) {
+        if(serialPort->isOpen()) {
+            serialPort->write(data.toUtf8());
+        }
+    }
+
+    void readData() {
+        while(serialPort->canReadLine()) {
+            QByteArray data = serialPort->readLine().trimmed();
+            QString line = QString::fromUtf8(data);
+            if(!line.isEmpty()) {
+                emit messageReceived(line);
+            }
+        }
+    }
+
+signals:
+    void messageReceived(QString message);
+    void connectionStatusChanged(bool connected, QString portName);
+    void errorOccurred(QString error);
+};
+
 class TelegraphWindow : public QMainWindow {
     Q_OBJECT
 
 public:
     TelegraphWindow(QWidget *parent = nullptr) : QMainWindow(parent) {
-        setWindowTitle("PIC KONTROL ISTASYONU");
+        setWindowTitle("PIC KONTROL ISTASYONU V3");
         resize(1200, 750);
 
         QWidget *centralWidget = new QWidget(this);
@@ -70,7 +133,7 @@ public:
         baudSelect->addItems(bauds);
 
         customCmdInput = new QLineEdit();
-        customCmdInput->setPlaceholderText("Ozel Komut");
+        customCmdInput->setPlaceholderText("Ozel Komut (Orn: RESET)");
         
         sendCmdButton = new QPushButton("KOMUTU YOLLA");
         sendCmdButton->setCursor(Qt::PointingHandCursor);
@@ -94,7 +157,7 @@ public:
         settingsLayout->addWidget(new QLabel("BAGLANTI TURU"));
         settingsLayout->addWidget(connectionTypeSelect);
 
-        settingsLayout->addWidget(new QLabel("CIHAZ SECIMI"));
+        settingsLayout->addWidget(new QLabel("CIHAZ / PORT SECIMI"));
         settingsLayout->addWidget(portSelect);
         settingsLayout->addWidget(new QLabel("BAUDRATE"));
         settingsLayout->addWidget(baudSelect);
@@ -156,8 +219,23 @@ public:
         mainLayout->addWidget(chatGroup, 1);
         mainLayout->addWidget(logGroup);
 
-        socket = new QBluetoothSocket(QBluetoothServiceInfo::RfcommProtocol, this);
+        btSocket = new QBluetoothSocket(QBluetoothServiceInfo::RfcommProtocol, this);
         discoveryAgent = new QBluetoothDeviceDiscoveryAgent(this);
+
+        serialThread = new QThread(this);
+        worker = new SerialWorker();
+        worker->moveToThread(serialThread);
+
+        connect(serialThread, &QThread::finished, worker, &QObject::deleteLater);
+        connect(this, &TelegraphWindow::operateOpenSerial, worker, &SerialWorker::openPort);
+        connect(this, &TelegraphWindow::operateCloseSerial, worker, &SerialWorker::closePort);
+        connect(this, &TelegraphWindow::operateWriteSerial, worker, &SerialWorker::writeData);
+        
+        connect(worker, &SerialWorker::messageReceived, this, &TelegraphWindow::handleSerialMessage);
+        connect(worker, &SerialWorker::connectionStatusChanged, this, &TelegraphWindow::handleSerialConnectionStatus);
+        connect(worker, &SerialWorker::errorOccurred, this, &TelegraphWindow::appendLog);
+
+        serialThread->start();
 
 #ifdef Q_OS_WIN
         commandMap["BR"]   = {"cmd /c start https://google.com", 0, 3000};
@@ -165,19 +243,17 @@ public:
 #elif defined(Q_OS_MAC)
         commandMap["BR"]   = {"open https://google.com", 0, 3000};
         commandMap["TERM"] = {"open -a Terminal", 0, 2000};
-        commandMap["NV"]   = {"open -a Terminal", 0, 2000};
-        commandMap["FL"]   = {"open .", 0, 2000};
-        commandMap["UPD"]  = {"open -b com.apple.AppStore", 0, 10000};
 #else
         commandMap["BR"] = {"chromium https://google.com", 0, 3000};
         commandMap["TERM"] = {"kitty", 0, 2000};
-        commandMap["NV"] = {"kitty nvim /home/aura/Documents/Code", 0, 2000};
+        commandMap["NV"] = {"kitty nvim", 0, 2000};
         commandMap["FL"] = {"nautilus", 0, 2000};
         commandMap["UPD"] = {"kitty --hold sudo pacman -Syu", 0, 10000};
 #endif
 
+        connect(connectionTypeSelect, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &TelegraphWindow::onConnectionTypeChanged);
         connect(connectButton, &QPushButton::clicked, this, &TelegraphWindow::toggleConnection);
-        connect(scanButton, &QPushButton::clicked, this, &TelegraphWindow::startDiscovery);
+        connect(scanButton, &QPushButton::clicked, this, &TelegraphWindow::handleScanOrRefresh);
         
         connect(discoveryAgent, &QBluetoothDeviceDiscoveryAgent::deviceDiscovered, this, &TelegraphWindow::deviceDiscovered);
         connect(discoveryAgent, &QBluetoothDeviceDiscoveryAgent::finished, this, [this](){
@@ -186,9 +262,9 @@ public:
             appendLog("SISTEM: Tarama tamamlandi.");
         });
 
-        connect(socket, &QBluetoothSocket::connected, this, &TelegraphWindow::socketConnected);
-        connect(socket, &QBluetoothSocket::disconnected, this, &TelegraphWindow::socketDisconnected);
-        connect(socket, &QBluetoothSocket::readyRead, this, &TelegraphWindow::readSocketData);
+        connect(btSocket, &QBluetoothSocket::connected, this, &TelegraphWindow::btSocketConnected);
+        connect(btSocket, &QBluetoothSocket::disconnected, this, &TelegraphWindow::btSocketDisconnected);
+        connect(btSocket, &QBluetoothSocket::readyRead, this, &TelegraphWindow::readBtSocketData);
         
         connect(messageInput, &QLineEdit::returnPressed, this, &TelegraphWindow::sendMessage);
         connect(sendCmdButton, &QPushButton::clicked, this, &TelegraphWindow::sendCustomCommand);
@@ -202,10 +278,18 @@ public:
         writeToFile("--- OTURUM BASLADI ---");
     }
 
+    ~TelegraphWindow() {
+        serialThread->quit();
+        serialThread->wait();
+    }
+
 private:
-    QBluetoothSocket *socket;
+    QBluetoothSocket *btSocket;
     QBluetoothDeviceDiscoveryAgent *discoveryAgent;
     
+    QThread *serialThread;
+    SerialWorker *worker;
+
     QComboBox *connectionTypeSelect;
     QComboBox *portSelect;
     QComboBox *baudSelect;
@@ -222,6 +306,8 @@ private:
     QMap<QString, CommandConfig> commandMap;
     QString lastLogDate;
     bool isDarkTheme = true;
+    bool isBtConnected = false;
+    bool isUsbConnected = false;
 
     void setupStyles(bool dark) {
         QString bgColor = dark ? "#1e1e2e" : "#eff1f5";
@@ -234,124 +320,25 @@ private:
         QString btnHover = dark ? "#585b70" : "#b4befe";
         QString titleBg = dark ? "#45475a" : "#bcc0cc";
         QString titleFg = dark ? "#cdd6f4" : "#4c4f69"; 
-        QString success = "#a6e3a1"; 
         QString danger = "#f38ba8";
 
         QString style = QString(R"(
             QMainWindow { background-color: %1; }
             QWidget { color: %2; font-family: 'JetBrains Mono', 'Segoe UI', sans-serif; font-size: 13px; outline: none; }
-            
-            QGroupBox {
-                border: 2px solid %4;
-                border-radius: 16px;
-                background-color: %3;
-            }
-
-            QLabel#boxTitle {
-                background-color: %10;
-                color: #000000;
-                font-size: 14px;
-                font-weight: 900;
-                padding: 10px;
-                border-radius: 6px;
-                margin: 0px;
-            }
-
-            QLineEdit {
-                background-color: %6;
-                border: 2px solid %4;
-                border-radius: 8px;
-                padding: 8px;
-                color: %2;
-                selection-background-color: %5;
-            }
-            QLineEdit:focus {
-                border: 2px solid %5;
-            }
-
-            QComboBox {
-                background-color: %6;
-                border: 2px solid %4;
-                border-radius: 8px;
-                padding: 8px 10px;
-                color: %2;
-            }
-            QComboBox:focus {
-                border: 2px solid %5;
-            }
-            QComboBox::drop-down {
-                subcontrol-origin: padding;
-                subcontrol-position: top right;
-                width: 30px;
-                border-left-width: 0px;
-                border-top-right-radius: 8px;
-                border-bottom-right-radius: 8px;
-                background-color: rgba(0,0,0,0.1);
-            }
-            QComboBox::down-arrow {
-                width: 10px;
-                height: 10px;
-                background: none;
-                border-left: 2px solid %2;
-                border-bottom: 2px solid %2;
-                transform: rotate(-45deg);
-                margin-top: -3px;
-                margin-left: -3px;
-            }
-            QComboBox QAbstractItemView {
-                background-color: %6;
-                color: %2;
-                border: 2px solid %4;
-                selection-background-color: %5;
-                selection-color: %1;
-                outline: none;
-                border-radius: 4px;
-                padding: 5px;
-            }
-
-            QTextEdit {
-                background-color: %6;
-                border: 2px solid %4;
-                border-radius: 12px;
-                padding: 10px;
-                color: %2;
-            }
-
-            QPushButton {
-                background-color: %7;
-                color: %2;
-                border: none;
-                border-radius: 8px;
-                padding: 10px 20px;
-                font-weight: bold;
-                outline: none;
-            }
+            QGroupBox { border: 2px solid %4; border-radius: 16px; background-color: %3; }
+            QLabel#boxTitle { background-color: %10; color: #000000; font-size: 14px; font-weight: 900; padding: 10px; border-radius: 6px; margin: 0px; }
+            QLineEdit { background-color: %6; border: 2px solid %4; border-radius: 8px; padding: 8px; color: %2; selection-background-color: %5; }
+            QLineEdit:focus { border: 2px solid %5; }
+            QComboBox { background-color: %6; border: 2px solid %4; border-radius: 8px; padding: 8px 10px; color: %2; }
+            QComboBox::down-arrow { width: 10px; height: 10px; background: none; border-left: 2px solid %2; border-bottom: 2px solid %2; transform: rotate(-45deg); margin-top: -3px; margin-left: -3px; }
+            QTextEdit { background-color: %6; border: 2px solid %4; border-radius: 12px; padding: 10px; color: %2; }
+            QPushButton { background-color: %7; color: %2; border: none; border-radius: 8px; padding: 10px 20px; font-weight: bold; outline: none; }
             QPushButton:hover { background-color: %8; color: #1e1e2e; }
-            QPushButton:focus { outline: none; border: none; }
-
-            QPushButton#connectBtn {
-                background-color: %5;
-                color: %1;
-                font-size: 15px;
-                border-radius: 12px;
-            }
+            QPushButton#connectBtn { background-color: %5; color: %1; font-size: 15px; border-radius: 12px; }
             QPushButton#connectBtn:hover { background-color: %10; }
-            
-            QLabel#statusLabel {
-                font-size: 14px;
-                font-weight: bold;
-                padding: 10px;
-                border: 2px dashed %4;
-                border-radius: 8px;
-                margin-bottom: 10px;
-            }
-
-            QScrollBar:vertical {
-                border: none; background: %1; width: 10px; margin: 0; border-radius: 5px;
-            }
-            QScrollBar::handle:vertical {
-                background: %7; min-height: 20px; border-radius: 5px;
-            }
+            QLabel#statusLabel { font-size: 14px; font-weight: bold; padding: 10px; border: 2px dashed %4; border-radius: 8px; margin-bottom: 10px; }
+            QScrollBar:vertical { border: none; background: %1; width: 10px; margin: 0; border-radius: 5px; }
+            QScrollBar::handle:vertical { background: %7; min-height: 20px; border-radius: 5px; }
         )")
         .arg(bgColor, fgColor, boxBg, boxBorder, accent, inputBg, btnBg, btnHover, danger, titleBg, titleFg);
 
@@ -365,9 +352,27 @@ private:
         appendLog("KULLANICI: Tema degistirildi.");
     }
 
-    void startDiscovery() {
+    void onConnectionTypeChanged(int index) {
+        portSelect->clear();
+        if (index == 0) { 
+            scanButton->setText("BLUETOOTH TARA");
+        } else { 
+            scanButton->setText("PORTLARI YENILE");
+            refreshUsbPorts();
+        }
+    }
+
+    void handleScanOrRefresh() {
+        if (connectionTypeSelect->currentIndex() == 0) {
+            startBtDiscovery();
+        } else {
+            refreshUsbPorts();
+            appendLog("SISTEM: USB portlari yenilendi.");
+        }
+    }
+
+    void startBtDiscovery() {
         if(discoveryAgent->isActive()) return;
-        
         portSelect->clear();
         scanButton->setEnabled(false);
         scanButton->setText("TARANIYOR...");
@@ -380,44 +385,112 @@ private:
         portSelect->addItem(label, QVariant::fromValue(device.address().toString()));
     }
 
-    void toggleConnection() {
-        if (socket->state() == QBluetoothSocket::SocketState::ConnectedState) {
-            socket->disconnectFromService();
-        } else {
-            QString addressStr = portSelect->currentData().toString();
-            if (addressStr.isEmpty()) {
-                QMessageBox::warning(this, "Hata", "Lutfen bir cihaz secin.");
-                return;
-            }
-            
-            QBluetoothAddress address(addressStr);
-            socket->connectToService(address, QBluetoothUuid::ServiceClassUuid::SerialPort);
-            connectButton->setText("BAGLANIYOR...");
-            connectButton->setEnabled(false);
-            appendLog("KULLANICI: Baglanti istegi -> " + addressStr);
-        }
-    }
-
-    void socketConnected() {
-        connectButton->setText("BAGLANTIYI KES");
-        connectButton->setEnabled(true);
-        connectButton->setStyleSheet("background-color: #f38ba8; color: #1e1e2e;");
-        statusLabel->setText("DURUM: BAGLI");
-        statusLabel->setStyleSheet("color: #a6e3a1; font-weight: bold; border: 2px solid #a6e3a1;");
+    void btSocketConnected() {
+        isBtConnected = true;
+        updateUIConnectedState(true, "BLUETOOTH");
         appendLog("SISTEM: Bluetooth baglantisi basarili.");
     }
 
-    void socketDisconnected() {
-        connectButton->setText("BAGLAN");
-        connectButton->setEnabled(true);
-        connectButton->setStyleSheet(""); 
-        statusLabel->setText("DURUM: BAGLI DEGIL");
-        statusLabel->setStyleSheet("color: #f38ba8; font-weight: bold; border: 2px dashed #f38ba8;");
-        appendLog("SISTEM: Baglanti kesildi.");
+    void btSocketDisconnected() {
+        isBtConnected = false;
+        updateUIConnectedState(false, "");
+        appendLog("SISTEM: Bluetooth baglantisi kesildi.");
     }
 
-    void sendNMEAPacket(QString type, QString payload) {
-        if (socket->state() != QBluetoothSocket::SocketState::ConnectedState) {
+    void readBtSocketData() {
+        while (btSocket->canReadLine()) {
+            QByteArray data = btSocket->readLine().trimmed();
+            QString line = QString::fromUtf8(data);
+            processIncomingData(line);
+        }
+    }
+
+    void refreshUsbPorts() {
+        portSelect->clear();
+        const auto infos = QSerialPortInfo::availablePorts();
+        for (const QSerialPortInfo &info : infos) {
+            portSelect->addItem(info.portName());
+        }
+    }
+
+    void handleSerialConnectionStatus(bool connected, QString portName) {
+        isUsbConnected = connected;
+        if(connected) {
+            updateUIConnectedState(true, "USB (" + portName + ")");
+            appendLog("SISTEM: USB Seri baglanti basarili -> " + portName);
+        } else {
+            updateUIConnectedState(false, "");
+            appendLog("SISTEM: USB baglantisi kapatildi veya koptu.");
+        }
+    }
+
+    void handleSerialMessage(QString line) {
+        processIncomingData(line);
+    }
+
+    void toggleConnection() {
+        if (isBtConnected) {
+            btSocket->disconnectFromService();
+            return;
+        }
+        if (isUsbConnected) {
+            emit operateCloseSerial();
+            return;
+        }
+
+        int type = connectionTypeSelect->currentIndex();
+        
+        if (type == 0) { 
+            QString addressStr = portSelect->currentData().toString();
+            if (addressStr.isEmpty()) {
+                QMessageBox::warning(this, "Hata", "Lutfen bir Bluetooth cihazi secin.");
+                return;
+            }
+            QBluetoothAddress address(addressStr);
+            btSocket->connectToService(address, QBluetoothUuid::ServiceClassUuid::SerialPort);
+            connectButton->setText("BAGLANIYOR...");
+            connectButton->setEnabled(false);
+            appendLog("KULLANICI: BT Baglanti istegi -> " + addressStr);
+        } 
+        else { 
+            QString portName = portSelect->currentText();
+            if (portName.isEmpty()) {
+                QMessageBox::warning(this, "Hata", "Lutfen bir Seri Port secin.");
+                return;
+            }
+            int baud = baudSelect->currentText().toInt();
+            emit operateOpenSerial(portName, baud);
+            connectButton->setText("BAGLANIYOR...");
+            connectButton->setEnabled(false);
+            appendLog("KULLANICI: USB Baglanti istegi -> " + portName);
+        }
+    }
+
+    void updateUIConnectedState(bool connected, QString typeInfo) {
+        connectButton->setEnabled(true);
+        if (connected) {
+            connectButton->setText("BAGLANTIYI KES");
+            connectButton->setStyleSheet("background-color: #f38ba8; color: #1e1e2e;");
+            statusLabel->setText("DURUM: BAGLI - " + typeInfo);
+            statusLabel->setStyleSheet("color: #a6e3a1; font-weight: bold; border: 2px solid #a6e3a1;");
+            connectionTypeSelect->setEnabled(false);
+            portSelect->setEnabled(false);
+            baudSelect->setEnabled(false);
+            scanButton->setEnabled(false);
+        } else {
+            connectButton->setText("BAGLAN");
+            connectButton->setStyleSheet(""); 
+            statusLabel->setText("DURUM: BAGLI DEGIL");
+            statusLabel->setStyleSheet("color: #f38ba8; font-weight: bold; border: 2px dashed #f38ba8;");
+            connectionTypeSelect->setEnabled(true);
+            portSelect->setEnabled(true);
+            baudSelect->setEnabled(true);
+            scanButton->setEnabled(true);
+        }
+    }
+
+    void sendPacket(QString type, QString payload) {
+        if (!isBtConnected && !isUsbConnected) {
             QMessageBox::warning(this, "Uyari", "Once baglanti kurmalisiniz!");
             return;
         }
@@ -430,14 +503,19 @@ private:
         }
 
         QString packet = "$" + raw + "*" + QString::number(checksum, 16).toUpper() + "\r\n";
-        socket->write(packet.toUtf8());
+
+        if (isBtConnected) {
+            btSocket->write(packet.toUtf8());
+        } else if (isUsbConnected) {
+            emit operateWriteSerial(packet);
+        }
     }
 
     void sendMessage() {
         QString msg = messageInput->text();
         if (msg.isEmpty()) return;
 
-        sendNMEAPacket("M", msg);
+        sendPacket("M", msg);
         appendChat(msg, true);
         appendLog("GONDERILDI ($M): " + msg);
         messageInput->clear();
@@ -445,46 +523,39 @@ private:
 
     void sendCustomCommand() {
         QString cmd = customCmdInput->text();
-        if (cmd.isEmpty()) {
-            cmd = "PING"; 
-        }
+        if (cmd.isEmpty()) cmd = "PING"; 
 
-        sendNMEAPacket("K", cmd);
+        sendPacket("K", cmd);
         appendLog("KOMUT YOLLANDI ($K): " + cmd);
         customCmdInput->clear();
     }
 
-    void readSocketData() {
-        while (socket->canReadLine()) {
-            QByteArray data = socket->readLine().trimmed();
-            QString line = QString::fromUtf8(data);
-            
-            if (line.isEmpty()) continue;
+    void processIncomingData(QString line) {
+        if (line.isEmpty()) return;
 
-            int starIndex = line.indexOf('*');
-            if (starIndex != -1) {
-                 line = line.left(starIndex);
-            }
-            if (line.startsWith("$")) {
-                line = line.mid(1);
-            }
+        int starIndex = line.indexOf('*');
+        if (starIndex != -1) {
+             line = line.left(starIndex);
+        }
+        if (line.startsWith("$")) {
+            line = line.mid(1);
+        }
 
-            if (line.startsWith("K,")) {
-                handleCommand(line);
-                appendLog("GELEN KOMUT ($K): " + line);
-            } 
-            else if (line.startsWith("M,")) {
-                QString msgContent = line.mid(2);
-                appendChat(msgContent, false);
-                appendLog("GELEN MESAJ ($M): " + msgContent);
-            }
-            else {
-                 appendLog("RAW: " + line);
-            }
+        if (line.startsWith("K,")) {
+            handleSystemCommand(line);
+            appendLog("GELEN KOMUT ($K): " + line);
+        } 
+        else if (line.startsWith("M,")) {
+            QString msgContent = line.mid(2);
+            appendChat(msgContent, false);
+            appendLog("GELEN MESAJ ($M): " + msgContent);
+        }
+        else {
+             appendLog("RAW: " + line);
         }
     }
 
-    void handleCommand(QString rawData) {
+    void handleSystemCommand(QString rawData) {
         QStringList parts = rawData.split(',');
         if (parts.size() < 2) return; 
         
@@ -497,9 +568,9 @@ private:
             if (now - cfg.lastRunTime > cfg.offsetMs) {
                 QProcess::startDetached(cfg.systemCommand);
                 cfg.lastRunTime = now;
-                appendLog("SISTEM EYLEMI: " + cfg.systemCommand);
+                appendLog("SISTEM EYLEMI BASLATILDI: " + cfg.systemCommand);
             } else {
-                appendLog("SISTEM: " + cmdKey + " (Zaman asimi)");
+                appendLog("SISTEM: " + cmdKey + " (Zaman asimi/Debounce)");
             }
         } else {
             appendLog("BILINMEYEN KOMUT: " + cmdKey);
@@ -523,7 +594,7 @@ private:
     }
 
     void writeToFile(QString text) {
-        QFile file("telgraf_bt.log");
+        QFile file("telgraf.log");
         if (file.open(QIODevice::Append | QIODevice::Text)) {
             QTextStream out(&file);
             out << text << "\n";
@@ -548,6 +619,11 @@ private:
         chatDisplay->append(html);
         chatDisplay->verticalScrollBar()->setValue(chatDisplay->verticalScrollBar()->maximum());
     }
+
+signals:
+    void operateOpenSerial(QString name, int baud);
+    void operateCloseSerial();
+    void operateWriteSerial(QString data);
 };
 
 int main(int argc, char *argv[]) {

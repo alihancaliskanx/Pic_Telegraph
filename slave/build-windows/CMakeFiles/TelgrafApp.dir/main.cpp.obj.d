@@ -499,6 +499,24 @@ CMakeFiles/TelgrafApp.dir/main.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/random.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/opt_random.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/random.tcc \
+ /usr/x86_64-w64-mingw32/include/qt6/QtCore/QThread \
+ /usr/x86_64-w64-mingw32/include/qt6/QtCore/qthread.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/future \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/mutex \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/std_mutex.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/unique_lock.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/condition_variable \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/atomic_futex.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/std_thread.h \
+ /usr/x86_64-w64-mingw32/include/qt6/QtSerialPort/QSerialPort \
+ /usr/x86_64-w64-mingw32/include/qt6/QtSerialPort/qserialport.h \
+ /usr/x86_64-w64-mingw32/include/qt6/QtCore/qproperty.h \
+ /usr/x86_64-w64-mingw32/include/qt6/QtCore/qpropertyprivate.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/experimental/source_location \
+ /usr/x86_64-w64-mingw32/include/qt6/QtSerialPort/qserialportglobal.h \
+ /usr/x86_64-w64-mingw32/include/qt6/QtSerialPort/qtserialportexports.h \
+ /usr/x86_64-w64-mingw32/include/qt6/QtSerialPort/QSerialPortInfo \
+ /usr/x86_64-w64-mingw32/include/qt6/QtSerialPort/qserialportinfo.h \
  /usr/x86_64-w64-mingw32/include/qt6/QtBluetooth/QBluetoothDeviceDiscoveryAgent \
  /usr/x86_64-w64-mingw32/include/qt6/QtBluetooth/qbluetoothdevicediscoveryagent.h \
  /usr/x86_64-w64-mingw32/include/qt6/QtBluetooth/qtbluetoothglobal.h \

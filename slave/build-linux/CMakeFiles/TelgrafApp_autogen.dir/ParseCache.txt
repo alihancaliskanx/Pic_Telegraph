@@ -94,6 +94,7 @@
  mdp:/usr/include/c++/15.2.1/bits/allocated_ptr.h
  mdp:/usr/include/c++/15.2.1/bits/allocator.h
  mdp:/usr/include/c++/15.2.1/bits/atomic_base.h
+ mdp:/usr/include/c++/15.2.1/bits/atomic_futex.h
  mdp:/usr/include/c++/15.2.1/bits/atomic_lockfree_defines.h
  mdp:/usr/include/c++/15.2.1/bits/basic_string.h
  mdp:/usr/include/c++/15.2.1/bits/basic_string.tcc
@@ -142,6 +143,8 @@
  mdp:/usr/include/c++/15.2.1/bits/specfun.h
  mdp:/usr/include/c++/15.2.1/bits/std_abs.h
  mdp:/usr/include/c++/15.2.1/bits/std_function.h
+ mdp:/usr/include/c++/15.2.1/bits/std_mutex.h
+ mdp:/usr/include/c++/15.2.1/bits/std_thread.h
  mdp:/usr/include/c++/15.2.1/bits/stl_algo.h
  mdp:/usr/include/c++/15.2.1/bits/stl_algobase.h
  mdp:/usr/include/c++/15.2.1/bits/stl_bvector.h
@@ -170,6 +173,7 @@
  mdp:/usr/include/c++/15.2.1/bits/string_view.tcc
  mdp:/usr/include/c++/15.2.1/bits/stringfwd.h
  mdp:/usr/include/c++/15.2.1/bits/uniform_int_dist.h
+ mdp:/usr/include/c++/15.2.1/bits/unique_lock.h
  mdp:/usr/include/c++/15.2.1/bits/unique_ptr.h
  mdp:/usr/include/c++/15.2.1/bits/unordered_map.h
  mdp:/usr/include/c++/15.2.1/bits/unordered_set.h
@@ -187,6 +191,7 @@
  mdp:/usr/include/c++/15.2.1/cmath
  mdp:/usr/include/c++/15.2.1/compare
  mdp:/usr/include/c++/15.2.1/concepts
+ mdp:/usr/include/c++/15.2.1/condition_variable
  mdp:/usr/include/c++/15.2.1/cstddef
  mdp:/usr/include/c++/15.2.1/cstdint
  mdp:/usr/include/c++/15.2.1/cstdio
@@ -197,6 +202,7 @@
  mdp:/usr/include/c++/15.2.1/debug/assertions.h
  mdp:/usr/include/c++/15.2.1/debug/debug.h
  mdp:/usr/include/c++/15.2.1/exception
+ mdp:/usr/include/c++/15.2.1/experimental/source_location
  mdp:/usr/include/c++/15.2.1/ext/aligned_buffer.h
  mdp:/usr/include/c++/15.2.1/ext/alloc_traits.h
  mdp:/usr/include/c++/15.2.1/ext/atomicity.h
@@ -206,6 +212,7 @@
  mdp:/usr/include/c++/15.2.1/ext/type_traits.h
  mdp:/usr/include/c++/15.2.1/filesystem
  mdp:/usr/include/c++/15.2.1/functional
+ mdp:/usr/include/c++/15.2.1/future
  mdp:/usr/include/c++/15.2.1/initializer_list
  mdp:/usr/include/c++/15.2.1/iosfwd
  mdp:/usr/include/c++/15.2.1/iterator
@@ -213,6 +220,7 @@
  mdp:/usr/include/c++/15.2.1/list
  mdp:/usr/include/c++/15.2.1/map
  mdp:/usr/include/c++/15.2.1/memory
+ mdp:/usr/include/c++/15.2.1/mutex
  mdp:/usr/include/c++/15.2.1/new
  mdp:/usr/include/c++/15.2.1/numeric
  mdp:/usr/include/c++/15.2.1/optional
@@ -302,6 +310,7 @@
  mdp:/usr/include/qt6/QtCore/QSharedPointer
  mdp:/usr/include/qt6/QtCore/QString
  mdp:/usr/include/qt6/QtCore/QTextStream
+ mdp:/usr/include/qt6/QtCore/QThread
  mdp:/usr/include/qt6/QtCore/QUuid
  mdp:/usr/include/qt6/QtCore/QVariant
  mdp:/usr/include/qt6/QtCore/QtGlobal
@@ -395,6 +404,8 @@
  mdp:/usr/include/qt6/QtCore/qpoint.h
  mdp:/usr/include/qt6/QtCore/qprocess.h
  mdp:/usr/include/qt6/QtCore/qprocessordetection.h
+ mdp:/usr/include/qt6/QtCore/qproperty.h
+ mdp:/usr/include/qt6/QtCore/qpropertyprivate.h
  mdp:/usr/include/qt6/QtCore/qrandom.h
  mdp:/usr/include/qt6/QtCore/qrect.h
  mdp:/usr/include/qt6/QtCore/qrefcount.h
@@ -434,6 +445,7 @@
  mdp:/usr/include/qt6/QtCore/qtenvironmentvariables.h
  mdp:/usr/include/qt6/QtCore/qtextstream.h
  mdp:/usr/include/qt6/QtCore/qtformat_impl.h
+ mdp:/usr/include/qt6/QtCore/qthread.h
  mdp:/usr/include/qt6/QtCore/qtmetamacros.h
  mdp:/usr/include/qt6/QtCore/qtnoop.h
  mdp:/usr/include/qt6/QtCore/qtpreprocessorsupport.h
@@ -487,6 +499,12 @@
  mdp:/usr/include/qt6/QtGui/qtransform.h
  mdp:/usr/include/qt6/QtGui/qvalidator.h
  mdp:/usr/include/qt6/QtGui/qwindowdefs.h
+ mdp:/usr/include/qt6/QtSerialPort/QSerialPort
+ mdp:/usr/include/qt6/QtSerialPort/QSerialPortInfo
+ mdp:/usr/include/qt6/QtSerialPort/qserialport.h
+ mdp:/usr/include/qt6/QtSerialPort/qserialportglobal.h
+ mdp:/usr/include/qt6/QtSerialPort/qserialportinfo.h
+ mdp:/usr/include/qt6/QtSerialPort/qtserialportexports.h
  mdp:/usr/include/qt6/QtWidgets/QApplication
  mdp:/usr/include/qt6/QtWidgets/QComboBox
  mdp:/usr/include/qt6/QtWidgets/QGroupBox

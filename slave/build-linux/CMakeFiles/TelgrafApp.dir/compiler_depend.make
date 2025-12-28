@@ -97,6 +97,7 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
   /usr/include/c++/15.2.1/bits/allocated_ptr.h \
   /usr/include/c++/15.2.1/bits/allocator.h \
   /usr/include/c++/15.2.1/bits/atomic_base.h \
+  /usr/include/c++/15.2.1/bits/atomic_futex.h \
   /usr/include/c++/15.2.1/bits/atomic_lockfree_defines.h \
   /usr/include/c++/15.2.1/bits/basic_string.h \
   /usr/include/c++/15.2.1/bits/basic_string.tcc \
@@ -145,6 +146,8 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
   /usr/include/c++/15.2.1/bits/specfun.h \
   /usr/include/c++/15.2.1/bits/std_abs.h \
   /usr/include/c++/15.2.1/bits/std_function.h \
+  /usr/include/c++/15.2.1/bits/std_mutex.h \
+  /usr/include/c++/15.2.1/bits/std_thread.h \
   /usr/include/c++/15.2.1/bits/stl_algo.h \
   /usr/include/c++/15.2.1/bits/stl_algobase.h \
   /usr/include/c++/15.2.1/bits/stl_bvector.h \
@@ -173,6 +176,7 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
   /usr/include/c++/15.2.1/bits/string_view.tcc \
   /usr/include/c++/15.2.1/bits/stringfwd.h \
   /usr/include/c++/15.2.1/bits/uniform_int_dist.h \
+  /usr/include/c++/15.2.1/bits/unique_lock.h \
   /usr/include/c++/15.2.1/bits/unique_ptr.h \
   /usr/include/c++/15.2.1/bits/unordered_map.h \
   /usr/include/c++/15.2.1/bits/unordered_set.h \
@@ -190,6 +194,7 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
   /usr/include/c++/15.2.1/cmath \
   /usr/include/c++/15.2.1/compare \
   /usr/include/c++/15.2.1/concepts \
+  /usr/include/c++/15.2.1/condition_variable \
   /usr/include/c++/15.2.1/cstddef \
   /usr/include/c++/15.2.1/cstdint \
   /usr/include/c++/15.2.1/cstdio \
@@ -200,6 +205,7 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
   /usr/include/c++/15.2.1/debug/assertions.h \
   /usr/include/c++/15.2.1/debug/debug.h \
   /usr/include/c++/15.2.1/exception \
+  /usr/include/c++/15.2.1/experimental/source_location \
   /usr/include/c++/15.2.1/ext/aligned_buffer.h \
   /usr/include/c++/15.2.1/ext/alloc_traits.h \
   /usr/include/c++/15.2.1/ext/atomicity.h \
@@ -209,6 +215,7 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
   /usr/include/c++/15.2.1/ext/type_traits.h \
   /usr/include/c++/15.2.1/filesystem \
   /usr/include/c++/15.2.1/functional \
+  /usr/include/c++/15.2.1/future \
   /usr/include/c++/15.2.1/initializer_list \
   /usr/include/c++/15.2.1/iosfwd \
   /usr/include/c++/15.2.1/iterator \
@@ -216,6 +223,7 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
   /usr/include/c++/15.2.1/list \
   /usr/include/c++/15.2.1/map \
   /usr/include/c++/15.2.1/memory \
+  /usr/include/c++/15.2.1/mutex \
   /usr/include/c++/15.2.1/new \
   /usr/include/c++/15.2.1/numeric \
   /usr/include/c++/15.2.1/optional \
@@ -305,6 +313,7 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
   /usr/include/qt6/QtCore/QSharedPointer \
   /usr/include/qt6/QtCore/QString \
   /usr/include/qt6/QtCore/QTextStream \
+  /usr/include/qt6/QtCore/QThread \
   /usr/include/qt6/QtCore/QUuid \
   /usr/include/qt6/QtCore/QVariant \
   /usr/include/qt6/QtCore/QtGlobal \
@@ -398,6 +407,8 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
   /usr/include/qt6/QtCore/qpoint.h \
   /usr/include/qt6/QtCore/qprocess.h \
   /usr/include/qt6/QtCore/qprocessordetection.h \
+  /usr/include/qt6/QtCore/qproperty.h \
+  /usr/include/qt6/QtCore/qpropertyprivate.h \
   /usr/include/qt6/QtCore/qrandom.h \
   /usr/include/qt6/QtCore/qrect.h \
   /usr/include/qt6/QtCore/qrefcount.h \
@@ -437,6 +448,7 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
   /usr/include/qt6/QtCore/qtenvironmentvariables.h \
   /usr/include/qt6/QtCore/qtextstream.h \
   /usr/include/qt6/QtCore/qtformat_impl.h \
+  /usr/include/qt6/QtCore/qthread.h \
   /usr/include/qt6/QtCore/qtmetamacros.h \
   /usr/include/qt6/QtCore/qtnoop.h \
   /usr/include/qt6/QtCore/qtpreprocessorsupport.h \
@@ -490,6 +502,12 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
   /usr/include/qt6/QtGui/qtransform.h \
   /usr/include/qt6/QtGui/qvalidator.h \
   /usr/include/qt6/QtGui/qwindowdefs.h \
+  /usr/include/qt6/QtSerialPort/QSerialPort \
+  /usr/include/qt6/QtSerialPort/QSerialPortInfo \
+  /usr/include/qt6/QtSerialPort/qserialport.h \
+  /usr/include/qt6/QtSerialPort/qserialportglobal.h \
+  /usr/include/qt6/QtSerialPort/qserialportinfo.h \
+  /usr/include/qt6/QtSerialPort/qtserialportexports.h \
   /usr/include/qt6/QtWidgets/QApplication \
   /usr/include/qt6/QtWidgets/QComboBox \
   /usr/include/qt6/QtWidgets/QGroupBox \
@@ -1107,8 +1125,6 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
 
 /usr/lib/cmake/Qt6SerialPort/Qt6SerialPortConfig.cmake:
 
-/usr/lib/cmake/Qt6SerialPort/Qt6SerialPortAdditionalTargetInfo.cmake:
-
 /usr/share/cmake/Modules/Platform/Linker/Linux-GNU-CXX.cmake:
 
 /usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:
@@ -1148,8 +1164,6 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
 /usr/lib/cmake/Qt6Gui/Qt6QXdgDesktopPortalThemePluginConfig.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QXcbIntegrationPluginAdditionalTargetInfo.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QXcbGlxIntegrationPluginAdditionalTargetInfo.cmake:
 
 /usr/lib/cmake/Qt6Network/Qt6NetworkTargets-relwithdebinfo.cmake:
 
@@ -1205,8 +1219,6 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
 
 /usr/lib/cmake/Qt6Gui/Qt6QSvgIconPluginTargets-relwithdebinfo.cmake:
 
-/usr/lib/cmake/Qt6Gui/Qt6QSvgIconPluginAdditionalTargetInfo.cmake:
-
 /usr/lib/cmake/Qt6Gui/Qt6QPdfPluginTargets.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QPdfPluginTargets-relwithdebinfo.cmake:
@@ -1220,8 +1232,6 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
 /usr/lib/cmake/Qt6Gui/Qt6QMngPluginTargets-relwithdebinfo.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginTargets.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginTargets-relwithdebinfo.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginAdditionalTargetInfo.cmake:
 
@@ -1349,10 +1359,6 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
 
 /usr/lib/cmake/Qt6DBus/Qt6DBusVersionlessAliasTargets.cmake:
 
-/usr/lib/cmake/Qt6Gui/Qt6QXcbGlxIntegrationPluginTargets.cmake:
-
-/usr/lib/cmake/Qt6DBus/Qt6DBusTargets-relwithdebinfo.cmake:
-
 /usr/lib/cmake/Qt6DBus/Qt6DBusMacros.cmake:
 
 /usr/lib/cmake/Qt6DBus/Qt6DBusConfigVersionImpl.cmake:
@@ -1372,10 +1378,6 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
 /usr/lib/cmake/Qt6Core/Qt6CoreMacros.cmake:
 
 /usr/lib/cmake/Qt6Core/Qt6CoreConfigExtras.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QXdgDesktopPortalThemePluginTargets.cmake:
-
-/usr/lib/cmake/Qt6Bluetooth/Qt6BluetoothTargets-relwithdebinfo.cmake:
 
 /usr/lib/cmake/Qt6Bluetooth/Qt6BluetoothConfigVersionImpl.cmake:
 
@@ -1463,29 +1465,43 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
 
 /usr/include/sys/cdefs.h:
 
-/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/gthr-default.h:
+/usr/lib/cmake/Qt6/QtPublicAndroidHelpers.cmake:
 
-/usr/lib/cmake/Qt6Core/Qt6CoreTargets-relwithdebinfo.cmake:
+/usr/include/strings.h:
 
-/usr/include/qt6/QtCore/QFile:
+/usr/include/string.h:
 
-/usr/share/cmake/Modules/Compiler/Renesas-DetermineCompiler.cmake:
+/usr/include/stdio.h:
 
-/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/error_constants.h:
+/usr/include/stdint.h:
 
-/usr/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginAdditionalTargetInfo.cmake:
+/usr/lib/cmake/Qt6Network/Qt6NetworkVersionlessAliasTargets.cmake:
 
-/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++locale.h:
+/usr/include/stdc-predef.h:
 
-/usr/lib/cmake/Qt6Gui/Qt6QLibInputPluginTargets.cmake:
+/usr/include/sched.h:
 
-/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++config.h:
+/usr/lib/cmake/Qt6/Qt6VersionlessAliasTargets.cmake:
 
-/usr/include/bits/types/__sigset_t.h:
+/usr/include/qt6/QtWidgets/qwidget.h:
 
-/usr/lib/cmake/Qt6Gui/Qt6QMinimalEglIntegrationPluginTargets.cmake:
+/usr/include/qt6/QtWidgets/qtwidgetsglobal.h:
 
-/usr/include/qt6/QtGui/qguiapplication_platform.h:
+/usr/include/qt6/QtWidgets/qtwidgetsexports.h:
+
+/usr/include/qt6/QtWidgets/qtwidgets-config.h:
+
+/usr/include/qt6/QtWidgets/qtextedit.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginTargets.cmake:
+
+/usr/include/qt6/QtWidgets/qtabbar.h:
+
+/usr/include/qt6/QtWidgets/qstyleoption.h:
+
+/usr/include/qt6/QtWidgets/qstyle.h:
+
+/usr/include/qt6/QtWidgets/qsizepolicy.h:
 
 /usr/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake:
 
@@ -1519,6 +1535,10 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
 
 /usr/include/c++/15.2.1/ratio:
 
+/usr/include/qt6/QtWidgets/qtabwidget.h:
+
+/usr/include/bits/floatn-common.h:
+
 /usr/include/qt6/QtWidgets/qgroupbox.h:
 
 /usr/include/c++/15.2.1/random:
@@ -1541,6 +1561,10 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
 
 /usr/include/c++/15.2.1/numeric:
 
+/usr/lib/cmake/Qt6Gui/Qt6QSvgIconPluginAdditionalTargetInfo.cmake:
+
+/usr/include/c++/15.2.1/mutex:
+
 /usr/include/c++/15.2.1/tr1/legendre_function.tcc:
 
 /usr/include/c++/15.2.1/memory:
@@ -1559,9 +1583,11 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
 
 /usr/include/c++/15.2.1/iosfwd:
 
-/usr/include/qt6/QtCore/QDateTime:
+/usr/lib/cmake/Qt6Gui/Qt6QXdgDesktopPortalThemePluginTargets.cmake:
 
-/usr/include/c++/15.2.1/bits/atomic_lockfree_defines.h:
+/usr/lib/cmake/Qt6Bluetooth/Qt6BluetoothTargets-relwithdebinfo.cmake:
+
+/usr/include/c++/15.2.1/future:
 
 /usr/share/cmake/Modules/Compiler/OrangeC-DetermineCompiler.cmake:
 
@@ -1574,6 +1600,8 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
 /usr/lib/cmake/Qt6Gui/Qt6QSvgIconPluginConfig.cmake:
 
 /usr/include/c++/15.2.1/filesystem:
+
+/usr/include/c++/15.2.1/bits/std_thread.h:
 
 /usr/include/bits/types/struct_FILE.h:
 
@@ -1624,8 +1652,6 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
 /usr/include/qt6/QtCore/qstringbuilder.h:
 
 /usr/include/qt6/QtGui/qregion.h:
-
-/usr/include/stdint.h:
 
 /usr/include/c++/15.2.1/cerrno:
 
@@ -1721,10 +1747,6 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
 
 /usr/include/pthread.h:
 
-/usr/lib/cmake/Qt6/Qt6VersionlessAliasTargets.cmake:
-
-/usr/include/qt6/QtWidgets/qwidget.h:
-
 /usr/include/c++/15.2.1/bits/stl_tree.h:
 
 /usr/include/c++/15.2.1/bits/stl_raw_storage_iter.h:
@@ -1763,8 +1785,6 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
 
 /usr/include/c++/15.2.1/bits/specfun.h:
 
-/usr/include/c++/15.2.1/bits/shared_ptr_atomic.h:
-
 /usr/include/c++/15.2.1/tr1/bessel_function.tcc:
 
 /usr/lib/cmake/Qt6Gui/Qt6QEvdevTouchScreenPluginConfig.cmake:
@@ -1795,6 +1815,10 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
 
 /usr/include/qt6/QtBluetooth/qbluetoothaddress.h:
 
+/usr/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginTargets-relwithdebinfo.cmake:
+
+/usr/include/c++/15.2.1/condition_variable:
+
 /usr/include/c++/15.2.1/bits/predefined_ops.h:
 
 /usr/include/bits/types/struct_itimerspec.h:
@@ -1818,6 +1842,12 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
 /usr/include/c++/15.2.1/bits/node_handle.h:
 
 /usr/include/c++/15.2.1/bits/basic_string.tcc:
+
+/usr/include/c++/15.2.1/system_error:
+
+/usr/lib/cmake/Qt6Gui/Qt6QEglFSIntegrationPluginAdditionalTargetInfo.cmake:
+
+/usr/include/c++/15.2.1/bits/new_allocator.h:
 
 /usr/include/c++/15.2.1/ctime:
 
@@ -1851,9 +1881,17 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
 
 /usr/include/qt6/QtCore/qtaggedpointer.h:
 
-/usr/include/asm/errno.h:
+/usr/include/c++/15.2.1/experimental/source_location:
 
-/usr/include/c++/15.2.1/system_error:
+/usr/include/qt6/QtCore/qmalloc.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6QPdfPluginAdditionalTargetInfo.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6QEvdevTouchScreenPluginAdditionalTargetInfo.cmake:
+
+/usr/include/qt6/QtGui/qpen.h:
+
+/usr/include/qt6/QtGui/qrgba64.h:
 
 /usr/share/cmake/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake:
 
@@ -1866,6 +1904,8 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
 /usr/include/c++/15.2.1/bits/align.h:
 
 /usr/include/bits/thread-shared-types.h:
+
+/usr/include/qt6/QtCore/QThread:
 
 /usr/include/bits/types/time_t.h:
 
@@ -1880,10 +1920,6 @@ TelgrafApp_autogen/timestamp: /home/sups/Documents/Code/mikroproje/Pic_Telegraph
 /usr/include/qt6/QtWidgets/QLabel:
 
 /usr/include/bits/types/__FILE.h:
-
-/usr/lib/cmake/Qt6Gui/Qt6QEglFSIntegrationPluginAdditionalTargetInfo.cmake:
-
-/usr/include/c++/15.2.1/bits/new_allocator.h:
 
 /usr/lib/cmake/Qt6Gui/Qt6GuiConfigVersion.cmake:
 
@@ -1963,8 +1999,6 @@ CMakeFiles/4.2.1/CMakeCXXCompiler.cmake:
 
 /usr/include/bits/posix2_lim.h:
 
-/usr/include/bits/stdint-least.h:
-
 /usr/include/alloca.h:
 
 /usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake:
@@ -1975,13 +2009,21 @@ CMakeFiles/4.2.1/CMakeCXXCompiler.cmake:
 
 /usr/include/asm/types.h:
 
+/usr/include/bits/types/__sigset_t.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6QLibInputPluginTargets.cmake:
+
+/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++config.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6QMinimalEglIntegrationPluginTargets.cmake:
+
+/usr/include/qt6/QtGui/qguiapplication_platform.h:
+
 /usr/include/c++/15.2.1/tr1/modified_bessel_func.tcc:
 
 /usr/include/c++/15.2.1/tr1/poly_laguerre.tcc:
 
-/usr/lib/cmake/Qt6/QtPublicAndroidHelpers.cmake:
-
-/usr/include/strings.h:
+/usr/include/c++/15.2.1/bits/unique_lock.h:
 
 /usr/include/asm-generic/posix_types.h:
 
@@ -2047,6 +2089,10 @@ CMakeFiles/4.2.1/CMakeSystem.cmake:
 
 /usr/include/assert.h:
 
+/usr/lib/cmake/Qt6SerialPort/Qt6SerialPortAdditionalTargetInfo.cmake:
+
+/usr/include/c++/15.2.1/bits/atomic_futex.h:
+
 /usr/include/qt6/QtCore/qbytearray.h:
 
 /usr/include/qt6/QtWidgets/qapplication.h:
@@ -2058,8 +2104,6 @@ CMakeFiles/4.2.1/CMakeSystem.cmake:
 /usr/lib/cmake/Qt6Gui/Qt6QWaylandIntegrationPluginConfig.cmake:
 
 /usr/include/qt6/QtGui/qtransform.h:
-
-/usr/include/bits/time64.h:
 
 /usr/include/c++/15.2.1/bits/std_abs.h:
 
@@ -2081,17 +2125,17 @@ CMakeFiles/4.2.1/CMakeSystem.cmake:
 
 /usr/include/c++/15.2.1/bits/hashtable_policy.h:
 
-/usr/lib/cmake/Qt6Gui/Qt6QVncIntegrationPluginConfig.cmake:
-
-/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/atomic_word.h:
-
-/usr/include/c++/15.2.1/bits/parse_numbers.h:
-
 /usr/include/c++/15.2.1/tr1/ell_integral.tcc:
 
 /usr/include/c++/15.2.1/ext/numeric_traits.h:
 
 /usr/include/bits/xopen_lim.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6QXcbGlxIntegrationPluginTargets.cmake:
+
+/usr/lib/cmake/Qt6DBus/Qt6DBusTargets-relwithdebinfo.cmake:
+
+/usr/include/c++/15.2.1/bits/std_mutex.h:
 
 /usr/include/bits/endianness.h:
 
@@ -2113,6 +2157,12 @@ CMakeFiles/4.2.1/CMakeSystem.cmake:
 
 /usr/include/bits/types/clock_t.h:
 
+/usr/include/c++/15.2.1/bits/parse_numbers.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6QVncIntegrationPluginConfig.cmake:
+
+/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/atomic_word.h:
+
 /usr/lib/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake:
 
 /usr/lib/cmake/Qt6/QtPublicSbomPythonHelpers.cmake:
@@ -2131,7 +2181,7 @@ CMakeFiles/4.2.1/CMakeSystem.cmake:
 
 /usr/include/qt6/QtWidgets/qgridlayout.h:
 
-/usr/include/c++/15.2.1/version:
+/usr/include/bits/stdint-least.h:
 
 /usr/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake:
 
@@ -2187,10 +2237,6 @@ CMakeFiles/4.2.1/CMakeSystem.cmake:
 
 /usr/include/c++/15.2.1/bits/stl_tempbuf.h:
 
-/usr/lib/cmake/Qt6Network/Qt6NetworkVersionlessAliasTargets.cmake:
-
-/usr/include/stdc-predef.h:
-
 /usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets-relwithdebinfo.cmake:
 
 /usr/include/c++/15.2.1/bits/char_traits.h:
@@ -2237,8 +2283,6 @@ CMakeFiles/4.2.1/CMakeSystem.cmake:
 
 /usr/include/qt6/QtBluetooth/QBluetoothUuid:
 
-/usr/include/c++/15.2.1/backward/auto_ptr.h:
-
 /usr/include/asm/bitsperlong.h:
 
 /usr/include/c++/15.2.1/bits/localefwd.h:
@@ -2268,8 +2312,6 @@ CMakeFiles/4.2.1/CMakeSystem.cmake:
 /usr/include/qt6/QtWidgets/QMainWindow:
 
 /usr/include/bits/wordsize.h:
-
-/usr/include/stdio.h:
 
 /usr/include/c++/15.2.1/bits/hash_bytes.h:
 
@@ -2306,6 +2348,26 @@ CMakeFiles/4.2.1/CMakeSystem.cmake:
 /usr/include/c++/15.2.1/bits/nested_exception.h:
 
 /usr/include/qt6/QtCore/qstringfwd.h:
+
+/usr/include/c++/15.2.1/version:
+
+/usr/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginAdditionalTargetInfo.cmake:
+
+/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++locale.h:
+
+/usr/share/cmake/Modules/Compiler/Renesas-DetermineCompiler.cmake:
+
+/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/error_constants.h:
+
+/usr/include/c++/15.2.1/bits/atomic_lockfree_defines.h:
+
+/usr/include/qt6/QtCore/QDateTime:
+
+/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/gthr-default.h:
+
+/usr/lib/cmake/Qt6Core/Qt6CoreTargets-relwithdebinfo.cmake:
+
+/usr/include/qt6/QtCore/QFile:
 
 /usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:
 
@@ -2347,8 +2409,6 @@ CMakeFiles/4.2.1/CMakeSystem.cmake:
 
 /usr/include/linux/errno.h:
 
-/usr/include/qt6/QtWidgets/qtwidgets-config.h:
-
 /usr/include/qt6/QtGui/qbitmap.h:
 
 /usr/include/qt6/QtCore/qcoreevent.h:
@@ -2374,6 +2434,10 @@ CMakeFiles/4.2.1/CMakeSystem.cmake:
 /usr/include/bits/types/struct_timespec.h:
 
 /usr/include/qt6/QtBluetooth/qbluetoothsocket.h:
+
+/usr/include/c++/15.2.1/bits/shared_ptr_atomic.h:
+
+/usr/include/qt6/QtSerialPort/QSerialPortInfo:
 
 /usr/include/linux/limits.h:
 
@@ -2470,6 +2534,8 @@ TelgrafApp_autogen/moc_predefs.h:
 /usr/include/qt6/QtCore/q20functional.h:
 
 /usr/include/features.h:
+
+/usr/include/qt6/QtSerialPort/QSerialPort:
 
 /usr/include/c++/15.2.1/chrono:
 
@@ -2653,23 +2719,11 @@ TelgrafApp_autogen/moc_predefs.h:
 
 /usr/include/qt6/QtCore/qlogging.h:
 
-/usr/include/qt6/QtCore/qmalloc.h:
-
-/usr/lib/cmake/Qt6Gui/Qt6QPdfPluginAdditionalTargetInfo.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QEvdevTouchScreenPluginAdditionalTargetInfo.cmake:
-
-/usr/include/qt6/QtGui/qpen.h:
-
-/usr/include/qt6/QtGui/qrgba64.h:
-
 /usr/include/qt6/QtCore/qmap.h:
 
 /usr/share/cmake/Modules/MacroAddFileDependencies.cmake:
 
 /usr/include/qt6/QtCore/qmargins.h:
-
-/usr/include/qt6/QtWidgets/qsizepolicy.h:
 
 /usr/include/qt6/QtCore/qmetacontainer.h:
 
@@ -2680,6 +2734,10 @@ TelgrafApp_autogen/moc_predefs.h:
 /usr/include/qt6/QtCore/qnamespace.h:
 
 /usr/include/qt6/QtCore/qnativeinterface.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6QXcbGlxIntegrationPluginAdditionalTargetInfo.cmake:
+
+/usr/include/qt6/QtSerialPort/qserialport.h:
 
 /usr/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginTargets.cmake:
 
@@ -2701,9 +2759,21 @@ TelgrafApp_autogen/moc_predefs.h:
 
 /usr/include/qt6/QtCore/qobjectdefs.h:
 
+/usr/include/qt6/QtCore/qproperty.h:
+
 /usr/include/qt6/QtCore/qobjectdefs_impl.h:
 
 /usr/include/qt6/QtCore/qpoint.h:
+
+/usr/include/bits/time64.h:
+
+/usr/include/qt6/QtCore/qpropertyprivate.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/qt6/QtWidgets/qslider.h:
+
+/usr/include/qt6/QtCore/qrect.h:
 
 /usr/include/qt6/QtCore/qshareddata.h:
 
@@ -2773,6 +2843,8 @@ TelgrafApp_autogen/moc_predefs.h:
 
 /usr/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake:
 
+/usr/include/qt6/QtCore/qthread.h:
+
 /usr/include/qt6/QtCore/qtconfiginclude.h:
 
 /usr/include/qt6/QtCore/qtypes.h:
@@ -2837,6 +2909,16 @@ TelgrafApp_autogen/moc_predefs.h:
 
 /usr/include/qt6/QtGui/qvalidator.h:
 
+/usr/include/c++/15.2.1/backward/auto_ptr.h:
+
+/usr/include/qt6/QtSerialPort/qserialportglobal.h:
+
+/usr/include/asm/errno.h:
+
+/usr/include/qt6/QtSerialPort/qserialportinfo.h:
+
+/usr/include/qt6/QtSerialPort/qtserialportexports.h:
+
 /usr/include/qt6/QtWidgets/QGroupBox:
 
 /usr/include/qt6/QtWidgets/qabstractitemdelegate.h:
@@ -2866,31 +2948,3 @@ TelgrafApp_autogen/moc_predefs.h:
 /usr/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake:
 
 /usr/include/qt6/QtWidgets/qpushbutton.h:
-
-/usr/include/qt6/QtWidgets/qstyle.h:
-
-/usr/include/qt6/QtWidgets/qstyleoption.h:
-
-/usr/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginTargets.cmake:
-
-/usr/include/qt6/QtWidgets/qtabbar.h:
-
-/usr/include/bits/floatn-common.h:
-
-/usr/include/qt6/QtWidgets/qtabwidget.h:
-
-/usr/include/qt6/QtWidgets/qtextedit.h:
-
-/usr/include/qt6/QtWidgets/qtwidgetsexports.h:
-
-/usr/include/qt6/QtWidgets/qtwidgetsglobal.h:
-
-/usr/include/sched.h:
-
-/usr/include/qt6/QtCore/qrect.h:
-
-/usr/include/qt6/QtWidgets/qslider.h:
-
-/usr/include/stdlib.h:
-
-/usr/include/string.h:
