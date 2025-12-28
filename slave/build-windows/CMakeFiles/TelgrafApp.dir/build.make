@@ -122,8 +122,11 @@ TelgrafApp.exe: CMakeFiles/TelgrafApp.dir/main.cpp.obj
 TelgrafApp.exe: CMakeFiles/TelgrafApp.dir/build.make
 TelgrafApp.exe: /usr/x86_64-w64-mingw32/lib/libQt6Widgets.dll.a
 TelgrafApp.exe: /usr/x86_64-w64-mingw32/lib/libQt6SerialPort.dll.a
+TelgrafApp.exe: /usr/x86_64-w64-mingw32/lib/libQt6Bluetooth.dll.a
 TelgrafApp.exe: /usr/x86_64-w64-mingw32/lib/libQt6Gui.dll.a
+TelgrafApp.exe: /usr/x86_64-w64-mingw32/lib/libQt6Network.dll.a
 TelgrafApp.exe: /usr/x86_64-w64-mingw32/lib/libQt6Core.dll.a
+TelgrafApp.exe: /usr/x86_64-w64-mingw32/lib/libQt6EntryPoint.a
 TelgrafApp.exe: CMakeFiles/TelgrafApp.dir/linkLibs.rsp
 TelgrafApp.exe: CMakeFiles/TelgrafApp.dir/objects1.rsp
 TelgrafApp.exe: CMakeFiles/TelgrafApp.dir/link.txt

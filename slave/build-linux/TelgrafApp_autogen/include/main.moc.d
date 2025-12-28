@@ -90,7 +90,6 @@
   /usr/include/c++/15.2.1/bits/allocated_ptr.h \
   /usr/include/c++/15.2.1/bits/allocator.h \
   /usr/include/c++/15.2.1/bits/atomic_base.h \
-  /usr/include/c++/15.2.1/bits/atomic_futex.h \
   /usr/include/c++/15.2.1/bits/atomic_lockfree_defines.h \
   /usr/include/c++/15.2.1/bits/basic_string.h \
   /usr/include/c++/15.2.1/bits/basic_string.tcc \
@@ -128,6 +127,8 @@
   /usr/include/c++/15.2.1/bits/postypes.h \
   /usr/include/c++/15.2.1/bits/predefined_ops.h \
   /usr/include/c++/15.2.1/bits/ptr_traits.h \
+  /usr/include/c++/15.2.1/bits/random.h \
+  /usr/include/c++/15.2.1/bits/random.tcc \
   /usr/include/c++/15.2.1/bits/range_access.h \
   /usr/include/c++/15.2.1/bits/refwrap.h \
   /usr/include/c++/15.2.1/bits/requires_hosted.h \
@@ -137,8 +138,6 @@
   /usr/include/c++/15.2.1/bits/specfun.h \
   /usr/include/c++/15.2.1/bits/std_abs.h \
   /usr/include/c++/15.2.1/bits/std_function.h \
-  /usr/include/c++/15.2.1/bits/std_mutex.h \
-  /usr/include/c++/15.2.1/bits/std_thread.h \
   /usr/include/c++/15.2.1/bits/stl_algo.h \
   /usr/include/c++/15.2.1/bits/stl_algobase.h \
   /usr/include/c++/15.2.1/bits/stl_bvector.h \
@@ -167,7 +166,6 @@
   /usr/include/c++/15.2.1/bits/string_view.tcc \
   /usr/include/c++/15.2.1/bits/stringfwd.h \
   /usr/include/c++/15.2.1/bits/uniform_int_dist.h \
-  /usr/include/c++/15.2.1/bits/unique_lock.h \
   /usr/include/c++/15.2.1/bits/unique_ptr.h \
   /usr/include/c++/15.2.1/bits/unordered_map.h \
   /usr/include/c++/15.2.1/bits/unordered_set.h \
@@ -185,7 +183,6 @@
   /usr/include/c++/15.2.1/cmath \
   /usr/include/c++/15.2.1/compare \
   /usr/include/c++/15.2.1/concepts \
-  /usr/include/c++/15.2.1/condition_variable \
   /usr/include/c++/15.2.1/cstddef \
   /usr/include/c++/15.2.1/cstdint \
   /usr/include/c++/15.2.1/cstdio \
@@ -196,7 +193,6 @@
   /usr/include/c++/15.2.1/debug/assertions.h \
   /usr/include/c++/15.2.1/debug/debug.h \
   /usr/include/c++/15.2.1/exception \
-  /usr/include/c++/15.2.1/experimental/source_location \
   /usr/include/c++/15.2.1/ext/aligned_buffer.h \
   /usr/include/c++/15.2.1/ext/alloc_traits.h \
   /usr/include/c++/15.2.1/ext/atomicity.h \
@@ -206,7 +202,6 @@
   /usr/include/c++/15.2.1/ext/type_traits.h \
   /usr/include/c++/15.2.1/filesystem \
   /usr/include/c++/15.2.1/functional \
-  /usr/include/c++/15.2.1/future \
   /usr/include/c++/15.2.1/initializer_list \
   /usr/include/c++/15.2.1/iosfwd \
   /usr/include/c++/15.2.1/iterator \
@@ -214,13 +209,13 @@
   /usr/include/c++/15.2.1/list \
   /usr/include/c++/15.2.1/map \
   /usr/include/c++/15.2.1/memory \
-  /usr/include/c++/15.2.1/mutex \
   /usr/include/c++/15.2.1/new \
   /usr/include/c++/15.2.1/numeric \
   /usr/include/c++/15.2.1/optional \
   /usr/include/c++/15.2.1/pstl/execution_defs.h \
   /usr/include/c++/15.2.1/pstl/glue_numeric_defs.h \
   /usr/include/c++/15.2.1/pstl/pstl_config.h \
+  /usr/include/c++/15.2.1/random \
   /usr/include/c++/15.2.1/ratio \
   /usr/include/c++/15.2.1/set \
   /usr/include/c++/15.2.1/stdexcept \
@@ -257,6 +252,7 @@
   /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/error_constants.h \
   /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/gthr-default.h \
   /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/gthr.h \
+  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/opt_random.h \
   /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
   /usr/include/ctype.h \
   /usr/include/endian.h \
@@ -274,12 +270,37 @@
   /usr/include/linux/types.h \
   /usr/include/locale.h \
   /usr/include/pthread.h \
+  /usr/include/qt6/QtBluetooth/QBluetoothAddress \
+  /usr/include/qt6/QtBluetooth/QBluetoothDeviceDiscoveryAgent \
+  /usr/include/qt6/QtBluetooth/QBluetoothDeviceInfo \
+  /usr/include/qt6/QtBluetooth/QBluetoothSocket \
+  /usr/include/qt6/QtBluetooth/QBluetoothUuid \
+  /usr/include/qt6/QtBluetooth/qbluetooth.h \
+  /usr/include/qt6/QtBluetooth/qbluetoothaddress.h \
+  /usr/include/qt6/QtBluetooth/qbluetoothdevicediscoveryagent.h \
+  /usr/include/qt6/QtBluetooth/qbluetoothdeviceinfo.h \
+  /usr/include/qt6/QtBluetooth/qbluetoothserviceinfo.h \
+  /usr/include/qt6/QtBluetooth/qbluetoothsocket.h \
+  /usr/include/qt6/QtBluetooth/qbluetoothuuid.h \
+  /usr/include/qt6/QtBluetooth/qtbluetooth-config.h \
+  /usr/include/qt6/QtBluetooth/qtbluetoothexports.h \
+  /usr/include/qt6/QtBluetooth/qtbluetoothglobal.h \
+  /usr/include/qt6/QtCore/QByteArray \
   /usr/include/qt6/QtCore/QDateTime \
+  /usr/include/qt6/QtCore/QDebug \
   /usr/include/qt6/QtCore/QFile \
+  /usr/include/qt6/QtCore/QList \
   /usr/include/qt6/QtCore/QMap \
+  /usr/include/qt6/QtCore/QMetaType \
+  /usr/include/qt6/QtCore/QObject \
   /usr/include/qt6/QtCore/QProcess \
+  /usr/include/qt6/QtCore/QRandomGenerator \
+  /usr/include/qt6/QtCore/QSharedPointer \
+  /usr/include/qt6/QtCore/QString \
   /usr/include/qt6/QtCore/QTextStream \
-  /usr/include/qt6/QtCore/QThread \
+  /usr/include/qt6/QtCore/QUuid \
+  /usr/include/qt6/QtCore/QVariant \
+  /usr/include/qt6/QtCore/QtGlobal \
   /usr/include/qt6/QtCore/q17memory.h \
   /usr/include/qt6/QtCore/q20functional.h \
   /usr/include/qt6/QtCore/q20iterator.h \
@@ -370,8 +391,7 @@
   /usr/include/qt6/QtCore/qpoint.h \
   /usr/include/qt6/QtCore/qprocess.h \
   /usr/include/qt6/QtCore/qprocessordetection.h \
-  /usr/include/qt6/QtCore/qproperty.h \
-  /usr/include/qt6/QtCore/qpropertyprivate.h \
+  /usr/include/qt6/QtCore/qrandom.h \
   /usr/include/qt6/QtCore/qrect.h \
   /usr/include/qt6/QtCore/qrefcount.h \
   /usr/include/qt6/QtCore/qregularexpression.h \
@@ -410,7 +430,6 @@
   /usr/include/qt6/QtCore/qtenvironmentvariables.h \
   /usr/include/qt6/QtCore/qtextstream.h \
   /usr/include/qt6/QtCore/qtformat_impl.h \
-  /usr/include/qt6/QtCore/qthread.h \
   /usr/include/qt6/QtCore/qtmetamacros.h \
   /usr/include/qt6/QtCore/qtnoop.h \
   /usr/include/qt6/QtCore/qtpreprocessorsupport.h \
@@ -423,6 +442,7 @@
   /usr/include/qt6/QtCore/qtypes.h \
   /usr/include/qt6/QtCore/qurl.h \
   /usr/include/qt6/QtCore/qutf8stringview.h \
+  /usr/include/qt6/QtCore/quuid.h \
   /usr/include/qt6/QtCore/qvariant.h \
   /usr/include/qt6/QtCore/qvarlengtharray.h \
   /usr/include/qt6/QtCore/qversiontagging.h \
@@ -463,12 +483,6 @@
   /usr/include/qt6/QtGui/qtransform.h \
   /usr/include/qt6/QtGui/qvalidator.h \
   /usr/include/qt6/QtGui/qwindowdefs.h \
-  /usr/include/qt6/QtSerialPort/QSerialPort \
-  /usr/include/qt6/QtSerialPort/QSerialPortInfo \
-  /usr/include/qt6/QtSerialPort/qserialport.h \
-  /usr/include/qt6/QtSerialPort/qserialportglobal.h \
-  /usr/include/qt6/QtSerialPort/qserialportinfo.h \
-  /usr/include/qt6/QtSerialPort/qtserialportexports.h \
   /usr/include/qt6/QtWidgets/QApplication \
   /usr/include/qt6/QtWidgets/QComboBox \
   /usr/include/qt6/QtWidgets/QGroupBox \

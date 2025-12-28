@@ -442,15 +442,6 @@ CMakeFiles/TelgrafApp.dir/main.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/qt6/QtWidgets/qlabel.h \
  /usr/x86_64-w64-mingw32/include/qt6/QtGui/qpicture.h \
  /usr/x86_64-w64-mingw32/include/qt6/QtCore/qiodevice.h \
- /usr/x86_64-w64-mingw32/include/qt6/QtSerialPort/QSerialPort \
- /usr/x86_64-w64-mingw32/include/qt6/QtSerialPort/qserialport.h \
- /usr/x86_64-w64-mingw32/include/qt6/QtCore/qproperty.h \
- /usr/x86_64-w64-mingw32/include/qt6/QtCore/qpropertyprivate.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/experimental/source_location \
- /usr/x86_64-w64-mingw32/include/qt6/QtSerialPort/qserialportglobal.h \
- /usr/x86_64-w64-mingw32/include/qt6/QtSerialPort/qtserialportexports.h \
- /usr/x86_64-w64-mingw32/include/qt6/QtSerialPort/QSerialPortInfo \
- /usr/x86_64-w64-mingw32/include/qt6/QtSerialPort/qserialportinfo.h \
  /usr/x86_64-w64-mingw32/include/qt6/QtWidgets/QGroupBox \
  /usr/x86_64-w64-mingw32/include/qt6/QtWidgets/qgroupbox.h \
  /usr/x86_64-w64-mingw32/include/qt6/QtCore/QProcess \
@@ -502,15 +493,49 @@ CMakeFiles/TelgrafApp.dir/main.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/qt6/QtWidgets/qmessagebox.h \
  /usr/x86_64-w64-mingw32/include/qt6/QtWidgets/qdialog.h \
  /usr/x86_64-w64-mingw32/include/qt6/QtWidgets/qdialogbuttonbox.h \
- /usr/x86_64-w64-mingw32/include/qt6/QtCore/QThread \
- /usr/x86_64-w64-mingw32/include/qt6/QtCore/qthread.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/future \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/mutex \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/std_mutex.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/unique_lock.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/condition_variable \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/atomic_futex.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/std_thread.h \
+ /usr/x86_64-w64-mingw32/include/qt6/QtCore/QRandomGenerator \
+ /usr/x86_64-w64-mingw32/include/qt6/QtCore/qrandom.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/random \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/random.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/opt_random.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/random.tcc \
+ /usr/x86_64-w64-mingw32/include/qt6/QtBluetooth/QBluetoothDeviceDiscoveryAgent \
+ /usr/x86_64-w64-mingw32/include/qt6/QtBluetooth/qbluetoothdevicediscoveryagent.h \
+ /usr/x86_64-w64-mingw32/include/qt6/QtBluetooth/qtbluetoothglobal.h \
+ /usr/x86_64-w64-mingw32/include/qt6/QtBluetooth/qtbluetooth-config.h \
+ /usr/x86_64-w64-mingw32/include/qt6/QtBluetooth/qtbluetoothexports.h \
+ /usr/x86_64-w64-mingw32/include/qt6/QtCore/QObject \
+ /usr/x86_64-w64-mingw32/include/qt6/QtCore/qobject.h \
+ /usr/x86_64-w64-mingw32/include/qt6/QtBluetooth/QBluetoothDeviceInfo \
+ /usr/x86_64-w64-mingw32/include/qt6/QtBluetooth/qbluetoothdeviceinfo.h \
+ /usr/x86_64-w64-mingw32/include/qt6/QtBluetooth/QBluetoothUuid \
+ /usr/x86_64-w64-mingw32/include/qt6/QtBluetooth/qbluetoothuuid.h \
+ /usr/x86_64-w64-mingw32/include/qt6/QtCore/QtGlobal \
+ /usr/x86_64-w64-mingw32/include/qt6/QtCore/qglobal.h \
+ /usr/x86_64-w64-mingw32/include/qt6/QtCore/QMetaType \
+ /usr/x86_64-w64-mingw32/include/qt6/QtCore/qmetatype.h \
+ /usr/x86_64-w64-mingw32/include/qt6/QtCore/QUuid \
+ /usr/x86_64-w64-mingw32/include/qt6/QtCore/quuid.h \
+ /usr/x86_64-w64-mingw32/include/qt6/QtCore/QDebug \
+ /usr/x86_64-w64-mingw32/include/qt6/QtCore/qdebug.h \
+ /usr/x86_64-w64-mingw32/include/qt6/QtBluetooth/QBluetoothAddress \
+ /usr/x86_64-w64-mingw32/include/qt6/QtBluetooth/qbluetoothaddress.h \
+ /usr/x86_64-w64-mingw32/include/qt6/QtCore/QByteArray \
+ /usr/x86_64-w64-mingw32/include/qt6/QtCore/qbytearray.h \
+ /usr/x86_64-w64-mingw32/include/qt6/QtCore/QString \
+ /usr/x86_64-w64-mingw32/include/qt6/QtCore/qstring.h \
+ /usr/x86_64-w64-mingw32/include/qt6/QtBluetooth/QBluetoothSocket \
+ /usr/x86_64-w64-mingw32/include/qt6/QtBluetooth/qbluetoothsocket.h \
+ /usr/x86_64-w64-mingw32/include/qt6/QtBluetooth/qbluetooth.h \
+ /usr/x86_64-w64-mingw32/include/qt6/QtBluetooth/qbluetoothaddress.h \
+ /usr/x86_64-w64-mingw32/include/qt6/QtBluetooth/qbluetoothuuid.h \
+ /usr/x86_64-w64-mingw32/include/qt6/QtBluetooth/qbluetoothserviceinfo.h \
+ /usr/x86_64-w64-mingw32/include/qt6/QtCore/QList \
+ /usr/x86_64-w64-mingw32/include/qt6/QtCore/qlist.h \
+ /usr/x86_64-w64-mingw32/include/qt6/QtCore/QSharedPointer \
+ /usr/x86_64-w64-mingw32/include/qt6/QtCore/qsharedpointer.h \
+ /usr/x86_64-w64-mingw32/include/qt6/QtCore/QVariant \
+ /usr/x86_64-w64-mingw32/include/qt6/QtCore/qvariant.h \
  /home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/TelgrafApp_autogen/include/main.moc \
  /usr/x86_64-w64-mingw32/include/qt6/QtCore/qtmochelpers.h \
  /usr/x86_64-w64-mingw32/include/qt6/QtCore/qtmocconstants.h \

@@ -1,14 +1,15 @@
 #!/bin/bash
 
 # Önce temizlik
-rm -rf build-linux build-windows bin_output
-mkdir -p build-linux build-windows bin_output
+rm -rf build-linux build-windows build-mac bin_output
+mkdir -p build-linux build-windows build-mac bin_output
 
 echo "--- 1. Linux Sürümü Derleniyor ---"
 cd build-linux
 cmake ..
 make -j$(nproc)
 cp TelgrafApp ../bin_output/TelgrafApp_Linux
+sudo setcap 'cap_net_admin,cap_net_raw+eip' ./TelgrafApp
 cd ..
 
 echo "--- 2. Windows (.exe) Sürümü Derleniyor ---"

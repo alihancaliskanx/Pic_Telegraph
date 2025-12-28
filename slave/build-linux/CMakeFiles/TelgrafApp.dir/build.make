@@ -121,9 +121,12 @@ TelgrafApp: CMakeFiles/TelgrafApp.dir/build.make
 TelgrafApp: CMakeFiles/TelgrafApp.dir/compiler_depend.ts
 TelgrafApp: /usr/lib/libQt6Widgets.so.6.10.1
 TelgrafApp: /usr/lib/libQt6SerialPort.so.6.10.1
+TelgrafApp: /usr/lib/libQt6Bluetooth.so.6.10.1
 TelgrafApp: /usr/lib/libQt6Gui.so.6.10.1
 TelgrafApp: /usr/lib/libGLX.so
 TelgrafApp: /usr/lib/libOpenGL.so
+TelgrafApp: /usr/lib/libQt6Network.so.6.10.1
+TelgrafApp: /usr/lib/libQt6DBus.so.6.10.1
 TelgrafApp: /usr/lib/libQt6Core.so.6.10.1
 TelgrafApp: CMakeFiles/TelgrafApp.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-linux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable TelgrafApp"

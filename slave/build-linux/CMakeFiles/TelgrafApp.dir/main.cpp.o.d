@@ -390,17 +390,7 @@ CMakeFiles/TelgrafApp.dir/main.cpp.o: \
  /usr/include/qt6/QtWidgets/QLineEdit \
  /usr/include/qt6/QtWidgets/qlineedit.h /usr/include/qt6/QtWidgets/QLabel \
  /usr/include/qt6/QtWidgets/qlabel.h /usr/include/qt6/QtGui/qpicture.h \
- /usr/include/qt6/QtCore/qiodevice.h \
- /usr/include/qt6/QtSerialPort/QSerialPort \
- /usr/include/qt6/QtSerialPort/qserialport.h \
- /usr/include/qt6/QtCore/qproperty.h \
- /usr/include/qt6/QtCore/qpropertyprivate.h \
- /usr/include/c++/15.2.1/experimental/source_location \
- /usr/include/qt6/QtSerialPort/qserialportglobal.h \
- /usr/include/qt6/QtSerialPort/qtserialportexports.h \
- /usr/include/qt6/QtSerialPort/QSerialPortInfo \
- /usr/include/qt6/QtSerialPort/qserialportinfo.h \
- /usr/include/qt6/QtWidgets/QGroupBox \
+ /usr/include/qt6/QtCore/qiodevice.h /usr/include/qt6/QtWidgets/QGroupBox \
  /usr/include/qt6/QtWidgets/qgroupbox.h /usr/include/qt6/QtCore/QProcess \
  /usr/include/qt6/QtCore/qprocess.h /usr/include/qt6/QtCore/QDateTime \
  /usr/include/qt6/QtCore/qdatetime.h /usr/include/qt6/QtCore/qcalendar.h \
@@ -439,13 +429,39 @@ CMakeFiles/TelgrafApp.dir/main.cpp.o: \
  /usr/include/qt6/QtWidgets/qmessagebox.h \
  /usr/include/qt6/QtWidgets/qdialog.h \
  /usr/include/qt6/QtWidgets/qdialogbuttonbox.h \
- /usr/include/qt6/QtCore/QThread /usr/include/qt6/QtCore/qthread.h \
- /usr/include/c++/15.2.1/future /usr/include/c++/15.2.1/mutex \
- /usr/include/c++/15.2.1/bits/std_mutex.h \
- /usr/include/c++/15.2.1/bits/unique_lock.h \
- /usr/include/c++/15.2.1/condition_variable \
- /usr/include/c++/15.2.1/bits/atomic_futex.h \
- /usr/include/c++/15.2.1/bits/std_thread.h \
+ /usr/include/qt6/QtCore/QRandomGenerator \
+ /usr/include/qt6/QtCore/qrandom.h /usr/include/c++/15.2.1/random \
+ /usr/include/c++/15.2.1/bits/random.h \
+ /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/opt_random.h \
+ /usr/include/c++/15.2.1/bits/random.tcc \
+ /usr/include/qt6/QtBluetooth/QBluetoothDeviceDiscoveryAgent \
+ /usr/include/qt6/QtBluetooth/qbluetoothdevicediscoveryagent.h \
+ /usr/include/qt6/QtBluetooth/qtbluetoothglobal.h \
+ /usr/include/qt6/QtBluetooth/qtbluetooth-config.h \
+ /usr/include/qt6/QtBluetooth/qtbluetoothexports.h \
+ /usr/include/qt6/QtCore/QObject /usr/include/qt6/QtCore/qobject.h \
+ /usr/include/qt6/QtBluetooth/QBluetoothDeviceInfo \
+ /usr/include/qt6/QtBluetooth/qbluetoothdeviceinfo.h \
+ /usr/include/qt6/QtBluetooth/QBluetoothUuid \
+ /usr/include/qt6/QtBluetooth/qbluetoothuuid.h \
+ /usr/include/qt6/QtCore/QtGlobal /usr/include/qt6/QtCore/qglobal.h \
+ /usr/include/qt6/QtCore/QMetaType /usr/include/qt6/QtCore/qmetatype.h \
+ /usr/include/qt6/QtCore/QUuid /usr/include/qt6/QtCore/quuid.h \
+ /usr/include/qt6/QtCore/QDebug /usr/include/qt6/QtCore/qdebug.h \
+ /usr/include/qt6/QtBluetooth/QBluetoothAddress \
+ /usr/include/qt6/QtBluetooth/qbluetoothaddress.h \
+ /usr/include/qt6/QtCore/QByteArray /usr/include/qt6/QtCore/qbytearray.h \
+ /usr/include/qt6/QtCore/QString /usr/include/qt6/QtCore/qstring.h \
+ /usr/include/qt6/QtBluetooth/QBluetoothSocket \
+ /usr/include/qt6/QtBluetooth/qbluetoothsocket.h \
+ /usr/include/qt6/QtBluetooth/qbluetooth.h \
+ /usr/include/qt6/QtBluetooth/qbluetoothaddress.h \
+ /usr/include/qt6/QtBluetooth/qbluetoothuuid.h \
+ /usr/include/qt6/QtBluetooth/qbluetoothserviceinfo.h \
+ /usr/include/qt6/QtCore/QList /usr/include/qt6/QtCore/qlist.h \
+ /usr/include/qt6/QtCore/QSharedPointer \
+ /usr/include/qt6/QtCore/qsharedpointer.h \
+ /usr/include/qt6/QtCore/QVariant /usr/include/qt6/QtCore/qvariant.h \
  /home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-linux/TelgrafApp_autogen/include/main.moc \
  /usr/include/qt6/QtCore/qtmochelpers.h \
  /usr/include/qt6/QtCore/qtmocconstants.h \

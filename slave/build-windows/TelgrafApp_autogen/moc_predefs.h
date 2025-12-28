@@ -22,6 +22,7 @@
 #define __cpp_static_assert 201411L
 #define __BFLT16_MIN_10_EXP__ (-37)
 #define __cpp_inheriting_constructors 201511L
+#define QT_NEEDS_QMAIN 1
 #define QT_GUI_LIB 1
 #define __ORDER_LITTLE_ENDIAN__ 1234
 #define __WCHAR_MAX__ 0xffff
@@ -35,6 +36,7 @@
 #define __cpp_binary_literals 201304L
 #define __FLT64_DECIMAL_DIG__ 17
 #define __cpp_noexcept_function_type 201510L
+#define QT_BLUETOOTH_LIB 1
 #define __GCC_ATOMIC_CHAR32_T_LOCK_FREE 2
 #define __cpp_variadic_templates 200704L
 #define __UINT_FAST64_MAX__ 0xffffffffffffffffULL
@@ -310,6 +312,7 @@
 #define __INT_LEAST16_MAX__ 0x7fff
 #define __FLT16_NORM_MAX__ 6.55040000000000000000000000000000000e+4F16
 #define __DEC64_MANT_DIG__ 16
+#define QT_NETWORK_LIB 1
 #define __FLT32_DENORM_MIN__ 1.40129846432481707092372958328991613e-45F32
 #define __SIG_ATOMIC_WIDTH__ 32
 #define __GCC_DESTRUCTIVE_SIZE 64

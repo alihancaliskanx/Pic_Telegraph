@@ -1143,8 +1143,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/CMakeFiles/CMakeScratch/TryCompile-60XWcw"
-      binary: "/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/CMakeFiles/CMakeScratch/TryCompile-60XWcw"
+      source: "/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/CMakeFiles/CMakeScratch/TryCompile-Z7ocLB"
+      binary: "/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/CMakeFiles/CMakeScratch/TryCompile-Z7ocLB"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-D_FORTIFY_SOURCE=3 -D_GLIBCXX_ASSERTIONS -O2 -fexceptions --param=ssp-buffer-size=4 -Wformat -fcf-protection"
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1154,13 +1154,13 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/CMakeFiles/CMakeScratch/TryCompile-60XWcw'
+        Change Dir: '/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/CMakeFiles/CMakeScratch/TryCompile-Z7ocLB'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_a699b/fast
-        /usr/bin/make  -f CMakeFiles/cmTC_a699b.dir/build.make CMakeFiles/cmTC_a699b.dir/build
-        make[1]: Entering directory '/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/CMakeFiles/CMakeScratch/TryCompile-60XWcw'
-        Building CXX object CMakeFiles/cmTC_a699b.dir/CMakeCXXCompilerABI.cpp.obj
-        /usr/bin/x86_64-w64-mingw32-g++   -D_FORTIFY_SOURCE=3 -D_GLIBCXX_ASSERTIONS -O2 -fexceptions --param=ssp-buffer-size=4 -Wformat -fcf-protection    -v -o CMakeFiles/cmTC_a699b.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_b6665/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_b6665.dir/build.make CMakeFiles/cmTC_b6665.dir/build
+        make[1]: Entering directory '/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/CMakeFiles/CMakeScratch/TryCompile-Z7ocLB'
+        Building CXX object CMakeFiles/cmTC_b6665.dir/CMakeCXXCompilerABI.cpp.obj
+        /usr/bin/x86_64-w64-mingw32-g++   -D_FORTIFY_SOURCE=3 -D_GLIBCXX_ASSERTIONS -O2 -fexceptions --param=ssp-buffer-size=4 -Wformat -fcf-protection    -v -o CMakeFiles/cmTC_b6665.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=/usr/bin/x86_64-w64-mingw32-g++
         Target: x86_64-w64-mingw32
@@ -1168,8 +1168,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 15.2.0 (GCC) 
-        COLLECT_GCC_OPTIONS='-D' '_FORTIFY_SOURCE=3' '-D' '_GLIBCXX_ASSERTIONS' '-O2' '-fexceptions' '--param=ssp-buffer-size=4' '-Wformat=1' '-fcf-protection=full' '-v' '-o' 'CMakeFiles/cmTC_a699b.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_a699b.dir/'
-         /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/cc1plus -quiet -v -D_REENTRANT -D _FORTIFY_SOURCE=3 -D _GLIBCXX_ASSERTIONS /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_a699b.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -O2 -Wformat=1 -version -fexceptions -fcf-protection=full --param=ssp-buffer-size=4 -o /tmp/ccZxCtch.s
+        COLLECT_GCC_OPTIONS='-D' '_FORTIFY_SOURCE=3' '-D' '_GLIBCXX_ASSERTIONS' '-O2' '-fexceptions' '--param=ssp-buffer-size=4' '-Wformat=1' '-fcf-protection=full' '-v' '-o' 'CMakeFiles/cmTC_b6665.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_b6665.dir/'
+         /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/cc1plus -quiet -v -D_REENTRANT -D _FORTIFY_SOURCE=3 -D _GLIBCXX_ASSERTIONS /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_b6665.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -O2 -Wformat=1 -version -fexceptions -fcf-protection=full --param=ssp-buffer-size=4 -o /tmp/ccFFsoz5.s
         GNU C++17 (GCC) version 15.2.0 (x86_64-w64-mingw32)
         	compiled by GNU C version 15.2.1 20250813, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.3.1, isl version isl-0.27-GMP
         
@@ -1185,14 +1185,14 @@ events:
          /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/include
         End of search list.
         Compiler executable checksum: 94e2fcf38c2dc7c6120bcf1bc489aca0
-        COLLECT_GCC_OPTIONS='-D' '_FORTIFY_SOURCE=3' '-D' '_GLIBCXX_ASSERTIONS' '-O2' '-fexceptions' '--param=ssp-buffer-size=4' '-Wformat=1' '-fcf-protection=full' '-v' '-o' 'CMakeFiles/cmTC_a699b.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_a699b.dir/'
-         /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/as -v -o CMakeFiles/cmTC_a699b.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccZxCtch.s
+        COLLECT_GCC_OPTIONS='-D' '_FORTIFY_SOURCE=3' '-D' '_GLIBCXX_ASSERTIONS' '-O2' '-fexceptions' '--param=ssp-buffer-size=4' '-Wformat=1' '-fcf-protection=full' '-v' '-o' 'CMakeFiles/cmTC_b6665.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_b6665.dir/'
+         /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/as -v -o CMakeFiles/cmTC_b6665.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccFFsoz5.s
         GNU assembler version 2.45 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.45
         COMPILER_PATH=/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/:/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/:/usr/lib/gcc/x86_64-w64-mingw32/:/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/:/usr/lib/gcc/x86_64-w64-mingw32/:/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/:/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/:/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/
-        COLLECT_GCC_OPTIONS='-D' '_FORTIFY_SOURCE=3' '-D' '_GLIBCXX_ASSERTIONS' '-O2' '-fexceptions' '--param=ssp-buffer-size=4' '-Wformat=1' '-fcf-protection=full' '-v' '-o' 'CMakeFiles/cmTC_a699b.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_a699b.dir/CMakeCXXCompilerABI.cpp.'
-        Linking CXX executable cmTC_a699b.exe
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a699b.dir/link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-D' '_FORTIFY_SOURCE=3' '-D' '_GLIBCXX_ASSERTIONS' '-O2' '-fexceptions' '--param=ssp-buffer-size=4' '-Wformat=1' '-fcf-protection=full' '-v' '-o' 'CMakeFiles/cmTC_b6665.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_b6665.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_b6665.exe
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b6665.dir/link.txt --verbose=1
         Using built-in specs.
         COLLECT_GCC=/usr/bin/x86_64-w64-mingw32-g++
         COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper
@@ -1203,16 +1203,16 @@ events:
         gcc version 15.2.0 (GCC) 
         COMPILER_PATH=/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/:/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/:/usr/lib/gcc/x86_64-w64-mingw32/:/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/:/usr/lib/gcc/x86_64-w64-mingw32/:/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/:/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/:/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/
-        COLLECT_GCC_OPTIONS='-D' '_FORTIFY_SOURCE=3' '-D' '_GLIBCXX_ASSERTIONS' '-O2' '-fexceptions' '--param=ssp-buffer-size=4' '-Wformat=1' '-fcf-protection=full' '-fstack-protector' '-v' '-o' 'cmTC_a699b.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_a699b.'
-         /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/collect2 -plugin /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccH4OlSs.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_a699b.exe /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -L/usr/lib/gcc/x86_64-w64-mingw32/15.2.0 -L/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -L/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -O1 --sort-common --as-needed -v --whole-archive CMakeFiles/cmTC_a699b.dir/objects.a --no-whole-archive --out-implib libcmTC_a699b.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lssp_nonshared -lssp -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o
+        COLLECT_GCC_OPTIONS='-D' '_FORTIFY_SOURCE=3' '-D' '_GLIBCXX_ASSERTIONS' '-O2' '-fexceptions' '--param=ssp-buffer-size=4' '-Wformat=1' '-fcf-protection=full' '-fstack-protector' '-v' '-o' 'cmTC_b6665.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_b6665.'
+         /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/collect2 -plugin /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc42S2M3.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_b6665.exe /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -L/usr/lib/gcc/x86_64-w64-mingw32/15.2.0 -L/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -L/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -O1 --sort-common --as-needed -v --whole-archive CMakeFiles/cmTC_b6665.dir/objects.a --no-whole-archive --out-implib libcmTC_b6665.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lssp_nonshared -lssp -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o
         collect2 version 15.2.0
-        /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/ld -plugin /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccH4OlSs.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_a699b.exe /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -L/usr/lib/gcc/x86_64-w64-mingw32/15.2.0 -L/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -L/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -O1 --sort-common --as-needed -v --whole-archive CMakeFiles/cmTC_a699b.dir/objects.a --no-whole-archive --out-implib libcmTC_a699b.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lssp_nonshared -lssp -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o
+        /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/ld -plugin /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc42S2M3.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_b6665.exe /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -L/usr/lib/gcc/x86_64-w64-mingw32/15.2.0 -L/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -L/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -O1 --sort-common --as-needed -v --whole-archive CMakeFiles/cmTC_b6665.dir/objects.a --no-whole-archive --out-implib libcmTC_b6665.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lssp_nonshared -lssp -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o
         GNU ld (GNU Binutils) 2.45
-        COLLECT_GCC_OPTIONS='-D' '_FORTIFY_SOURCE=3' '-D' '_GLIBCXX_ASSERTIONS' '-O2' '-fexceptions' '--param=ssp-buffer-size=4' '-Wformat=1' '-fcf-protection=full' '-fstack-protector' '-v' '-o' 'cmTC_a699b.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_a699b.'
-        /usr/bin/cmake -E rm -f CMakeFiles/cmTC_a699b.dir/objects.a
-        /usr/bin/x86_64-w64-mingw32-ar qc CMakeFiles/cmTC_a699b.dir/objects.a @CMakeFiles/cmTC_a699b.dir/objects1.rsp
-        /usr/bin/x86_64-w64-mingw32-g++ -D_FORTIFY_SOURCE=3 -D_GLIBCXX_ASSERTIONS -O2 -fexceptions --param=ssp-buffer-size=4 -Wformat -fcf-protection  -Wl,-O1,--sort-common,--as-needed -fstack-protector -v -Wl,-v -Wl,--whole-archive CMakeFiles/cmTC_a699b.dir/objects.a -Wl,--no-whole-archive -o cmTC_a699b.exe -Wl,--out-implib,libcmTC_a699b.dll.a -Wl,--major-image-version,0,--minor-image-version,0
-        make[1]: Leaving directory '/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/CMakeFiles/CMakeScratch/TryCompile-60XWcw'
+        COLLECT_GCC_OPTIONS='-D' '_FORTIFY_SOURCE=3' '-D' '_GLIBCXX_ASSERTIONS' '-O2' '-fexceptions' '--param=ssp-buffer-size=4' '-Wformat=1' '-fcf-protection=full' '-fstack-protector' '-v' '-o' 'cmTC_b6665.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_b6665.'
+        /usr/bin/cmake -E rm -f CMakeFiles/cmTC_b6665.dir/objects.a
+        /usr/bin/x86_64-w64-mingw32-ar qc CMakeFiles/cmTC_b6665.dir/objects.a @CMakeFiles/cmTC_b6665.dir/objects1.rsp
+        /usr/bin/x86_64-w64-mingw32-g++ -D_FORTIFY_SOURCE=3 -D_GLIBCXX_ASSERTIONS -O2 -fexceptions --param=ssp-buffer-size=4 -Wformat -fcf-protection  -Wl,-O1,--sort-common,--as-needed -fstack-protector -v -Wl,-v -Wl,--whole-archive CMakeFiles/cmTC_b6665.dir/objects.a -Wl,--no-whole-archive -o cmTC_b6665.exe -Wl,--out-implib,libcmTC_b6665.dll.a -Wl,--major-image-version,0,--minor-image-version,0
+        make[1]: Leaving directory '/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/CMakeFiles/CMakeScratch/TryCompile-Z7ocLB'
         
       exitCode: 0
   -
@@ -1251,13 +1251,13 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/CMakeFiles/CMakeScratch/TryCompile-60XWcw']
+        ignore line: [Change Dir: '/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/CMakeFiles/CMakeScratch/TryCompile-Z7ocLB']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_a699b/fast]
-        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_a699b.dir/build.make CMakeFiles/cmTC_a699b.dir/build]
-        ignore line: [make[1]: Entering directory '/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/CMakeFiles/CMakeScratch/TryCompile-60XWcw']
-        ignore line: [Building CXX object CMakeFiles/cmTC_a699b.dir/CMakeCXXCompilerABI.cpp.obj]
-        ignore line: [/usr/bin/x86_64-w64-mingw32-g++   -D_FORTIFY_SOURCE=3 -D_GLIBCXX_ASSERTIONS -O2 -fexceptions --param=ssp-buffer-size=4 -Wformat -fcf-protection    -v -o CMakeFiles/cmTC_a699b.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_b6665/fast]
+        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_b6665.dir/build.make CMakeFiles/cmTC_b6665.dir/build]
+        ignore line: [make[1]: Entering directory '/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/CMakeFiles/CMakeScratch/TryCompile-Z7ocLB']
+        ignore line: [Building CXX object CMakeFiles/cmTC_b6665.dir/CMakeCXXCompilerABI.cpp.obj]
+        ignore line: [/usr/bin/x86_64-w64-mingw32-g++   -D_FORTIFY_SOURCE=3 -D_GLIBCXX_ASSERTIONS -O2 -fexceptions --param=ssp-buffer-size=4 -Wformat -fcf-protection    -v -o CMakeFiles/cmTC_b6665.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/x86_64-w64-mingw32-g++]
         ignore line: [Target: x86_64-w64-mingw32]
@@ -1265,8 +1265,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 15.2.0 (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-D' '_FORTIFY_SOURCE=3' '-D' '_GLIBCXX_ASSERTIONS' '-O2' '-fexceptions' '--param=ssp-buffer-size=4' '-Wformat=1' '-fcf-protection=full' '-v' '-o' 'CMakeFiles/cmTC_a699b.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_a699b.dir/']
-        ignore line: [ /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/cc1plus -quiet -v -D_REENTRANT -D _FORTIFY_SOURCE=3 -D _GLIBCXX_ASSERTIONS /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_a699b.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -O2 -Wformat=1 -version -fexceptions -fcf-protection=full --param=ssp-buffer-size=4 -o /tmp/ccZxCtch.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-D' '_FORTIFY_SOURCE=3' '-D' '_GLIBCXX_ASSERTIONS' '-O2' '-fexceptions' '--param=ssp-buffer-size=4' '-Wformat=1' '-fcf-protection=full' '-v' '-o' 'CMakeFiles/cmTC_b6665.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_b6665.dir/']
+        ignore line: [ /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/cc1plus -quiet -v -D_REENTRANT -D _FORTIFY_SOURCE=3 -D _GLIBCXX_ASSERTIONS /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_b6665.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -O2 -Wformat=1 -version -fexceptions -fcf-protection=full --param=ssp-buffer-size=4 -o /tmp/ccFFsoz5.s]
         ignore line: [GNU C++17 (GCC) version 15.2.0 (x86_64-w64-mingw32)]
         ignore line: [	compiled by GNU C version 15.2.1 20250813  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.3.1  isl version isl-0.27-GMP]
         ignore line: []
@@ -1282,14 +1282,14 @@ events:
         ignore line: [ /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 94e2fcf38c2dc7c6120bcf1bc489aca0]
-        ignore line: [COLLECT_GCC_OPTIONS='-D' '_FORTIFY_SOURCE=3' '-D' '_GLIBCXX_ASSERTIONS' '-O2' '-fexceptions' '--param=ssp-buffer-size=4' '-Wformat=1' '-fcf-protection=full' '-v' '-o' 'CMakeFiles/cmTC_a699b.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_a699b.dir/']
-        ignore line: [ /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/as -v -o CMakeFiles/cmTC_a699b.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccZxCtch.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-D' '_FORTIFY_SOURCE=3' '-D' '_GLIBCXX_ASSERTIONS' '-O2' '-fexceptions' '--param=ssp-buffer-size=4' '-Wformat=1' '-fcf-protection=full' '-v' '-o' 'CMakeFiles/cmTC_b6665.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_b6665.dir/']
+        ignore line: [ /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/as -v -o CMakeFiles/cmTC_b6665.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccFFsoz5.s]
         ignore line: [GNU assembler version 2.45 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.45]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/:/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/:/usr/lib/gcc/x86_64-w64-mingw32/:/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/:/usr/lib/gcc/x86_64-w64-mingw32/:/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/:/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/:/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-D' '_FORTIFY_SOURCE=3' '-D' '_GLIBCXX_ASSERTIONS' '-O2' '-fexceptions' '--param=ssp-buffer-size=4' '-Wformat=1' '-fcf-protection=full' '-v' '-o' 'CMakeFiles/cmTC_a699b.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_a699b.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [Linking CXX executable cmTC_a699b.exe]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a699b.dir/link.txt --verbose=1]
+        ignore line: [COLLECT_GCC_OPTIONS='-D' '_FORTIFY_SOURCE=3' '-D' '_GLIBCXX_ASSERTIONS' '-O2' '-fexceptions' '--param=ssp-buffer-size=4' '-Wformat=1' '-fcf-protection=full' '-v' '-o' 'CMakeFiles/cmTC_b6665.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_b6665.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_b6665.exe]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b6665.dir/link.txt --verbose=1]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/x86_64-w64-mingw32-g++]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper]
@@ -1300,13 +1300,13 @@ events:
         ignore line: [gcc version 15.2.0 (GCC) ]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/:/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/:/usr/lib/gcc/x86_64-w64-mingw32/:/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/:/usr/lib/gcc/x86_64-w64-mingw32/:/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/:/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/:/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-D' '_FORTIFY_SOURCE=3' '-D' '_GLIBCXX_ASSERTIONS' '-O2' '-fexceptions' '--param=ssp-buffer-size=4' '-Wformat=1' '-fcf-protection=full' '-fstack-protector' '-v' '-o' 'cmTC_a699b.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_a699b.']
-        link line: [ /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/collect2 -plugin /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccH4OlSs.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_a699b.exe /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -L/usr/lib/gcc/x86_64-w64-mingw32/15.2.0 -L/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -L/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -O1 --sort-common --as-needed -v --whole-archive CMakeFiles/cmTC_a699b.dir/objects.a --no-whole-archive --out-implib libcmTC_a699b.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lssp_nonshared -lssp -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-D' '_FORTIFY_SOURCE=3' '-D' '_GLIBCXX_ASSERTIONS' '-O2' '-fexceptions' '--param=ssp-buffer-size=4' '-Wformat=1' '-fcf-protection=full' '-fstack-protector' '-v' '-o' 'cmTC_b6665.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_b6665.']
+        link line: [ /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/collect2 -plugin /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc42S2M3.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_b6665.exe /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -L/usr/lib/gcc/x86_64-w64-mingw32/15.2.0 -L/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -L/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -O1 --sort-common --as-needed -v --whole-archive CMakeFiles/cmTC_b6665.dir/objects.a --no-whole-archive --out-implib libcmTC_b6665.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lssp_nonshared -lssp -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o]
           arg [/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccH4OlSs.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/cc42S2M3.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
@@ -1328,7 +1328,7 @@ events:
           arg [i386pep] ==> ignore
           arg [-Bdynamic] ==> search dynamic
           arg [-o] ==> ignore
-          arg [cmTC_a699b.exe] ==> ignore
+          arg [cmTC_b6665.exe] ==> ignore
           arg [/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
           arg [/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o] ==> obj [/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o]
           arg [-L/usr/lib/gcc/x86_64-w64-mingw32/15.2.0] ==> dir [/usr/lib/gcc/x86_64-w64-mingw32/15.2.0]
@@ -1339,10 +1339,10 @@ events:
           arg [--as-needed] ==> ignore
           arg [-v] ==> ignore
           arg [--whole-archive] ==> ignore
-          arg [CMakeFiles/cmTC_a699b.dir/objects.a] ==> ignore
+          arg [CMakeFiles/cmTC_b6665.dir/objects.a] ==> ignore
           arg [--no-whole-archive] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_a699b.dll.a] ==> ignore
+          arg [libcmTC_b6665.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore
@@ -1369,7 +1369,7 @@ events:
           arg [-lkernel32] ==> lib [kernel32]
           arg [/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o] ==> obj [/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o]
         ignore line: [collect2 version 15.2.0]
-        ignore line: [/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/ld -plugin /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccH4OlSs.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_a699b.exe /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -L/usr/lib/gcc/x86_64-w64-mingw32/15.2.0 -L/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -L/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -O1 --sort-common --as-needed -v --whole-archive CMakeFiles/cmTC_a699b.dir/objects.a --no-whole-archive --out-implib libcmTC_a699b.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lssp_nonshared -lssp -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o]
+        ignore line: [/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/ld -plugin /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc42S2M3.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_b6665.exe /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -L/usr/lib/gcc/x86_64-w64-mingw32/15.2.0 -L/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -L/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -O1 --sort-common --as-needed -v --whole-archive CMakeFiles/cmTC_b6665.dir/objects.a --no-whole-archive --out-implib libcmTC_b6665.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lssp_nonshared -lssp -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o]
         linker tool for 'CXX': /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/ld
         remove lib [msvcrt]
         remove lib [msvcrt]
@@ -1493,8 +1493,8 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/CMakeFiles/CMakeScratch/TryCompile-gFOJRD"
-      binary: "/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/CMakeFiles/CMakeScratch/TryCompile-gFOJRD"
+      source: "/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/CMakeFiles/CMakeScratch/TryCompile-h9Nm9p"
+      binary: "/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/CMakeFiles/CMakeScratch/TryCompile-h9Nm9p"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-D_FORTIFY_SOURCE=3 -D_GLIBCXX_ASSERTIONS -O2 -pipe -fexceptions --param=ssp-buffer-size=4 -Wformat -Werror=format-security -fcf-protection"
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1504,19 +1504,19 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: '/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/CMakeFiles/CMakeScratch/TryCompile-gFOJRD'
+        Change Dir: '/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/CMakeFiles/CMakeScratch/TryCompile-h9Nm9p'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_738a0/fast
-        /usr/bin/make  -f CMakeFiles/cmTC_738a0.dir/build.make CMakeFiles/cmTC_738a0.dir/build
-        make[1]: Entering directory '/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/CMakeFiles/CMakeScratch/TryCompile-gFOJRD'
-        Building CXX object CMakeFiles/cmTC_738a0.dir/src.cxx.obj
-        /usr/bin/x86_64-w64-mingw32-g++ -DCMAKE_HAVE_LIBC_PTHREAD  -D_FORTIFY_SOURCE=3 -D_GLIBCXX_ASSERTIONS -O2 -pipe -fexceptions --param=ssp-buffer-size=4 -Wformat -Werror=format-security -fcf-protection  -std=gnu++17 -o CMakeFiles/cmTC_738a0.dir/src.cxx.obj -c /home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/CMakeFiles/CMakeScratch/TryCompile-gFOJRD/src.cxx
-        Linking CXX executable cmTC_738a0.exe
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_738a0.dir/link.txt --verbose=1
-        /usr/bin/cmake -E rm -f CMakeFiles/cmTC_738a0.dir/objects.a
-        /usr/bin/x86_64-w64-mingw32-ar qc CMakeFiles/cmTC_738a0.dir/objects.a @CMakeFiles/cmTC_738a0.dir/objects1.rsp
-        /usr/bin/x86_64-w64-mingw32-g++ -D_FORTIFY_SOURCE=3 -D_GLIBCXX_ASSERTIONS -O2 -pipe -fexceptions --param=ssp-buffer-size=4 -Wformat -Werror=format-security -fcf-protection  -Wl,-O1,--sort-common,--as-needed -fstack-protector  -Wl,--whole-archive CMakeFiles/cmTC_738a0.dir/objects.a -Wl,--no-whole-archive -o cmTC_738a0.exe -Wl,--out-implib,libcmTC_738a0.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles/cmTC_738a0.dir/linkLibs.rsp
-        make[1]: Leaving directory '/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/CMakeFiles/CMakeScratch/TryCompile-gFOJRD'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_cba53/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_cba53.dir/build.make CMakeFiles/cmTC_cba53.dir/build
+        make[1]: Entering directory '/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/CMakeFiles/CMakeScratch/TryCompile-h9Nm9p'
+        Building CXX object CMakeFiles/cmTC_cba53.dir/src.cxx.obj
+        /usr/bin/x86_64-w64-mingw32-g++ -DCMAKE_HAVE_LIBC_PTHREAD  -D_FORTIFY_SOURCE=3 -D_GLIBCXX_ASSERTIONS -O2 -pipe -fexceptions --param=ssp-buffer-size=4 -Wformat -Werror=format-security -fcf-protection  -std=gnu++17 -o CMakeFiles/cmTC_cba53.dir/src.cxx.obj -c /home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/CMakeFiles/CMakeScratch/TryCompile-h9Nm9p/src.cxx
+        Linking CXX executable cmTC_cba53.exe
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cba53.dir/link.txt --verbose=1
+        /usr/bin/cmake -E rm -f CMakeFiles/cmTC_cba53.dir/objects.a
+        /usr/bin/x86_64-w64-mingw32-ar qc CMakeFiles/cmTC_cba53.dir/objects.a @CMakeFiles/cmTC_cba53.dir/objects1.rsp
+        /usr/bin/x86_64-w64-mingw32-g++ -D_FORTIFY_SOURCE=3 -D_GLIBCXX_ASSERTIONS -O2 -pipe -fexceptions --param=ssp-buffer-size=4 -Wformat -Werror=format-security -fcf-protection  -Wl,-O1,--sort-common,--as-needed -fstack-protector  -Wl,--whole-archive CMakeFiles/cmTC_cba53.dir/objects.a -Wl,--no-whole-archive -o cmTC_cba53.exe -Wl,--out-implib,libcmTC_cba53.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles/cmTC_cba53.dir/linkLibs.rsp
+        make[1]: Leaving directory '/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/CMakeFiles/CMakeScratch/TryCompile-h9Nm9p'
         
       exitCode: 0
   -
@@ -1791,8 +1791,8 @@ events:
     checks:
       - "Performing Test HAVE_STDATOMIC"
     directories:
-      source: "/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/CMakeFiles/CMakeScratch/TryCompile-E1uc3s"
-      binary: "/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/CMakeFiles/CMakeScratch/TryCompile-E1uc3s"
+      source: "/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/CMakeFiles/CMakeScratch/TryCompile-uj2tPV"
+      binary: "/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/CMakeFiles/CMakeScratch/TryCompile-uj2tPV"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-D_FORTIFY_SOURCE=3 -D_GLIBCXX_ASSERTIONS -O2 -pipe -fexceptions --param=ssp-buffer-size=4 -Wformat -Werror=format-security -fcf-protection"
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1802,19 +1802,19 @@ events:
       variable: "HAVE_STDATOMIC"
       cached: true
       stdout: |
-        Change Dir: '/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/CMakeFiles/CMakeScratch/TryCompile-E1uc3s'
+        Change Dir: '/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/CMakeFiles/CMakeScratch/TryCompile-uj2tPV'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_24ff0/fast
-        /usr/bin/make  -f CMakeFiles/cmTC_24ff0.dir/build.make CMakeFiles/cmTC_24ff0.dir/build
-        make[1]: Entering directory '/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/CMakeFiles/CMakeScratch/TryCompile-E1uc3s'
-        Building CXX object CMakeFiles/cmTC_24ff0.dir/src.cxx.obj
-        /usr/bin/x86_64-w64-mingw32-g++ -DHAVE_STDATOMIC  -D_FORTIFY_SOURCE=3 -D_GLIBCXX_ASSERTIONS -O2 -pipe -fexceptions --param=ssp-buffer-size=4 -Wformat -Werror=format-security -fcf-protection  -std=gnu++17 -o CMakeFiles/cmTC_24ff0.dir/src.cxx.obj -c /home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/CMakeFiles/CMakeScratch/TryCompile-E1uc3s/src.cxx
-        Linking CXX executable cmTC_24ff0.exe
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_24ff0.dir/link.txt --verbose=1
-        /usr/bin/cmake -E rm -f CMakeFiles/cmTC_24ff0.dir/objects.a
-        /usr/bin/x86_64-w64-mingw32-ar qc CMakeFiles/cmTC_24ff0.dir/objects.a @CMakeFiles/cmTC_24ff0.dir/objects1.rsp
-        /usr/bin/x86_64-w64-mingw32-g++ -D_FORTIFY_SOURCE=3 -D_GLIBCXX_ASSERTIONS -O2 -pipe -fexceptions --param=ssp-buffer-size=4 -Wformat -Werror=format-security -fcf-protection  -Wl,-O1,--sort-common,--as-needed -fstack-protector  -Wl,--whole-archive CMakeFiles/cmTC_24ff0.dir/objects.a -Wl,--no-whole-archive -o cmTC_24ff0.exe -Wl,--out-implib,libcmTC_24ff0.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles/cmTC_24ff0.dir/linkLibs.rsp
-        make[1]: Leaving directory '/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/CMakeFiles/CMakeScratch/TryCompile-E1uc3s'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_78dc6/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_78dc6.dir/build.make CMakeFiles/cmTC_78dc6.dir/build
+        make[1]: Entering directory '/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/CMakeFiles/CMakeScratch/TryCompile-uj2tPV'
+        Building CXX object CMakeFiles/cmTC_78dc6.dir/src.cxx.obj
+        /usr/bin/x86_64-w64-mingw32-g++ -DHAVE_STDATOMIC  -D_FORTIFY_SOURCE=3 -D_GLIBCXX_ASSERTIONS -O2 -pipe -fexceptions --param=ssp-buffer-size=4 -Wformat -Werror=format-security -fcf-protection  -std=gnu++17 -o CMakeFiles/cmTC_78dc6.dir/src.cxx.obj -c /home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/CMakeFiles/CMakeScratch/TryCompile-uj2tPV/src.cxx
+        Linking CXX executable cmTC_78dc6.exe
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_78dc6.dir/link.txt --verbose=1
+        /usr/bin/cmake -E rm -f CMakeFiles/cmTC_78dc6.dir/objects.a
+        /usr/bin/x86_64-w64-mingw32-ar qc CMakeFiles/cmTC_78dc6.dir/objects.a @CMakeFiles/cmTC_78dc6.dir/objects1.rsp
+        /usr/bin/x86_64-w64-mingw32-g++ -D_FORTIFY_SOURCE=3 -D_GLIBCXX_ASSERTIONS -O2 -pipe -fexceptions --param=ssp-buffer-size=4 -Wformat -Werror=format-security -fcf-protection  -Wl,-O1,--sort-common,--as-needed -fstack-protector  -Wl,--whole-archive CMakeFiles/cmTC_78dc6.dir/objects.a -Wl,--no-whole-archive -o cmTC_78dc6.exe -Wl,--out-implib,libcmTC_78dc6.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles/cmTC_78dc6.dir/linkLibs.rsp
+        make[1]: Leaving directory '/home/sups/Documents/Code/mikroproje/Pic_Telegraph/slave/build-windows/CMakeFiles/CMakeScratch/TryCompile-uj2tPV'
         
       exitCode: 0
   -
@@ -2260,52 +2260,7 @@ events:
       - "/usr/x86_64-w64-mingw32/lib/"
       - "/usr/x86_64-w64-mingw32/"
       - "/usr/x86_64-w64-mingw32/lib/"
-    searched_directories:
-      - "/usr/x86_64-w64-mingw32/lib/"
-      - "/usr/x86_64-w64-mingw32/bin/"
-      - "/usr/x86_64-w64-mingw32/bin/"
-      - "/usr/x86_64-w64-mingw32/home/sups/.local/share/mise/installs/go/1.25.5/bin/"
-      - "/usr/x86_64-w64-mingw32/home/sups/.local/share/mise/installs/node/25.0.0/bin/"
-      - "/usr/x86_64-w64-mingw32/home/sups/.local/share/omarchy/bin/"
-      - "/usr/x86_64-w64-mingw32/home/sups/.cargo/bin/"
-      - "/usr/x86_64-w64-mingw32/usr/local/sbin/"
-      - "/usr/x86_64-w64-mingw32/usr/local/bin/"
-      - "/usr/x86_64-w64-mingw32/usr/bin/"
-      - "/usr/x86_64-w64-mingw32/home/sups/.local/share/flatpak/exports/bin/"
-      - "/usr/x86_64-w64-mingw32/var/lib/flatpak/exports/bin/"
-      - "/usr/x86_64-w64-mingw32/usr/lib/jvm/default/bin/"
-      - "/usr/x86_64-w64-mingw32/opt/microchip/xc8/v3.10/bin/"
-      - "/usr/x86_64-w64-mingw32/usr/bin/site_perl/"
-      - "/usr/x86_64-w64-mingw32/usr/bin/vendor_perl/"
-      - "/usr/x86_64-w64-mingw32/usr/bin/core_perl/"
-      - "/usr/x86_64-w64-mingw32/usr/lib/"
-      - "/usr/x86_64-w64-mingw32/usr/"
-      - "/usr/x86_64-w64-mingw32/lib/"
-      - "/usr/x86_64-w64-mingw32/"
-      - "/usr/x86_64-w64-mingw32/lib/"
-      - "/usr/x86_64-w64-mingw32/lib/"
-      - "/usr/x86_64-w64-mingw32/bin/"
-      - "/usr/x86_64-w64-mingw32/bin/"
-      - "/usr/x86_64-w64-mingw32/home/sups/.local/share/mise/installs/go/1.25.5/bin/"
-      - "/usr/x86_64-w64-mingw32/home/sups/.local/share/mise/installs/node/25.0.0/bin/"
-      - "/usr/x86_64-w64-mingw32/home/sups/.local/share/omarchy/bin/"
-      - "/usr/x86_64-w64-mingw32/home/sups/.cargo/bin/"
-      - "/usr/x86_64-w64-mingw32/usr/local/sbin/"
-      - "/usr/x86_64-w64-mingw32/usr/local/bin/"
-      - "/usr/x86_64-w64-mingw32/usr/bin/"
-      - "/usr/x86_64-w64-mingw32/home/sups/.local/share/flatpak/exports/bin/"
-      - "/usr/x86_64-w64-mingw32/var/lib/flatpak/exports/bin/"
-      - "/usr/x86_64-w64-mingw32/usr/lib/jvm/default/bin/"
-      - "/usr/x86_64-w64-mingw32/opt/microchip/xc8/v3.10/bin/"
-      - "/usr/x86_64-w64-mingw32/usr/bin/site_perl/"
-      - "/usr/x86_64-w64-mingw32/usr/bin/vendor_perl/"
-      - "/usr/x86_64-w64-mingw32/usr/bin/core_perl/"
-      - "/usr/x86_64-w64-mingw32/usr/lib/"
-      - "/usr/x86_64-w64-mingw32/usr/"
-      - "/usr/x86_64-w64-mingw32/lib/"
-      - "/usr/x86_64-w64-mingw32/"
-      - "/usr/x86_64-w64-mingw32/lib/"
-    found: false
+    found: "/usr/x86_64-w64-mingw32/lib/libvulkan-1.dll.a"
     search_context:
       ENV{PATH}:
         - "/usr/x86_64-w64-mingw32/bin"
@@ -2741,6 +2696,176 @@ events:
   -
     kind: "find_package-v1"
     backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "/usr/x86_64-w64-mingw32/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:142 (find_dependency)"
+      - "/usr/x86_64-w64-mingw32/lib/cmake/Qt6Bluetooth/Qt6BluetoothDependencies.cmake:50 (_qt_internal_find_qt_dependencies)"
+      - "/usr/x86_64-w64-mingw32/lib/cmake/Qt6Bluetooth/Qt6BluetoothConfig.cmake:40 (include)"
+      - "/usr/x86_64-w64-mingw32/lib/cmake/Qt6/Qt6Config.cmake:237 (find_package)"
+      - "CMakeLists.txt:9 (find_package)"
+    name: "Qt6Network"
+    configs:
+      -
+        filename: "Qt6NetworkConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "qt6network-config.cmake"
+        kind: "cmake"
+    version_request:
+      version: "6.10.1"
+      version_complete: "6.10.1"
+      exact: false
+    settings:
+      required: "optional"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "Qt6Network"
+      search_paths:
+        - "/usr/x86_64-w64-mingw32/lib/cmake/Qt6Bluetooth/.."
+        - "/usr/x86_64-w64-mingw32/lib/cmake"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: false
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "ONLY"
+    candidates:
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6NetworkConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/qt6network-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6NetworkPrivate/Qt6NetworkConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6NetworkPrivate/qt6network-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6Network/Qt6NetworkConfig.cmake"
+      mode: "config"
+      version: "6.10.1"
+    search_context:
+      ENV{PATH}:
+        - "/usr/x86_64-w64-mingw32/bin"
+        - "/home/sups/.local/share/mise/installs/go/1.25.5/bin"
+        - "/home/sups/.local/share/mise/installs/node/25.0.0/bin"
+        - "/home/sups/.local/share/omarchy/bin/"
+        - "/home/sups/.cargo/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/home/sups/.local/share/flatpak/exports/bin"
+        - "/var/lib/flatpak/exports/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/opt/microchip/xc8/v3.10/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/usr/x86_64-w64-mingw32"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr"
+        - "/usr/x86_64-w64-mingw32"
+        - "/"
+      CMAKE_FIND_ROOT_PATH: "/usr/x86_64-w64-mingw32;/usr/x86_64-w64-mingw32"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "/usr/x86_64-w64-mingw32/lib/cmake/Qt6/Qt6Config.cmake:237 (find_package)"
+      - "CMakeLists.txt:9 (find_package)"
+    name: "Qt6Bluetooth"
+    configs:
+      -
+        filename: "Qt6BluetoothConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "qt6bluetooth-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "optional"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "Qt6Bluetooth"
+      search_paths:
+        - "/usr/x86_64-w64-mingw32/lib/cmake"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: false
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "ONLY"
+    candidates:
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6BluetoothConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/qt6bluetooth-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6BluetoothPrivate/Qt6BluetoothConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6BluetoothPrivate/qt6bluetooth-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6Bluetooth/Qt6BluetoothConfig.cmake"
+      mode: "config"
+      version: "6.10.1"
+    search_context:
+      ENV{PATH}:
+        - "/usr/x86_64-w64-mingw32/bin"
+        - "/home/sups/.local/share/mise/installs/go/1.25.5/bin"
+        - "/home/sups/.local/share/mise/installs/node/25.0.0/bin"
+        - "/home/sups/.local/share/omarchy/bin/"
+        - "/home/sups/.cargo/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/home/sups/.local/share/flatpak/exports/bin"
+        - "/var/lib/flatpak/exports/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/opt/microchip/xc8/v3.10/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/usr/x86_64-w64-mingw32"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr"
+        - "/usr/x86_64-w64-mingw32"
+        - "/"
+      CMAKE_FIND_ROOT_PATH: "/usr/x86_64-w64-mingw32;/usr/x86_64-w64-mingw32"
+  -
+    kind: "find_package-v1"
+    backtrace:
       - "CMakeLists.txt:9 (find_package)"
     name: "Qt6"
     components:
@@ -2750,6 +2875,10 @@ events:
         found: false
       -
         name: "SerialPort"
+        required: true
+        found: false
+      -
+        name: "Bluetooth"
         required: true
         found: false
     configs:
@@ -2879,6 +3008,606 @@ events:
         mode: "config"
         reason: "no_exist"
       -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickWidgetsPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickWidgetsPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickWidgets/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickWidgets/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickTestUtilsPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickTestUtilsPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickTestPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickTestPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickTest/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickTest/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickTemplates2Private/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickTemplates2Private/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickTemplates2/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickTemplates2/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickShapesPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickShapesPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickShapesDesignHelpersPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickShapesDesignHelpersPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickParticlesPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickParticlesPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickLayoutsPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickLayoutsPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickLayouts/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickLayouts/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickEffectsPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickEffectsPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickEffects/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickEffects/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickDialogs2UtilsPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickDialogs2UtilsPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickDialogs2Utils/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickDialogs2Utils/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickDialogs2QuickImplPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickDialogs2QuickImplPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickDialogs2QuickImpl/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickDialogs2QuickImpl/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickDialogs2Private/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickDialogs2Private/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickDialogs2/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickDialogs2/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControlsTestUtilsPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControlsTestUtilsPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2WindowsStyleImpl/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2WindowsStyleImpl/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2UniversalStyleImplPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2UniversalStyleImplPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2UniversalStyleImpl/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2UniversalStyleImpl/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2UniversalPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2UniversalPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2Universal/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2Universal/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2Private/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2Private/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2MaterialStyleImplPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2MaterialStyleImplPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2MaterialStyleImpl/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2MaterialStyleImpl/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2MaterialPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2MaterialPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2Material/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2Material/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2ImplPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2ImplPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2Impl/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2Impl/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2ImagineStyleImpl/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2ImagineStyleImpl/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2ImaginePrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2ImaginePrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2Imagine/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2Imagine/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2FusionStyleImplPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2FusionStyleImplPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2FusionStyleImpl/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2FusionStyleImpl/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2FusionPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2FusionPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2Fusion/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2Fusion/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2FluentWinUI3StyleImplPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2FluentWinUI3StyleImplPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2FluentWinUI3StyleImpl/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2FluentWinUI3StyleImpl/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2BasicStyleImplPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2BasicStyleImplPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2BasicStyleImpl/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2BasicStyleImpl/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2BasicPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2BasicPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2Basic/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2Basic/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QuickControls2/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6Quick/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6Quick/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlXmlListModelPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlXmlListModelPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlXmlListModel/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlXmlListModel/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlWorkerScriptPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlWorkerScriptPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlWorkerScript/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlWorkerScript/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlTypeRegistrarPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlTypeRegistrarPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlToolingSettingsPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlToolingSettingsPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlNetworkPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlNetworkPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlNetwork/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlNetwork/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlModelsPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlModelsPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlModels/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlModels/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlMetaPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlMetaPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlMeta/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlMeta/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlLocalStoragePrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlLocalStoragePrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlLocalStorage/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlLocalStorage/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlIntegration/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlIntegration/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlFormatPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlFormatPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlDomPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlDomPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlDebugPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlDebugPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlCorePrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlCorePrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlCore/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlCore/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlCompilerPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlCompilerPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlCompiler/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlCompiler/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlAssetDownloaderPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlAssetDownloaderPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlAssetDownloader/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6QmlAssetDownloader/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6Qml/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6Qml/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
         path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6PrintSupportPrivate/Qt6Config.cmake"
         mode: "config"
         reason: "no_exist"
@@ -2892,6 +3621,14 @@ events:
         reason: "no_exist"
       -
         path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6PrintSupport/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6PacketProtocolPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6PacketProtocolPrivate/qt6-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
@@ -2919,6 +3656,22 @@ events:
         mode: "config"
         reason: "no_exist"
       -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6NfcPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6NfcPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6Nfc/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6Nfc/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
         path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6NetworkPrivate/Qt6Config.cmake"
         mode: "config"
         reason: "no_exist"
@@ -2932,6 +3685,134 @@ events:
         reason: "no_exist"
       -
         path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6Network/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6LabsWavefrontMeshPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6LabsWavefrontMeshPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6LabsWavefrontMesh/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6LabsWavefrontMesh/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6LabsSynchronizerPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6LabsSynchronizerPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6LabsSynchronizer/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6LabsSynchronizer/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6LabsSharedImagePrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6LabsSharedImagePrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6LabsSharedImage/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6LabsSharedImage/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6LabsSettingsPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6LabsSettingsPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6LabsSettings/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6LabsSettings/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6LabsQmlModelsPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6LabsQmlModelsPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6LabsQmlModels/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6LabsQmlModels/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6LabsPlatformPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6LabsPlatformPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6LabsPlatform/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6LabsPlatform/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6LabsFolderListModelPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6LabsFolderListModelPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6LabsFolderListModel/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6LabsFolderListModel/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6LabsAnimationPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6LabsAnimationPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6LabsAnimation/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6LabsAnimation/qt6-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
@@ -3031,6 +3912,14 @@ events:
         mode: "config"
         reason: "no_exist"
       -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6Connectivity/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6Connectivity/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
         path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6Concurrent/Qt6Config.cmake"
         mode: "config"
         reason: "no_exist"
@@ -3044,6 +3933,22 @@ events:
         reason: "no_exist"
       -
         path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6BuildInternals/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6BluetoothPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6BluetoothPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6Bluetooth/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/x86_64-w64-mingw32/lib/cmake/Qt6Bluetooth/qt6-config.cmake"
         mode: "config"
         reason: "no_exist"
     found:
