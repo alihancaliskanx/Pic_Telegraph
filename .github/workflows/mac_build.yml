@@ -16,11 +16,11 @@ jobs:
         
     - name: Build
       run: |
+        cd slave
         mkdir build
         cd build
         cmake .. -DCMAKE_PREFIX_PATH=$QT_ROOT_DIR
         make
-        # .app dosyasını sıkıştır
         zip -r TelgrafApp-Mac.zip TelgrafApp.app
         
     - name: Upload Artifact
