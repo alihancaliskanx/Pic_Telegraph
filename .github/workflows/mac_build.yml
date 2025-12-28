@@ -28,4 +28,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: TelgrafApp-MacOS
-        path: build/TelgrafApp-Mac.zip
+        path: slave/build/TelgrafApp-Mac.zip
