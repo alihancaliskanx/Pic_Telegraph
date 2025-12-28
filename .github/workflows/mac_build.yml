@@ -11,8 +11,9 @@ jobs:
     - name: Install Qt
       uses: jurplel/install-qt-action@v3
       with:
-        version: '6.5.0' # Senin sürümüne göre ayarla
+        version: '6.5.0'
         host: 'mac'
+        modules: 'qtserialport qtconnectivity'
         
     - name: Build
       run: |
