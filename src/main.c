@@ -255,35 +255,120 @@ void send_nmea_packet()
     fprintf(BT_MODUL, "*%02X\r\n", checksum);
 }
 
+void full_wipe_reset()
+{
+    lcd_putc('\f');
+    lcd_locate(1, 1);
+    printf(lcd_putc, "HEPSI SILINIYOR");
+    output_high(BUZZER_PIN);
+    wdt_delay_ms(500);
+    output_low(BUZZER_PIN);
+
+    write_eeprom(0, 0);
+    write_eeprom(50, 0);
+
+    text_index = 0;
+    text_buffer[0] = '\0';
+
+    morse_index = 0;
+    morse_buffer[0] = '\0';
+
+    rx_display_buffer[0] = '\0';
+    scroll_pos = 0;
+
+    lcd_putc('\f');
+    update_lcd();
+}
+
 void process_incoming_nmea()
 {
     char *ptr_start;
     char *ptr_end;
     int8 len;
+    char packet_type;
+    char payload[25];
+    int1 param_val = 0;
+    int8 i;
+    int8 comma_index = 255;
+
+    char cmd_rst[] = "rst";
+    char cmd_led[] = "led_set";
+    char cmd_buz[] = "buzzer_set";
+    char cmd_hrst[] = "hard_reset";
 
     if (rx_temp_buffer[0] == '$')
     {
+        packet_type = rx_temp_buffer[1];
         ptr_start = strchr(rx_temp_buffer, ',');
         ptr_end = strchr(rx_temp_buffer, '*');
 
         if (ptr_start != 0 && ptr_end != 0 && ptr_end > ptr_start)
         {
             len = (int8)(ptr_end - ptr_start) - 1;
-            if (len > 20)
-                len = 20;
+            if (len > 24)
+                len = 24;
 
-            strncpy(rx_display_buffer, ptr_start + 1, len);
-            rx_display_buffer[len] = '\0';
+            strncpy(payload, ptr_start + 1, len);
+            payload[len] = '\0';
+
+            if (packet_type == 'M')
+            {
+                strcpy(rx_display_buffer, payload);
+            }
+            else if (packet_type == 'K')
+            {
+                for (i = 0; i < len; i++)
+                {
+                    if (payload[i] == ',')
+                    {
+                        comma_index = i;
+                        break;
+                    }
+                }
+
+                if (comma_index != 255)
+                {
+                    payload[comma_index] = '\0';
+                    if (payload[comma_index + 1] == '1')
+                        param_val = 1;
+                }
+
+                if (strcmp(payload, cmd_rst) == 0)
+                {
+                    reset_cpu();
+                }
+                else if (strcmp(payload, cmd_led) == 0)
+                {
+                    if (param_val)
+                        output_high(LED_PIN);
+                    else
+                        output_low(LED_PIN);
+                    rx_display_buffer[0] = '\0';
+                }
+                else if (strcmp(payload, cmd_buz) == 0)
+                {
+                    if (param_val)
+                        output_high(BUZZER_PIN);
+                    else
+                        output_low(BUZZER_PIN);
+                    rx_display_buffer[0] = '\0';
+                }
+                else if (strcmp(payload, cmd_hrst) == 0)
+                {
+                    full_wipe_reset();
+                    reset_cpu();
+                }
+                else
+                {
+                    strcpy(rx_display_buffer, "TANIMSIZ KOMUT");
+                }
+            }
         }
         else
         {
-            strcpy(rx_display_buffer, "FORMAT HATASI");
+            if (packet_type == 'M')
+                strcpy(rx_display_buffer, "FORMAT HATASI");
         }
-    }
-    else
-    {
-        strncpy(rx_display_buffer, rx_temp_buffer, 20);
-        rx_display_buffer[20] = '\0';
     }
     scroll_pos = 0;
 }
@@ -319,31 +404,6 @@ void enter_sleep_mode()
     idle_counter = 0;
 }
 
-void full_wipe_reset()
-{
-    lcd_putc('\f');
-    lcd_locate(1, 1);
-    printf(lcd_putc, "HEPSI SILINIYOR");
-    output_high(BUZZER_PIN);
-    wdt_delay_ms(500);
-    output_low(BUZZER_PIN);
-
-    write_eeprom(0, 0);
-    write_eeprom(50, 0);
-
-    text_index = 0;
-    text_buffer[0] = '\0';
-
-    morse_index = 0;
-    morse_buffer[0] = '\0';
-
-    rx_display_buffer[0] = '\0';
-    scroll_pos = 0;
-
-    lcd_putc('\f');
-    update_lcd();
-}
-
 #INT_RDA
 void serial_isr()
 {
@@ -356,7 +416,6 @@ void serial_isr()
         {
             rx_temp_index = 0;
         }
-
         if (incoming == '\n' || incoming == '\r')
         {
             rx_temp_buffer[rx_temp_index] = '\0';
@@ -365,7 +424,10 @@ void serial_isr()
         else
         {
             if (rx_temp_index < 38)
-                rx_temp_buffer[rx_temp_index++] = incoming;
+            {
+                rx_temp_buffer[rx_temp_index] = incoming;
+                rx_temp_index++;
+            }
         }
     }
 }
@@ -425,6 +487,8 @@ void timer0_isr()
 
 void main()
 {
+    setup_oscillator(OSC_8MHZ);
+
     setup_wdt(WDT_OFF);
 
     set_tris_b(0xFF);

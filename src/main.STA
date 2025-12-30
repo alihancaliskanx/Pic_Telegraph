@@ -1,94 +1,96 @@
 
-ROM used:   2786/8192 (34%)
-            2846/8192 (35%) including unused fragments
+ROM used:   3170/8192 (39%)
+            3170/8192 (39%) including unused fragments
 
             0.8 Average locations per line
-            3.4 Average locations per statement
+            3.7 Average locations per statement
 
 RAM used:   126/368 (34%) at main() level
-            151/368 (41%) worst case
+            219/368 (60%) worst case
 
 Stack used: 1 worst case (0 in main + 1 for interrupts)
 Stack size: 8
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  630   356  44  main.c
+  694   395  46  main.c
   758     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h
   423     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h
    32     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h
    28     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h
- 1351   359  44  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdlib.h
+ 1351   359  42  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdlib.h
   456   100  12  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\LCD.C
 ----- -----
- 3678   815 Total
+ 3742   854 Total
 
 Page ROM  %  RAM   Vol Diff  Functions:
 ---- --- --- ---   --- ----  ----------
 0     20   1    1             @delay_ms1
-0     82   3   11   318  6.5  strncpy
+ Inline        11   318  6.5  strncpy
+0     70   2    5   231  6.6  strcmp
 0     36   1    4   153  4.7  strchr
 0     32   1    5   129  4.6  strlen
 0      8   0    0             @const900
  Inline         3   760  4.5  lcd_read_byte
-0     51   2    2   262  3.7  lcd_read_nibble
-0     54   2    1   399  2.4  lcd_send_nibble
-0     98   4    3   415  3.7  lcd_send_byte
-0     73   3    2   704  5.0  lcd_init
+0     59   2    2   262  3.7  lcd_read_nibble
+0     60   2    1   399  2.4  lcd_send_nibble
+0    105   3    3   415  3.7  lcd_send_byte
+0     85   3    2   704  5.0  lcd_init
 0     20   1    4   208  6.3  lcd_gotoxy
 0     58   2    1   354  4.7  lcd_putc
 0     68   2    0             @const947
 0     25   1    4   117  3.2  wdt_delay_ms
-1     77   3    3   178  4.4  save_text_to_eeprom
+0     77   2    3   178  4.4  save_text_to_eeprom
 0     52   2    4   269  5.1  load_text_from_eeprom
 0     90   3    4   225  4.5  save_bt_to_eeprom
 0     51   2    5   283  5.5  load_bt_from_eeprom
 0     64   2    6   470  7.8  decode_morse
-0     46   2    4   386  6.5  lcd_locate
-0     99   4    6   517  7.1  update_scroll_line
+0     46   1    4   386  6.5  lcd_locate
+0    109   3    6   517  7.1  update_scroll_line
 0     11   0    0             @const977
-0    102   4    4             @PSTRINGC7_919
+0     68   2    4             @PSTRINGC7_919
  Inline         3             @DIV88
-0    148   5    4  1053  7.7  update_lcd
+0    152   5    4  1053  7.7  update_lcd
 0     11   0    0             @const986
 0     11   0    0             @const987
 0     29   1    2             @PSTRINGR_919
 0      2   0    0             @const990
 0     11   0    0             @const992
-0    123   4    6   614  7.3  send_nmea_packet
+0    125   4    6   614  7.3  send_nmea_packet
  Inline         2             @PRINTF_X_9600_62_63
-0    136   5    7   700  7.4  process_incoming_nmea
-0     18   1    0             @const1008
-0    104   4    0   682  4.7  enter_sleep_mode
-0      7   0    0             @const1010
-1    103   4    0   439  2.8  full_wipe_reset
-0      8   0    0   679  5.8  @const1012
-0     42   2    3   320  5.1  serial_isr
-0    107   4    2   679  5.8  timer1_isr
+0     91   3    0   439  2.8  full_wipe_reset
+0      8   0    0             @const1005
+ Inline        73  2337 10.0  process_incoming_nmea
+0     19   1    0  2140  9.7  @const1019
+0     18   1    0   439  2.8  @const1020
+0    104   3    0   682  4.7  enter_sleep_mode
+0      7   0    0   682  4.7  @const1022
+0     42   1    3   338  5.1  serial_isr
+0    113   4    2   679  5.8  timer1_isr
 0     11   0    0    76  2.7  timer0_isr
-1    618  22    2  4946 10.4  MAIN
-0      7   0    0             @const1021
-0      8   0    0             @const1023
+1   1122  35    2  4985 10.4  MAIN
+0      7   0    0    76  2.7  @const1031
+0      8   0    0  4946 10.4  @const1033
  Inline         0             @cinit1
 
 Program metrics:
-    Functions               28
-    Statements              815
+    Functions               33
+    Statements              854
     Comments                742
-    Volume (V)              27726
-    Difficulty (D)          149.4
-    Effort to implement (E) 4141416
-    Time to implement (T)   63 hours, 55 minutes
-    Est Delivered Bugs (B)  9
-    Cyclomatic Complexity   84
-    Maintainability (MI)    129
+    Volume (V)              43005
+    Difficulty (D)          185.4
+    Effort to implement (E) 7973598
+    Time to implement (T)   123 hours, 3 minutes
+    Est Delivered Bugs (B)  13
+    Cyclomatic Complexity   133
+    Maintainability (MI)    124
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00003     4  0  
 00004-00040    61  0  
-00041-007FF  1923  60  
-00800-00FFF   798  1250  
+00041-007FF  1983  0  
+00800-00FFF  1122  926  
 01000-017FF     0  2048  
 01800-01FFF     0  2048  
 
