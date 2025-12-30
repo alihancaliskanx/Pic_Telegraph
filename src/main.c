@@ -29,7 +29,7 @@ char text_buffer[21];
 int8 morse_index = 0;
 int8 text_index = 0;
 
-char rx_temp_buffer[25];
+char rx_temp_buffer[40];
 char rx_display_buffer[25];
 int8 rx_temp_index = 0;
 int1 rx_data_ready = 0;
@@ -252,7 +252,40 @@ void send_nmea_packet()
         fputc(char_to_send, BT_MODUL);
         checksum ^= char_to_send;
     }
-    fprintf(BT_MODUL, ",%X\r\n", checksum);
+    fprintf(BT_MODUL, "*%02X\r\n", checksum);
+}
+
+void process_incoming_nmea()
+{
+    char *ptr_start;
+    char *ptr_end;
+    int8 len;
+
+    if (rx_temp_buffer[0] == '$')
+    {
+        ptr_start = strchr(rx_temp_buffer, ',');
+        ptr_end = strchr(rx_temp_buffer, '*');
+
+        if (ptr_start != 0 && ptr_end != 0 && ptr_end > ptr_start)
+        {
+            len = (int8)(ptr_end - ptr_start) - 1;
+            if (len > 20)
+                len = 20;
+
+            strncpy(rx_display_buffer, ptr_start + 1, len);
+            rx_display_buffer[len] = '\0';
+        }
+        else
+        {
+            strcpy(rx_display_buffer, "FORMAT HATASI");
+        }
+    }
+    else
+    {
+        strncpy(rx_display_buffer, rx_temp_buffer, 20);
+        rx_display_buffer[20] = '\0';
+    }
+    scroll_pos = 0;
 }
 
 void enter_sleep_mode()
@@ -318,20 +351,20 @@ void serial_isr()
     if (kbhit(BT_MODUL))
     {
         incoming = fgetc(BT_MODUL);
-        if (incoming == '\\' || incoming == '\n' || incoming == '\r')
+
+        if (incoming == '$')
         {
-            if (rx_temp_index > 0)
-            {
-                rx_temp_buffer[rx_temp_index] = '\0';
-                strcpy(rx_display_buffer, rx_temp_buffer);
-                rx_data_ready = 1;
-                rx_temp_index = 0;
-                scroll_pos = 0;
-            }
+            rx_temp_index = 0;
+        }
+
+        if (incoming == '\n' || incoming == '\r')
+        {
+            rx_temp_buffer[rx_temp_index] = '\0';
+            rx_data_ready = 1;
         }
         else
         {
-            if (rx_temp_index < 20)
+            if (rx_temp_index < 38)
                 rx_temp_buffer[rx_temp_index++] = incoming;
         }
     }
@@ -443,6 +476,7 @@ void main()
 
         if (rx_data_ready)
         {
+            process_incoming_nmea();
             save_bt_to_eeprom();
             rx_data_ready = 0;
             update_lcd();
