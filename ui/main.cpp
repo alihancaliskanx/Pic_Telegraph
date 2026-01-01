@@ -163,8 +163,8 @@ statusLabel = new QLabel("STATUS: DISCONNECTED");
 
         connectButton = new QPushButton("CONNECT");
         connectButton->setCursor(Qt::PointingHandCursor);
-        connectButton->setFixedHeight(50);
         connectButton->setObjectName("connectBtn");
+        connectButton->setFixedHeight(50);
 
         scanButton = new QPushButton("SCAN BLUETOOTH");
         scanButton->setFixedHeight(40);
@@ -402,7 +402,7 @@ private:
         QString titleFg = dark ? "#cdd6f4" : "#4c4f69"; 
         QString danger = "#f38ba8";
 
-        QString stylePath = QCoreApplication::applicationDirPath() + "/.config/style.css";
+        QString stylePath = QCoreApplication::applicationDirPath() + "/.config/style.qss";
         QFile file(stylePath);
         
         QString styleContent;
@@ -667,55 +667,65 @@ private:
         customCmdInput->clear();
     }
 
-    // Parses incoming raw data strings
-    void processIncomingData(QString line) {
-        if (line.isEmpty()) return;
+// Parses incoming raw data strings
+void processIncomingData(QString line) {
+    if (line.isEmpty()) return;
+    if (!line.startsWith("$")) return;
 
-        // Strip checksum and prefix
-        int starIndex = line.indexOf('*');
-        if (starIndex != -1) {
-             line = line.left(starIndex);
-        }
-        if (line.startsWith("$")) {
-            line = line.mid(1);
-        }
+    // Checksum Ayrıştırma
+    int starIndex = line.indexOf('*');
+    if (starIndex == -1) return;
 
-        if (line.startsWith("K,")) {
-            handleSystemCommand(line);
-            appendLog("INCOMING COMMAND ($K): " + line);
-        } 
-        else if (line.startsWith("M,")) {
-            QString msgContent = line.mid(2);
-            appendChat(msgContent, false);
-            appendLog("INCOMING MESSAGE ($M): " + msgContent);
-        }
-        else {
-             appendLog("RAW: " + line);
-        }
+    QString content = line.mid(1, starIndex - 1); // $ ve * arasını al
+    QString receivedChecksumStr = line.mid(starIndex + 1).trimmed();
+    
+    // Checksum Hesaplama ve Doğrulama
+    int receivedChecksum = receivedChecksumStr.toInt(nullptr, 16);
+    int calculatedChecksum = 0;
+    QByteArray bytes = content.toLatin1();
+    for(char c : bytes) {
+        calculatedChecksum ^= c;
     }
 
-    // Executes system commands based on received data
-    void handleSystemCommand(QString rawData) {
-        QStringList parts = rawData.split(',');
-        if (parts.size() < 2) return; 
-        
-        QString cmdKey = parts[1].toUpper(); 
-        
-        if (commandMap.contains(cmdKey)) {
-            CommandConfig &cfg = commandMap[cmdKey];
-            qint64 now = QDateTime::currentMSecsSinceEpoch();
+    if (calculatedChecksum != receivedChecksum) {
+        appendLog("ERROR: Checksum Hatası! (" + content + ")");
+        return;
+    }
 
-            if (now - cfg.lastRunTime > cfg.offsetMs) {
-                QProcess::startDetached(cfg.systemCommand);
-                cfg.lastRunTime = now;
-                appendLog("SYSTEM ACTION STARTED: " + cfg.systemCommand);
-            } else {
-                appendLog("SYSTEM: " + cmdKey + " (Timeout/Debounce)");
-            }
+    if (content.startsWith("K,")) {
+        QString cleanCmd = content.mid(2); 
+        
+        appendLog("INCOMING COMMAND: " + cleanCmd);
+        handleSystemCommand(cleanCmd);
+    } 
+    else if (content.startsWith("M,")) {
+        QString msgContent = content.mid(2);
+        appendChat(msgContent, false);
+        appendLog("INCOMING MESSAGE: " + msgContent);
+    }
+}
+
+// Executes system commands based on received data
+void handleSystemCommand(QString cmdKey) {
+    cmdKey = cmdKey.toUpper().trimmed(); 
+    
+    if (commandMap.contains(cmdKey)) {
+        CommandConfig &cfg = commandMap[cmdKey];
+        qint64 now = QDateTime::currentMSecsSinceEpoch();
+
+        if (now - cfg.lastRunTime > cfg.offsetMs) {
+            QStringList args;
+            args << "-c" << cfg.systemCommand;
+            QProcess::startDetached("/bin/sh", args);
+            cfg.lastRunTime = now;
+            appendLog("SYSTEM ACTION: " + cfg.systemCommand);
         } else {
-            appendLog("UNKNOWN COMMAND: " + cmdKey);
+            appendLog("SYSTEM: " + cmdKey + " (Bekleme Süresinde)");
         }
+    } else {
+        appendLog("UNKNOWN COMMAND: " + cmdKey);
     }
+}
 
     // Appends text to the log window and file
     void appendLog(QString text) {

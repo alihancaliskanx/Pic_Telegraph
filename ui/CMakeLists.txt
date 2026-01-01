@@ -39,8 +39,8 @@ add_custom_command(TARGET TelgrafApp POST_BUILD
     $<TARGET_FILE_DIR:TelgrafApp>/.config/Command.json
     
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
-    ${CMAKE_CURRENT_SOURCE_DIR}/.config/style.css
-    $<TARGET_FILE_DIR:TelgrafApp>/.config/style.css
+    ${CMAKE_CURRENT_SOURCE_DIR}/.config/style.qss
+    $<TARGET_FILE_DIR:TelgrafApp>/.config/style.qss
 
         COMMAND ${CMAKE_COMMAND} -E copy_if_different
     ${CMAKE_CURRENT_SOURCE_DIR}/.config/keybinding.conf

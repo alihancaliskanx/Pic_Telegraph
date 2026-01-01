@@ -1,14 +1,86 @@
 {
+    "P": {
+        "cmd": "notify-send 'Pic_Telegraph' 'Bağlantı Başarılı!' --icon=dialog-information",
+        "timeout": 1000
+    },
+    "T": {
+        "cmd": "kitty",
+        "timeout": 2000
+    },
     "BR": {
-        "cmd": "cmd /c start https://google.com",
+        "cmd": "xdg-open https://www.google.com",
+        "timeout": 5000
+    },
+    "Y": {
+        "cmd": "xdg-open https://www.youtube.com",
+        "timeout": 5000
+    },
+    "F": {
+        "cmd": "nautilus",
+        "timeout": 2000
+    },
+    "E": {
+        "cmd": "kitty -e nvim",
+        "timeout": 2000
+    },
+    "B": {
+        "cmd": "kitty --class float_term -e btop",
+        "timeout": 2000
+    },
+    "UPD": {
+        "cmd": "kitty --title 'Sistem Güncellemesi' -e sudo -E pacman -Syu",
+        "timeout": 10000
+    },
+    "X": {
+        "cmd": "kitty --class float_term -e cmatrix",
+        "timeout": 2000
+    },
+    "SS": {
+        "cmd": "grim -g \"$(slurp)\" - | wl-copy && notify-send 'Ekran Görüntüsü' 'Panoya alındı.'",
         "timeout": 3000
     },
-    "TERM": {
-        "cmd": "start cmd.exe",
-        "timeout": 2000
+    "S": {
+        "cmd": "spotify",
+        "timeout": 3000
     },
-    "NV": {
-        "cmd": "notepad",
-        "timeout": 2000
+    "C": {
+        "cmd": "code",
+        "timeout": 3000
+    },
+    "K": {
+        "cmd": "hyprctl dispatch killactive",
+        "timeout": 500
+    },
+    "L": {
+        "cmd": "hyprlock",
+        "timeout": 5000
+    },
+    "UP": {
+        "cmd": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 50%+",
+        "timeout": 200
+    },
+    "DO": {
+        "cmd": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 50%-",
+        "timeout": 200
+    },
+    "M": {
+        "cmd": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "timeout": 500
+    },
+    "PP": {
+        "cmd": "playerctl play-pause",
+        "timeout": 1000
+    },
+    "N": {
+        "cmd": "playerctl next",
+        "timeout": 500
+    },
+    "U": {
+        "cmd": "brightnessctl set +100%",
+        "timeout": 200
+    },
+    "D": {
+        "cmd": "brightnessctl set 100%-",
+        "timeout": 200
     }
 }

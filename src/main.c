@@ -149,7 +149,7 @@ char decode_morse(char *code)
     }
     if (morse_tree[index] == 0)
         return '?';
-    return morse_tree[index];
+    return "morse_tree"[index];
 }
 
 // Function to position the cursor on the LCD (Handles memory addresses)
