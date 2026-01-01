@@ -1,0 +1,206 @@
+QMainWindow {
+    background-color: %1;
+}
+
+QWidget {
+    color: %2;
+    font-family: 'JetBrains Mono', 'Segoe UI', sans-serif;
+    font-size: 13px;
+    outline: none;
+}
+
+QGroupBox {
+    border: 2px solid %4;
+    border-radius: 16px;
+    background-color: %3;
+}
+
+QLabel#boxTitle {
+    background-color: %10;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 900;
+    padding: 10px;
+    border-radius: 6px;
+    margin: 0px;
+}
+
+QLineEdit {
+    background-color: %6;
+    border: 2px solid %4;
+    border-radius: 8px;
+    padding: 8px; 
+    color: %2;
+    selection-background-color: %5;
+}
+
+QLineEdit:focus { 
+    border: 2px solid %5;
+}
+
+/* --- COMBOBOX DESIGN --- */
+QComboBox { 
+    background-color: %6; 
+    border: 2px solid %4; 
+    border-radius: 8px; 
+    padding: 8px 15px;
+    color: %2; 
+    font-weight: bold;
+}
+
+QComboBox:hover, QComboBox:focus { 
+    border: 2px solid %5; 
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 30px;
+    border-left-width: 0px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+QComboBox::down-arrow {
+    width: 8px; 
+    height: 8px; 
+    background: none; 
+    border-left: 2px solid %2; 
+    border-bottom: 2px solid %2; 
+    transform: rotate(-45deg); 
+    margin-right: 10px;
+}
+
+QComboBox::down-arrow:on { 
+    border-left: 2px solid %5;
+    border-bottom: 2px solid %5;
+}
+
+/* --- DROPDOWN LIST POPUP FIX --- */
+QComboBox QAbstractItemView {
+    background-color: %6; 
+    border: 2px solid %5; 
+    border-radius: 4px; 
+    selection-background-color: %5; 
+    selection-color: %1; 
+    padding: 4px; 
+    outline: none;
+}
+
+/* Combobox internal scrollbar adjustment */
+QComboBox QAbstractItemView QScrollBar:vertical {
+    width: 10px; 
+    margin-right: 0px; 
+    background: transparent;
+}
+
+/* Item row design */
+QComboBox QAbstractItemView::item {
+    min-height: 25px; 
+    border-radius: 4px; 
+    margin-right: 2px; 
+    padding: 5px 10px;
+}
+
+QComboBox QAbstractItemView::item:selected {
+    background-color: %5;
+    color: %1;
+}
+
+QTextEdit {
+    background-color: %6;
+    border: 2px solid %4;
+    border-radius: 12px;
+    padding: 10px;
+    color: %2;
+}
+
+QPushButton {
+    background-color: %7;
+    color: %2;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: bold;
+    outline: none;
+}
+
+QPushButton:hover {
+    background-color: %8;
+    color: #1e1e2e;
+}
+
+QPushButton#connectBtn {
+    background-color: %5;
+    color: %1;
+    font-size: 15px;
+    border-radius: 12px;
+}
+
+QPushButton#connectBtn:hover {
+    background-color: %10;
+}
+
+QLabel#statusLabel {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+    border: 2px dashed %4;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* --- SCROLLBAR DESIGN --- */
+QScrollBar:vertical {
+    border: none;
+    background-color: %1; 
+    width: 14px;
+    margin: 0px;
+    border-radius: 0px;
+}
+QScrollBar::handle:vertical {
+    background-color: %7; 
+    min-height: 30px;
+    border-radius: 7px;
+    margin: 2px; 
+}
+QScrollBar::handle:vertical:hover {
+    background-color: %8; 
+}
+QScrollBar::handle:vertical:pressed {
+    background-color: %5; 
+}
+
+/* Horizontal Scrollbar */
+QScrollBar:horizontal {
+    border: none;
+    background-color: %1;
+    height: 14px;
+    margin: 0px;
+    border-radius: 0px;
+}
+QScrollBar::handle:horizontal {
+    background-color: %7;
+    min-width: 30px;
+    border-radius: 7px;
+    margin: 2px;
+}
+QScrollBar::handle:horizontal:hover {
+    background-color: %8;
+}
+QScrollBar::handle:horizontal:pressed {
+    background-color: %5;
+}
+
+/* Clear arrows and background */
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical,
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    border: none;
+    background: none;
+    height: 0px;
+    width: 0px;
+}
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical,
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+    background: none;
+}

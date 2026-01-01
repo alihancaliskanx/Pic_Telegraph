@@ -1,0 +1,14 @@
+{
+    "BR": {
+        "cmd": "cmd /c start https://google.com",
+        "timeout": 3000
+    },
+    "TERM": {
+        "cmd": "start cmd.exe",
+        "timeout": 2000
+    },
+    "NV": {
+        "cmd": "notepad",
+        "timeout": 2000
+    }
+}

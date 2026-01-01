@@ -1,0 +1,44 @@
+# --- General OS Files ---
+.DS_Store
+Thumbs.db
+*~
+*.swp
+
+# --- VS Code ---
+.vscode/
+*.code-workspace
+
+# --- C++ / CMake / Qt (PC User Interface) ---
+ui/build/
+ui/install/
+ui/output/
+ui/CMakeUserPresets.json
+build/
+*.autosave
+*.user
+
+# --- CCS C Compiler (PIC Side Trash) ---
+*.hex
+*.err
+*.esym
+*.cod
+*.lst
+*.tre
+*.cof
+*.sta
+*.sym
+*.PJT
+*.bak
+*.xsym
+*.sym
+*.STA
+src/__history/
+
+# --- Proteus Simulation ---
+*.pdsprj.*
+*.Backup
+*.workspace
+Lock.lck
+
+# --- Log Files ---
+*.log
